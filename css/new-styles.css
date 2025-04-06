@@ -95,7 +95,7 @@ fill: #f4f4fd;
     color: #fff;
     margin-top: 12px;
     margin: 0 auto;
-    width: 648px;
+    width: 504px;
     text-align: center;
     margin-bottom: 16px;
   }
@@ -130,8 +130,8 @@ fill: #f4f4fd;
     height: 56px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 318px;
-  height: 56px;
+    width: 242px;
+    height: 56px;
   }
   .menu {
     display: flex;
@@ -241,7 +241,6 @@ fill: #f4f4fd;
   }
   .acor-container {
     margin: 20px 0;
-    width: 696px;
     margin: auto;
   }
   
@@ -371,9 +370,7 @@ fill: #f4f4fd;
   }
   
   /* ============================TABLET STYLES========================================= */
-  .tech-skills-container {
-    max-width: 768px;
-  }
+
   
   .marquee {
     font-size: 36px;
@@ -410,6 +407,7 @@ fill: #f4f4fd;
     padding-bottom: 50px;
     width: 745px;
     justify-content: center;
+            margin-top: 40px;
   }
   .text-number {
     font-family: var(--font-family);
@@ -459,7 +457,6 @@ fill: #f4f4fd;
     text-transform: capitalize;
     text-align: center;
     color: #fff;
-    width: 900px;
     margin: 0 auto;
 padding-top: 48px;
     margin-bottom: 64px;
@@ -608,7 +605,6 @@ margin-top: 32px;
   font-weight: 300;
   box-sizing: border-box;
   z-index: 100;
-  font-family: Verdana, sans-serif;
   font-size: 18px;
   margin: 0 0 5px;
   transition: color 0.35s;
@@ -1063,20 +1059,10 @@ background;
   text-transform: capitalize;
   text-align: center;
   color: #fff;
-  width: 900px;
   margin: 0 auto;
 
   margin-bottom: 64px;
 }
-
-
-
-
-
-
-
-
-
 
 
 .block-1:hover {
@@ -1093,14 +1079,6 @@ background;
 }
 
 /* Стиль для текста внутри блоков */
-.title-count-months,
-.block-1 h3,
-.block-1 h4,
-.block-1 p,
-.block-1 a,
-.block-1 button {
-  color: inherit; /* Наследует цвет родительского блока */
-}
 /* Стиль для галочек */
 .block-1 .paragraph-ambitions img {
   transition: filter 0.3s ease; /* Плавное изменение фильтра */
@@ -1136,8 +1114,7 @@ background;
 
 .block-1:focus-within .button-ambitions,
 .block-1:hover .button-ambitions {
-  background: #ffa423; /* Оранжевый фон для активного состояния */
-  transform: scale(1.05); /* Легкое увеличение кнопки */
+  background: #ffa423; /* Оранжевый фон для активного состояния */ /* Легкое увеличение кнопки */
 }
 
 .block-1:hover .paragraph-ambitions img,
@@ -1161,20 +1138,20 @@ button .image-title {
 /* Неактивные состояния (по умолчанию) */
 .button-start,
 .button-free {
-  background-color: white;
-  color: #22674b; /* Зелёный текст */
+  background-color: #22674b;
+  color: #fff; /* Зелёный текст */
   border: 2px solid #22674b; /* Зелёная граница */
 }
 
 .button-start .image-title,
 .button-free .image-title {
-  fill: #22674b; /* Цвет стрелки */
+  fill: #fefefe; /* Цвет стрелки */
 }
 
 /* Активные состояния (при наведении или фокусе) */
 .button-start:hover,
 .button-free:hover {
-  background-color: #22674b; /* Зелёный фон */
+  background-color: #f79e1b; /* Зелёный фон */
   color: white; /* Белый текст */
 }
 
@@ -1182,16 +1159,18 @@ button .image-title {
 .button-free:hover .image-title {
   fill: white; /* Белый цвет стрелки */
 }
-
+.title-count-months, .block-1 h3, .block-1 h4, .block-1 p, .block-1 a, .block-1 button {
+  color: inherit;
+}
 /* Неактивное состояние кнопок */
 
 .button-start .image-title,
 .button-free .image-title {
-  color: #22674b;
+  color: #ffffff;
 }
 
 .span-save {
-  background-color: #22674b; /* Зелёный фон */
+  background-color: /* Зелёный фон */
   color: white; /* Белый текст */
   padding: 5px 10px;
   border-radius: 24px;
@@ -1212,13 +1191,12 @@ button .image-title {
   fill: white; /* Белая галочка при наведении */
 }
 .image-title {
-  fill: #22674b; /* Зеленый цвет для галочки */
+  fill: #ffffff; /* Зеленый цвет для галочки */
   transition: fill 0.3s ease; /* Плавное изменение цвета */
 }
 
 
 .acor-container .acor-body {
-  width: calc(100% - 40px);
   margin: 0;
   height: 0;
   color: rgba(0, 0, 0, 0);
@@ -1227,26 +1205,25 @@ button .image-title {
   box-sizing: border-box;
   transition: color 0.5s, padding 0.5s;
   overflow: hidden;
-  font-family: Verdana, sans-serif;
   font-size: 16px;
 }
 .acor-container .acor-body p {
   margin: 0 0 10px;
 }
 .acor-container label {
-        cursor: pointer;
-        display: block;
-        padding: 15px 20px;
-        color: #000000;
-        font-weight: 300;
-        box-sizing: border-box;
-        z-index: 100;
-        font-family: Verdana, sans-serif;
-        font-size: 18px;
-        margin: 0 0 5px;
-        transition: color 0.35s;
-        position: sticky;
-        margin-right: 90px;
+    cursor: pointer;
+    display: block;
+    padding: 15px 20px;
+    color: #000000;
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    margin: 0 0 5px;
+    transition: color 0.35s;
+    position: sticky;
+    margin-right: 90px;
 }
 
 .acor-container input {
@@ -1354,11 +1331,23 @@ button .image-title {
 .background-hero {
   background: #164e37;
 }
+.get-started-input-pc {
+  display: none;
+}
+.svg-pointer {
+  display: none;
+}
   }
 
 
 
 @media screen and (min-width: 1440px) {
+  .svg-pointer-tablet {
+    display: none;
+  }
+  .get-started-input-tablet {
+    display: none;
+  }
   .acor-container-line {
     width: 1080px;
   }
@@ -1417,10 +1406,6 @@ button .image-title {
   margin-bottom: 4px;
 }
 
-.container {
-  width: 1080px;
-  margin: 0 auto;
-}
 
 .general-padd {
   margin-top: 64px;
@@ -1429,7 +1414,7 @@ button .image-title {
 
 .header-block {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .menu {
@@ -1723,7 +1708,6 @@ tech skills ========== .visually-hidden {
 */
 
 /* ============================MOBILE STYLES========================================= */
-
 *,
 *::before,
 *::after {
@@ -1925,6 +1909,7 @@ tech skills ========== .visually-hidden {
   gap: 48px;
   margin: 0 auto;
   padding-bottom: 50px;
+  justify-content: center;
 }
 
 .benefits-item {
@@ -1989,9 +1974,6 @@ tech skills ========== .visually-hidden {
   text-decoration: underline;
   text-decoration-color: #f79e1b;
 }
-.ben-list {
-  margin-bottom: 20px;
-}
 .title-profit {
   font-family: var(--font-family);
   font-weight: 500;
@@ -2015,8 +1997,6 @@ tech skills ========== .visually-hidden {
 }
 .acor-container {
   margin: 20px 0;
-  /* width: 1080px; */
-  /* height: 444px; */
   margin: auto;
 }
 .acor-container .acor-body {
@@ -2029,7 +2009,6 @@ tech skills ========== .visually-hidden {
   box-sizing: border-box;
   transition: color 0.5s, padding 0.5s;
   overflow: hidden;
-  font-family: Verdana, sans-serif;
   font-size: 16px;
 }
 .acor-container .acor-body p {
@@ -2044,7 +2023,6 @@ tech skills ========== .visually-hidden {
   font-weight: 300;
   box-sizing: border-box;
   z-index: 100;
-  font-family: Verdana, sans-serif;
   font-size: 18px;
   margin: 0 0 5px;
   transition: color 0.35s;
@@ -2299,6 +2277,7 @@ tech skills ========== .visually-hidden {
 .svg-bar-line {
 display: none;
 }
+
 /* SECTION STYLES Ambitions ================================================= */
 .ambitions-container {
   margin: 0 auto;
@@ -2434,6 +2413,11 @@ display: none;
 }
 .title-ambitions {
   margin-bottom: 25px;
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 20px;
+line-height: 140%;
+color: #000;
 }
 .text-logo-block2 {
   font-family: var(--font-family);
@@ -2525,13 +2509,11 @@ display: none;
 .style-title-basic {
   color: #22674b;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .block-1:focus-within .button-ambitions,
 .block-1:hover .button-ambitions {
   background: #ffa423; /* Оранжевый фон для активного состояния */
-  transform: scale(1.05); /* Легкое увеличение кнопки */
 }
 
 .block-1:hover .paragraph-ambitions img,
@@ -2616,7 +2598,6 @@ button .image-title {
 
 /* Additional customized services */
 .block-add {
-  border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 24px;
   padding: 32px;
   width: 306px;
