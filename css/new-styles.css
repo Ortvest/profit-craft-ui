@@ -1,3 +1,9 @@
+html {
+  scroll-behavior: smooth
+}
+body {
+  scroll-behavior: smooth
+}
 h1,
 h2,
 h3,
@@ -28,7 +34,6 @@ cursor: pointer;
 body {
 font-family: "Roboto", sans-serif;
 background-color: #ffffff;
-color: #434455;
 }
 
 img {
@@ -43,6 +48,93 @@ fill: #f4f4fd;
 
 
 @media only screen and (max-width: 1440px) {
+  .svg-hero {
+    display: none;
+    }
+  .ambitions-section {
+    background: #e9e9e9;
+  }
+  .terms-conditions {
+    text-decoration: underline;
+  }
+  /* ACCORDION TABLET */
+  .title-faq-credit {
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 32px;
+line-height: 108%;
+letter-spacing: -0.01em;
+color: rgba(0, 0, 0, 0.9);
+  }
+.accordion {
+  max-width: 744px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.3s;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+.security {
+  display: none;
+}
+.accordion-text {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 20px;
+line-height: 160%;
+letter-spacing: -0.01em;
+color: rgba(0, 0, 0, 0.56);
+}
+.accordion-content {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.4s ease;
+}
+
+.accordion-content-inner {
+  padding: 1rem 0;
+}
+
+/* ACCORDION TABLET  */
+.more-forms {
+  margin-right: 24px;
+}
+  .map-container {
+    width: 648px;
+    height: 310px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+  .text-terms-conditions {
+    text-decoration: underline;
+  }
+  .intel-model-inter {
+    background: #e9e9e9;
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 14px;
+line-height: 130%;
+letter-spacing: -0.01em;
+color: rgba(0, 0, 0, 0.72);
+border-radius: 8px;
+padding: 20px 24px 20px 20px;
+height: 76px;
+margin-top: 24px;
+  }
   .hamburger-menu {
     position: absolute;
     right: 0;
@@ -138,6 +230,7 @@ fill: #f4f4fd;
     align-items: center;
     margin-bottom: 20px;
     margin-top: 20px;
+    justify-content: space-between;
   }
   #menu__toggle {
     opacity: 0;
@@ -194,7 +287,7 @@ fill: #f4f4fd;
     content: '';
     top: 8px;
   }
-  
+
   .menu__box {
     display: block;
     position: fixed;
@@ -214,6 +307,7 @@ fill: #f4f4fd;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
   
     transition-duration: .25s;
+    z-index: 999999999;
   }
   
   .menu__item {
@@ -233,7 +327,7 @@ fill: #f4f4fd;
   .menu__item:hover {
     background-color: #CFD8DC;
   }
-  .menu-list {
+  .header-menu {
     display: none;
   }
   .svg-convert {
@@ -243,7 +337,27 @@ fill: #f4f4fd;
     margin: 20px 0;
     margin: auto;
   }
-  
+  .top-header {
+    width: 648px;
+  }
+  .contacts-list {
+    margin-top: 20px;
+  }
+  .header-tablet {
+    display: none;
+  }
+  .menu-link {
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 18px;
+line-height: 120%;
+letter-spacing: -0.01em;
+color: #000;
+margin-left: 48px;
+  }
+  .menu-list {
+    display: flex;
+  }
   *,
   *::before,
   *::after {
@@ -369,7 +483,7 @@ fill: #f4f4fd;
     }
   }
   
-  /* ============================TABLET STYLES========================================= */
+  /* ===================================================================== */
 
   
   .marquee {
@@ -550,10 +664,10 @@ padding-top: 48px;
   justify-content: space-around;
 }
 .bar-line__right {
-justify-content: center;
-margin: 0 auto;
-display: flex;
+position: relative;
+
 }
+
 .bar-line-text {
   font-family: var(--font-family);
 font-weight: 500;
@@ -578,52 +692,22 @@ text-align: center;
 color: #000;
 margin-top: 32px;
 }
-.title-faq {
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 108%;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: #000;
-  margin: 0 auto;
-  padding-top: 80px;
-  display: flow;
-  margin-bottom: 74px;
-}
-.acor-container input:checked + label + .acor-body {
-  height: auto;
-  margin-top: -5px;
-  color: #000;
-  padding: 20px;
-}
-.acor-container label {
-  cursor: pointer;
-  display: block;
-  padding: 15px 20px;
-  color: #000000;
-  font-weight: 300;
-  box-sizing: border-box;
-  z-index: 100;
-  font-size: 18px;
-  margin: 0 0 5px;
-  transition: color 0.35s;
-}
-.acor-container input {
-  display: none;
-}
-.acor-container input:checked + label:before {
-  transition: transform 0.35s;
-  transform: rotate(90deg);
-}
 .desires {
   border-radius: 40px;
-  width: 696px;
+  width: 648px;
   background: #f0f0f0;
   margin: 0 auto;
   margin-bottom: 80px;
-  padding-bottom: 80px;
+
   margin-top: 80px;
+}
+.contacts-link {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  text-decoration-skip-ink: none;
+  color: #22674b;
 }
 .benefits-item-Security {
   text-align: center;
@@ -653,7 +737,6 @@ margin-top: 32px;
 }
 .ambitions-container {
   margin: 0 auto;
-  background: #f0f0f0;
 }
 .style-title-ambition {
   width: 696px;
@@ -687,11 +770,31 @@ margin-bottom: 12px;
 padding: 16px 24px 20px 24px;
 width: 696px;
 height: 124px;
-background: #fff;
 margin: 0 auto;
+display: flex;
+align-items: center;
+background: #ddd;
 }
 .text-logo-block2 {
   margin: 0 auto;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.8);
+  width: 408px;
+}
+.button-plan {
+  width: 110px;
+height: 22px;
+font-family: var(--font-family);
+font-weight: 600;
+font-size: 18px;
+line-height: 136%;
+text-transform: capitalize;
+color: #22674b;
+border: none;
+background: #ddd;
 }
 .title-ambitions {
   font-family: var(--font-family);
@@ -701,15 +804,6 @@ line-height: 140%;
 color: #000;
 margin-bottom: 24px;
 }
-
-
-
-
-
-
-
-
-
 .title-Count {
   font-family: var(--font-family);
   font-weight: 500;
@@ -782,7 +876,7 @@ color: #fff;
 }
 .pay-cass {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   justify-content: center;
   margin-top: 24px;
   padding-bottom: 40px;
@@ -857,14 +951,14 @@ height: 207px;
       .nav {
         position: sticky;
         top: 0;
-        background: #f0f0f0;
+        background: #e9e9e9;
         padding: 10px;
         display: flex;
         gap: 10px;
         z-index: 1000;
         position: sticky;
-        max-width: 715px; /* Ограничиваем ширину навигации */
-        margin: 0 auto; /* Центрируем навигацию */
+        max-width: 715px; 
+        margin: 0 auto; 
       }
       .nav button {
         padding: 10px;
@@ -926,10 +1020,7 @@ background;
       cursor: pointer;
       transition: all 0.3s ease;
   }
-    .acor-container input:checked + label:before {
-      transition: transform 0.35s;
-      transform: rotate(90deg);
-    }
+
   
 .wrap {
   margin: 0 auto;
@@ -1075,13 +1166,13 @@ background;
   background-color: white; /* Фон по умолчанию */
   color: #22674b; /* Цвет текста по умолчанию - зелёный */
   border-radius: 24px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s ease, color 0.3s ease;
 }
 
 /* Стиль для текста внутри блоков */
 /* Стиль для галочек */
 .block-1 .paragraph-ambitions img {
-  transition: filter 0.3s ease; /* Плавное изменение фильтра */
+  transition: filter 0.2s ease; /* Плавное изменение фильтра */
 }
 /* Когда блок находится в ховере или фокусе, меняем фон и текст */
 .block-1:hover,
@@ -1111,7 +1202,11 @@ background;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
+.span-premium:hover,
+.span-premium:focus {
+  background: rgba(255, 255, 255, 0.12);
+  color: white; /* Белый текст */
+} 
 .block-1:focus-within .button-ambitions,
 .block-1:hover .button-ambitions {
   background: #ffa423; /* Оранжевый фон для активного состояния */ /* Легкое увеличение кнопки */
@@ -1140,7 +1235,7 @@ button .image-title {
 .button-free {
   background-color: #22674b;
   color: #fff; /* Зелёный текст */
-  border: 2px solid #22674b; /* Зелёная граница */
+  border: none;
 }
 
 .button-start .image-title,
@@ -1168,18 +1263,39 @@ button .image-title {
 .button-free .image-title {
   color: #ffffff;
 }
-
-.span-save {
-  background-color: /* Зелёный фон */
+.span-premium:hover,
+.span-premium:focus {
+  background-color: #22674b; /* Зеленый фон */
+  color: white; /* Белый текст */
+}
+.span-premium {
+  margin-left: 450px;
+  background: rgba(255, 255, 255, 0.12);
   color: white; /* Белый текст */
   padding: 5px 10px;
   border-radius: 24px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Плавное изменение */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.span-save {
+  margin-left: 455px;
+  background-color: #22674b; /* Зелёный фон */
+  color: white; /* Белый текст */
+  padding: 5px 10px;
+  border-radius: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/* При наведении на span (активное состояние) */
-.block-1:hover .span-save {
-  background-color: rgba(0, 0, 0, 0.12); /* Светлый фон при наведении */
+.span-premium {
+  border-radius: 24px;
+  padding: 3px 12px 3px 8px;
+  width: 94px;
+  height: 28px;
+background: #22674b;
+font-family: var(--font-family);
+font-weight: 600;
+font-size: 14px;
+line-height: 150%;
+color: #fff;
 }
 .img-logotype {
   fill: #22674b; /* Зеленый цвет для галочки */
@@ -1189,10 +1305,6 @@ button .image-title {
 /* Стили для галочки, когда наводишь на карточку .block-1 */
 .block-1:hover .img-logotype {
   fill: white; /* Белая галочка при наведении */
-}
-.image-title {
-  fill: #ffffff; /* Зеленый цвет для галочки */
-  transition: fill 0.3s ease; /* Плавное изменение цвета */
 }
 
 
@@ -1210,41 +1322,14 @@ button .image-title {
 .acor-container .acor-body p {
   margin: 0 0 10px;
 }
-.acor-container label {
-    cursor: pointer;
-    display: block;
-    padding: 15px 20px;
-    color: #000000;
-    font-weight: 300;
-    box-sizing: border-box;
-    z-index: 100;
-    font-family: Verdana, sans-serif;
-    font-size: 18px;
-    margin: 0 0 5px;
-    transition: color 0.35s;
-    position: sticky;
-    margin-right: 90px;
-}
 
-.acor-container input {
-  display: none;
-}
-.acor-container input:checked + label {
-  color: #000000;
-}
-.acor-container input:checked + label:before {
-  transition: transform 0.35s;
-  transform: rotate(90deg);
-}
-.acor-container input:checked + label + .acor-body {
-  height: auto;
-  margin-top: -5px;
-  color: #000;
-  padding: 20px;
-}
+
+
+
+
+
 .how-credit-container {
-  width: 744px;
-  padding-bottom: 80px;
+  width: 648px;
 }
 .one-desires {
   padding-top: 80px;
@@ -1321,33 +1406,406 @@ button .image-title {
   .cards-pc {
     display: none;
   }
-  .acor-container label::before {
-    content: "❯";
-    float: right;
+
+.button-model {
+  border-radius: 8px;
+  padding: 20px 32px;
+  height: 67px;
+  background: #f79e1b;
+  margin-top: 24px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 136%;
+  color: #fff;
+  width: 568px;
+  border: none;
 }
-.acor-container label::after {
-  float: right;
+.bar-line-span-forms {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.56);
+  margin-bottom: 24px;
+  margin-right: 310px;
+}
+.bar-line-forms {
+  margin-right: 395px;
+}
+.contacts-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.icons-messanger {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.56);
+  margin-right: 390px;
+  margin-bottom: 36px;
+}
+.contacts-list-item {
+  display: flex;
+  margin-top: 20px;
+}
+.numbers-forms {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+line-height: 150%;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+color: #22674b;
 }
 .background-hero {
   background: #164e37;
 }
+.svg-pointer {
+  display: none;
+}
+.bank-fargo {
+  position: absolute;
+  top: 125px;
+  left: 673px;
+}
+.bank-chase {
+  position: absolute;
+  left: 310px;
+  top: 30px;
+}
+.bank-americaa {
+  position: absolute;
+  left: 220px;
+  top: 215px;
+}
+.security-image {
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+.image-titles-logo {
+  margin: 0 auto;
+}
+
+
+
+/* ===================== CONTACT US =============== */
+
+.contact-us {
+  display: none;
+
+}
+.acor-container-line {
+  width: 1080px;
+}
+.contact-us-forms {
+  margin: 0 auto;
+  
+}
+.contact-mannager {
+  display: none;
+}
+.bar-line-text-title-forms {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 64px;
+line-height: 108%;
+letter-spacing: -0.01em;
+text-transform: capitalize;
+color: #000;
+}
+.bar-line-text-title-forms {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 108%;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  color: #000;
+  margin-bottom: 40px;
+} 
+.bar-line-text-forms {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contact-us {
+  margin: 0 auto;
+}
+.contact-forms {
+  background: #f2f2f2;
+  padding: 40px;
+  border-radius: 24px;
+}
 .get-started-input-pc {
   display: none;
 }
-.svg-pointer {
+.bar-line-text-title-more {
+  border-radius: 24px;
+  /* padding: 40px; */
+  background: #f2f2f2;
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 32px;
+line-height: 108%;
+letter-spacing: -0.01em;
+color: #000;
+  width: 448px;
+}
+.acor-container {
+  margin: 20px 0;
+  margin: auto;
+}
+.button-send {
+  border-radius: 8px;
+  padding: 20px 32px;
+  width: 568px;
+  height: 67px;
+  background: #f79e1b;
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 20px;
+line-height: 136%;
+color: #fff;
+border: none;
+}
+.fullname-input {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+line-height: 108%;
+letter-spacing: -0.01em;
+color: rgba(0, 0, 0, 0.24);
+border: none;
+background: #f2f2f2;
+margin-top: 48px;
+}
+.fullname-input-email {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.01em;
+  color: rgba(0, 0, 0, 0.24);
+  border: none;
+  background: #f2f2f2;
+  margin-top: 48px;
+}
+select, input {
+  font-size: 16px;
+  border: none;
+  font-size: 16px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.01em;
+  color: #000;
+}
+.select-country {
+  margin-top: 48px;
+  width: 568px;
+  border: none;
+  background: inherit;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.01em;
+  color: #000;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.01em;
+  color: rgba(0, 0, 0, 0.32);
+}
+.hidden-visible {
   display: none;
+}
+.textarea-title {
+  margin-top: 48px;
+  width: 448px;
+  height: 152px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.01em;
+  color: rgba(0, 0, 0, 0.32);
+}
+.phone-number {
+  background: #f2f2f2;
+  margin-top: 48px;
+}
+
+
+/* ====================== KEYFRAMES SVG FORMS ======================= */
+.linear path {
+  stroke: gray; /* Начальный цвет линии */
+  stroke-width: 5px; /* Начальная толщина */
+  stroke-opacity: 0.60;
+  transition: stroke 0.5s ease, stroke-width 0.5s ease; 
+  /* Плавное изменение цвета и толщины */
+}
+
+/* При наведении на input, select или textarea — линия становится оранжевой и толстой */
+input:hover + .linear path,
+textarea:hover + .linear path,
+select:hover + .linear path,
+input:focus + .linear path,
+textarea:focus + .linear path,
+select:focus + .linear path {
+  stroke: orange; /* Цвет линии при фокусе или ховере */
+  stroke-width: 10px; /* Толщина линии при фокусе или ховере */
+}
+.contacts-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Когда наведен курсор на ссылку, линия становится видимой */
+.contacts-link:hover::after {
+  background-color: orange; /* Цвет линии */
+}
+
+.contacts-link:hover {
+  color: orange; /* Цвет текста при наведении */
+}
+.faq-information {
+  color: #000000;
+  color: #000000;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 108%;
+  letter-spacing: -0.01em;
+  color: rgba(0, 0, 0, 0.9);
+}
+.contact-us-forms {
+  margin: 0 auto;
+}
+.bar-lines {
+  padding-top: 20px;
+  width: 744px;
+  margin: 0 auto;
+  padding-left: 48px;
+  padding-right: 48px;
 }
   }
 
 
 
 @media screen and (min-width: 1440px) {
-  .svg-pointer-tablet {
+  /* ACCORDION  */
+  .title-faq-credit {
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 32px;
+line-height: 108%;
+letter-spacing: -0.01em;
+color: rgba(0, 0, 0, 0.9);
+  }
+.accordion {
+  max-width: 896px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-text {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 20px;
+line-height: 160%;
+letter-spacing: -0.01em;
+color: rgba(0, 0, 0, 0.56);
+}
+.accordion-content {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.4s ease;
+}
+
+.accordion-content-inner {
+  padding: 1rem 0;
+}
+  /* ACCORDION  */
+  .section-pc {
     display: none;
+  }
+  .bar-lines {
+    display: flex;
+    padding-bottom: 80px;
+    padding-top: 56px;
+display: none;
+  }
+  .text-send {
+    border-radius: 8px;
+padding: 20px 24px 20px 20px;
+width: 448px;
+height: 76px;
+background: #e9e9e9;
   }
   .get-started-input-tablet {
     display: none;
   }
+  .svg-pointer-forms {
+    display: none;
+    }
+  .contact-us-tablet {
+    display: none;
+  }
+  .security-image {
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  .svg-pointer-tablet {
+    display: none;
+  }
+
   .acor-container-line {
     width: 1080px;
   }
@@ -1356,22 +1814,30 @@ button .image-title {
   }
   /* CARDS BANK - AUTO - ASSISTANT - HELP */
 
+  .icons-desires {
+    margin-top: 20px;
+  }
 
   .bank-fargo {
     position: absolute;
-    margin-left: 1130px;
-    margin-top: 180px;
+    top: 125px;
+    left: 403px;
   }
   .bank-chase {
     position: absolute;
-    margin-left: 770px;
-    margin-top: 90px;
+    left: 40px;
+    top: 30px;
   }
-  .bank-america {
+  .bank-americaa {
     position: absolute;
-    margin-top: 270px;
-    margin-left: 680px;
+    left: -52px;
+    top: 215px;
+    transition: fill 0.3s ease;
   }
+
+.bank-info {
+  position: absolute;
+}
   header {
     opacity: 0;
     animation: ani 2.5s forwards;
@@ -1435,17 +1901,13 @@ button .image-title {
   gap: 48px;
 }
 
-.contacts-list {
-  display: flex;
-  gap: 40px;
-}
 .contacts-link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
 }
 .contacts-item {
+  display: flex;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: block;
 }
 
 .pagelogo {
@@ -1481,7 +1943,7 @@ button .image-title {
 
 .menu-link:hover,
 .menu-link:focus {
-  color: #404bbf;
+  color: #164e37;
 }
 
 .text-underline:active {
@@ -1498,13 +1960,11 @@ button .image-title {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
-  color: #404bbf;
+  color: #38673a;
 }
 
 /* title header credit */
@@ -1523,6 +1983,7 @@ button .image-title {
 .free-title-header {
   font-weight: 600;
 }
+
 .text-header {
   font-family: var(--font-family);
   font-weight: 500;
@@ -1534,11 +1995,11 @@ button .image-title {
 }
 .bar-line {
   display: flex;
-  height: 364px;
   gap: 98px;
   padding-bottom: 80px;
   padding-top: 56px;
 }
+
 .title-how-profit {
   font-family: var(--font-family);
   font-weight: 500;
@@ -1564,7 +2025,7 @@ button .image-title {
 }
 .bar-line__right {
   flex: 1;
-  margin-left: 20px;
+  position: relative;
 }
 .bar-line__right-text {
   stroke-width: 1px;
@@ -1693,6 +2154,7 @@ button .image-title {
   height: 56px;
   display: flex;
   gap: 12px;
+  margin-top: 24px;
 }
 
 tech skills ========== .visually-hidden {
@@ -2014,42 +2476,15 @@ tech skills ========== .visually-hidden {
 .acor-container .acor-body p {
   margin: 0 0 10px;
 }
-.acor-container label {
-  cursor: pointer;
-  display: block;
-  padding: 15px 20px;
-  width: 100%;
-  color: #000000;
-  font-weight: 300;
-  box-sizing: border-box;
-  z-index: 100;
-  font-size: 18px;
-  margin: 0 0 5px;
-  transition: color 0.35s;
-}
-.acor-container label:hover {
-  color: #000000;
-}
-.acor-container input {
-  display: none;
-}
-.acor-container label:before {
-  content: "\276F";
-  float: right;
-}
-.acor-container input:checked + label {
-  color: #000000;
-}
-.acor-container input:checked + label:before {
-  transition: transform 0.35s;
-  transform: rotate(90deg);
-}
-.acor-container input:checked + label + .acor-body {
-  height: auto;
-  margin-top: -5px;
-  color: #000;
-  padding: 20px;
-}
+
+
+
+
+
+
+
+
+
 .how-credit-container {
   /* width: 896px; */
   padding-bottom: 80px;
@@ -2064,6 +2499,7 @@ tech skills ========== .visually-hidden {
   background: #f0f0f0;
   margin: 0 auto;
   margin-bottom: 80px;
+  margin-top: 80px;
 }
 .benefits-list-Security {
   display: flex;
@@ -2144,7 +2580,9 @@ tech skills ========== .visually-hidden {
   z-index: 1;
   pointer-events: none;
 }
-
+.contact-us-button {
+  display: none;
+}
 .items {
   flex-shrink: 0;
   display: flex;
@@ -2267,7 +2705,7 @@ tech skills ========== .visually-hidden {
   font-size: 48px;
   line-height: 108%;
   letter-spacing: -0.01em;
-  text-align: center;
+
   color: #000;
   margin: 0 auto;
   padding-top: 80px;
@@ -2279,13 +2717,15 @@ display: none;
 }
 
 /* SECTION STYLES Ambitions ================================================= */
+.ambitions-section {
+  background: #e9e9e9;
+}
 .ambitions-container {
   margin: 0 auto;
-  background: #f0f0f0;
 }
 .ambitions {
   margin: 0 auto;
-  background: #f0f0f0;
+  background: #e9e9e9;
 }
 .global-style-ambitions {
   border-radius: 40px;
@@ -2444,7 +2884,7 @@ color: #000;
 }
 .pay-cass {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   justify-content: center;
   margin-top: 40px;
   padding-bottom: 88px;
@@ -2537,20 +2977,19 @@ button .image-title {
 /* Неактивные состояния (по умолчанию) */
 .button-start,
 .button-free {
-  background-color: white;
-  color: #22674b; /* Зелёный текст */
-  border: 2px solid #22674b; /* Зелёная граница */
+  border: none;
+  background: #22674b;
+  color: white;
 }
 
 .button-start .image-title,
 .button-free .image-title {
-  fill: #22674b; /* Цвет стрелки */
+  fill: #fff; /* Цвет стрелки */
 }
-
 /* Активные состояния (при наведении или фокусе) */
 .button-start:hover,
 .button-free:hover {
-  background-color: #22674b; /* Зелёный фон */
+  background-color: #ffa423; 
   color: white; /* Белый текст */
 }
 
@@ -2624,22 +3063,6 @@ button .image-title {
   margin: 0 auto;
   padding-bottom: 88px;
 }
-.acor-credit-container label {
-  cursor: pointer;
-  display: block;
-  padding: 15px 20px;
-  width: 100%;
-  color: #000000;
-  font-weight: 300;
-  box-sizing: border-box;
-  z-index: 100;
-  font-family: Verdana, sans-serif;
-  font-size: 18px;
-  margin: 0 0 5px;
-  transition: color 0.35s;
-  width: 210px;
-  margin: 0 auto;
-}
 .Additional {
   display: grid;-
   grid-template-rows: repeat(2, auto);
@@ -2703,8 +3126,460 @@ color: #000;
 .avg-benefits-low {
   display: none;
 }
+.svg-pointer-forms {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.contacts-link {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+line-height: 150%;
+text-decoration-skip-ink: none;
+color: #22674b;
+}
+.bar-line-text-title-forms {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 64px;
+line-height: 108%;
+letter-spacing: -0.01em;
+text-transform: capitalize;
+color: #000;
+margin-bottom: 40px;
+}
+.bar-line-text-forms {
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+color: #000;  
+margin-bottom: 20px;
+display: flex;
+align-items: center;
+}
+.bar-line-span-forms {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.56);
+  margin-bottom: 24px;
+  margin-right: 100px;
 }
 
+.bar-line-text-title-more {
+  border-radius: 24px;
+  /* padding: 40px; */
+  background: #f2f2f2;
+  width: 448px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 108%;
+  letter-spacing: -0.01em;
+  color: #000;
+  margin-bottom: 24px;
+  border-radius: 24px;
+background: #f2f2f2;
+width: 448px;
+}
+.button-send {
+background: #22674b;
+border-radius: 8px;
+padding: 20px 32px;
+height: 67px;
+font-family: var(--font-family);
+font-weight: 600;
+font-size: 20px;
+line-height: 136%;
+color: #fff;
+width: 100%;
+margin-top: 24px;
+}
+.intel-model-inter {
+  margin-top: 24px;
+}
+.textarea-title {
+  padding-top: 48px;
+  height: 110px;
+  width: 448px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.01em;
+  color: rgba(0, 0, 0, 0.32);   
+}
+.span-model {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  border-radius: 2px;
+  fill: transparent;
+  margin-right: 8px;
+}
+.bar-line-forms {
+  margin-right: 180px;
+}
+.text-conditions {
+  text-decoration: underline;
+}
+.img-more-forms {
+  margin-right: 16px;
+}
+.icons-messanger {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.56);
+  margin-right: 190px;
+}
+.contacts-list-item {
+  margin-bottom: 24px;
+}
+/*============================= FORMS ============================*/
+.fullname-input {
+width: 448px;
+border-radius: 4px;
+background-color: transparent;
+outline: transparent;
+resize: none;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+border: 1px solid rgba(46, 47, 66, 0.4);
+border: none;
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+line-height: 108%;
+letter-spacing: -0.01em;
+color: rgba(0, 0, 0, 0.32);
+margin-top: 33px;
+margin-bottom: 5px;
+}
+.fullname-input-two {
+  width: 448px;
+border-radius: 4px;
+background-color: transparent;
+outline: transparent;
+resize: none;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+border: 1px solid rgba(46, 47, 66, 0.4);
+border: none;
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+line-height: 108%;
+letter-spacing: -0.01em;
+color: rgba(0, 0, 0, 0.32);
+margin-top: 48px;
+margin-bottom: 5px;
+}
+.contact-forms {
+  background: #f2f2f2;
+  padding: 40px;
+  border-radius: 24px;
+}
+
+/*============================ STATES =======================*/
+.iframe-googlemaps {
+  height: 310px;
+}
+.phone-container {
+  max-width: 300px;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 10px;
+  width: 96px;
+  height: 74px;
+  margin-top: 24px;
+}
+select, input {
+  font-size: 16px;
+  border: none;
+  font-size: 16px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.01em;
+  color: #000;
+  background: #f2f2f2;
+}
+.select-country {
+  margin-top: 24px;
+  margin-bottom: 5px;
+width: 448px;
+border: none;
+background: inherit;
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+line-height: 108%;
+letter-spacing: -0.01em;
+color: #000;
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+line-height: 108%;
+letter-spacing: -0.01em;
+color: rgba(0, 0, 0, 0.32);
+}
+input {
+  flex: 1;
+  border: none;
+  background: inherit;
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+line-height: 108%;
+letter-spacing: -0.01em;
+color: rgba(0, 0, 0, 0.32);
+}
+p {
+  margin-top: 10px;
+}
+
+
+
+/* GOOGLE MAPS ========= */
+.map-container {
+  width: 436px;
+  height: 310px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px; 
+  
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  
+}
+/* Стили для SVG */
+.linear path {
+  stroke: gray; /* Начальный цвет линии */
+  stroke-width: 5px; /* Начальная толщина */
+  stroke-opacity: 0.60;
+  transition: stroke 0.5s ease, stroke-width 0.5s ease; 
+  /* Плавное изменение цвета и толщины */
+}
+
+/* При наведении на input, select или textarea — линия становится оранжевой и толстой */
+input:hover + .linear path,
+textarea:hover + .linear path,
+select:hover + .linear path,
+input:focus + .linear path,
+textarea:focus + .linear path,
+select:focus + .linear path {
+  stroke: orange; /* Цвет линии при фокусе или ховере */
+  stroke-width: 10px; /* Толщина линии при фокусе или ховере */
+}
+.contacts-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Когда наведен курсор на ссылку, линия становится видимой */
+.contacts-link:hover::after {
+  background-color: orange; /* Цвет линии */
+}
+
+.contacts-link:hover {
+  color: orange; /* Цвет текста при наведении */
+}
+
+
+
+/*   CONTACT US */
+
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+/* Заголовок окна */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Кнопка закрытия */
+.close-btn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Тело окна */
+.chat-body {
+  margin-top: 15px;
+}
+
+.chat-body p {
+  margin: 5px 0;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-forms-us {
+  align-items: center;
+  display: flex;
+  border-radius: 12px;
+  padding: 12px 16px;
+  width: 189px;
+  cursor: pointer;
+}
+
+
+/*    ROLL UP SERVICE    */
+/* Стиль для кнопки */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+/* Тело окна */
+.chat-body {
+  margin-top: 15px;
+}
+
+.contacts-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-forms-us {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-forms-us img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+
+/* Кнопка закрытия окна */
+/* Стиль для кнопки */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Окно обратной связи */
+.chat-popup {
+  display: none; /* Изначально скрыто */
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  z-index: 1001;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Тело окна */
+.chat-body {
+  margin-top: 15px;
+}
+
+.contacts-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-forms-us {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-forms-us img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.roll-up-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.roll-up-button svg {
+  margin-left: 5px;
+}
+
+/* Кнопка закрытия окна */
+.roll-up-button button {
+  color: #0b0b0b;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.hidden-visible {
+  display: none;
+}
+}
+/* =========== How profit craft ===========*/
 
 
 
