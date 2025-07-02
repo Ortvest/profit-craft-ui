@@ -1,0 +1,321 @@
+
+        .title-bar-line {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 60px;
+        }
+
+        .profit-colors-green {
+            color: #f6ad55;
+            position: relative;
+        }
+
+        .profit-colors-green::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #f6ad55, #ed8936);
+            border-radius: 2px;
+        }
+
+        .container-phone-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .showConten {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+
+        .showConten:hover {
+            transform: translateX(10px);
+        }
+
+        .showConten.active {
+            color: #48bb78;
+        }
+
+        .showConten p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+                width: 436px;
+        }
+
+        .showConten.active p {
+            color: #48bb78;
+        }
+
+        .content-panels {
+            font-size: 1rem;
+            color: #718096;
+            line-height: 1.6;
+            text-decoration: none;
+            display: block;
+                width: 436px;
+        }
+
+        .right-panel {
+            position: relative;
+        }
+
+        .right-panels-info {
+            display: none;
+        }
+
+        .content {
+            transition: all 0.5s ease;
+        }
+
+        .content.hidden {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .content:not(.hidden) {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+        }
+
+        .phone-frame {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .phone-screen {
+            background: #ffffff;
+            border-radius: 20px;
+            min-height: 450px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Content 1 - Progress Circle */
+        .container-phone-cards {
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .progress-section {
+            margin-bottom: 30px;
+        }
+
+        .progress-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .progress-circle {
+            fill: none;
+            stroke-width: 12;
+        }
+
+        .progress-bg {
+            stroke: #e2e8f0;
+        }
+
+        .progress-fill {
+            stroke: #48bb78;
+            stroke-linecap: round;
+            stroke-dasharray: 553;
+            stroke-dashoffset: 200;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            transition: stroke-dashoffset 2s ease;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .step-count {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2d3748;
+        }
+
+        .step-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+
+        .button-phone-content {
+            margin: 30px 0;
+        }
+
+        .button-phone {
+            width: 100%;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #ed8936, #dd6b20);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(237, 137, 54, 0.3);
+        }
+
+        .button-phone:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(237, 137, 54, 0.4);
+        }
+
+        .info-phone-content {
+            margin-top: 20px;
+        }
+
+        .info-phone {
+            font-size: 0.9rem;
+            color: #718096;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* Content 2 & 3 - Corrections List */
+        .container-phone-info {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .container-phone-info .progress-container h2 {
+            font-size: 1.3rem;
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .information-progress {
+            background: white;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            font-size: 0.9rem;
+            color: #4a5568;
+            position: relative;
+            border-left: 4px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .information-progress:nth-child(1),
+        .information-progress:nth-child(2),
+        .information-progress:nth-child(3) {
+            border-left-color: #48bb78;
+        }
+
+        .information-progress:nth-child(1)::after,
+        .information-progress:nth-child(2)::after,
+        .information-progress:nth-child(3)::after {
+            content: "Corrected";
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #48bb78;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .information-progress:nth-child(4) {
+            border-left-color: #ed8936;
+        }
+
+        .information-progress:nth-child(4)::after {
+            content: "";
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ed8936;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .information-progress:nth-child(5) {
+            border-left-color: #cbd5e0;
+        }
+
+        .information-progress:nth-child(5)::after {
+            content: "📱";
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: translateY(-50%) rotate(0deg); }
+            100% { transform: translateY(-50%) rotate(360deg); }
+        }
+
+        .svg-content-hiden {
+            transition: transform 0.3s ease;
+        }
+
+        .button-phone:hover .svg-content-hiden {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .container-phone-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            section {
+                padding: 40px 20px;
+            }
+            
+            .title-bar-line {
+                font-size: 2rem;
+            }
+        }
