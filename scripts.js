@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let speed = 1;
 
   items.innerHTML += items.innerHTML;
-=
   function animate() {
     if (items.offsetLeft <= -items.scrollWidth / 2) {
       items.style.left = "0px";
