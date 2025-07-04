@@ -414,6 +414,10 @@ button {
   color: black;
 }
 
+.profit-craft-mobile {
+  display: none;
+}
+
 /* Comments section*/
 .comments-section-wrapper {
   display: flex;
@@ -555,6 +559,11 @@ button {
   position: relative;
   color: #22674b;
 }
+
+.ambition-section-category {
+  display: none;
+}
+
 .ambitions-section-title-ambitions::after {
   content: "";
   position: absolute;
@@ -920,13 +929,13 @@ button {
   flex-direction: row;
   justify-content: center;
   padding: 80px 0;
+  gap: 116px;
 }
 .contact-section-blocks {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  width: 1080px;
 }
 
 .contact-information-block {
@@ -1011,7 +1020,6 @@ button {
 .contact-information-item-title {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   font-size: 24px;
   line-height: 150%;
   font-weight: 500;
@@ -1298,6 +1306,57 @@ summary::-webkit-details-marker {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+
+/* messenger widget */
+.messenger-widget {
+  position: fixed;
+  bottom: 48px;
+  right: 48px;
+  z-index: 1000;
+}
+
+.messenger-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border: none;
+  border-radius: 50%;
+  background-color: #164e37;
+  cursor: pointer;
+}
+
+.messenger-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0px 80px 23px rgba(206, 208, 212, 0),
+    0px 51px 21px rgba(206, 208, 212, 0.04),
+    0px 29px 17px rgba(206, 208, 212, 0.13),
+    0px 13px 13px rgba(206, 208, 212, 0.22),
+    0px 3px 7px rgba(206, 208, 212, 0.26);
+}
+
+.messenger-menu a {
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 600;
+  padding: 12px 16px;
+  gap: 16px;
+  align-items: center;
+  display: flex;
+  border-radius: 12px;
+}
+
+.messenger-menu a:hover {
+  background: #f0f0f0;
+}
+
 @media (width<= 1130px) {
   .main-section-wrapper {
     padding: 56px 48px 59px 48px;
@@ -1345,7 +1404,6 @@ summary::-webkit-details-marker {
   }
   .contact-section-blocks {
     min-width: 0;
-    width: 100%;
   }
 }
 
@@ -1420,10 +1478,91 @@ summary::-webkit-details-marker {
   .profit-text-img {
     gap: 32px;
   }
+  .ambition-section-category {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
+  }
+  .ambitions-section-category-text {
+    border-radius: 12px;
+    background-color: #dbdbdb;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    line-height: 136%;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .ambition-premium-star {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #dbdbdb;
+    padding: 8px 20px 8px 12px;
+  }
+  .ambition-premium-text {
+    font-size: 18px;
+    line-height: 136%;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  .ambitions-section-category-text.active,
+  .ambition-premium-star.active {
+    background-color: #22674b;
+    color: #fff;
+  }
+
+  .ambitions-plan-item.active {
+    background-color: #164e37;
+    color: #fff;
+  }
+
+  .ambitions-plan-item.active * {
+    color: #fff;
+  }
+
+  .ambitions-plan-item.active .ambitions-plan-select {
+    background-color: #f79e1b;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .ambitions-plan-item.active .ambitions-details-item::before {
+    background-image: url(../img/ic-check-white.svg);
+  }
+
+  .ambitions-plan-item:hover:not(.active) {
+    background-color: #164e37;
+    color: #fff;
+  }
+
+  .ambitions-plan-item:hover:not(.active) .ambitions-plan-select {
+    background-color: #f79e1b;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .ambitions-section-category-text.active {
+    color: #fff;
+  }
+
+  .ambitions-plan-item.active {
+    background-color: #164e37;
+    color: #fff;
+  }
+
+  .ambitions-plan-item.active * {
+    color: #fff;
+  }
+  .ambitions-plan-price {
+    font-size: 32px;
+  }
 
   .contact-section-blocks {
     flex-direction: column;
     gap: 64px;
+    width: 100%;
   }
 
   .goals-list {
@@ -1433,12 +1572,20 @@ summary::-webkit-details-marker {
     max-width: 88px;
   }
 
-  .contact-information-block {
-    width: 100%;
+  .contact-title {
+    text-align: center;
   }
+
+  .contact-section-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-information-block,
   .consultation-form {
     width: 100%;
   }
+
   .profit-item-title,
   .profit-item-title-inactive {
     text-align: center;
@@ -1448,7 +1595,7 @@ summary::-webkit-details-marker {
     padding: 40px 40px;
   }
 }
-@media (width<= 744px) {
+@media (width<= 820px) {
   .goals-section-wrapper {
     padding: 40px 48px 40px 48px;
   }
@@ -1700,6 +1847,43 @@ summary::-webkit-details-marker {
     width: 168px;
   }
 
+  .profit-craft-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+  }
+
+  .profit-craft-mobile-item {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    padding: 0 24px;
+    align-items: center;
+    justify-content: center;
+  }
+  .profit-craft-mobile-item img {
+    display: flex;
+    padding-left: 50px;
+  }
+  .profit-mobile-title {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    line-height: 120%;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: center;
+  }
+  .profit-mobile-description {
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    line-height: 160%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
   .ambitions-section-title {
     font-size: 44px;
     font-weight: 600;
@@ -1718,6 +1902,16 @@ summary::-webkit-details-marker {
   .ambitions-plan-help {
     padding: 0;
     background-color: transparent;
+  }
+
+  .ambition-section-category {
+    justify-content: center;
+  }
+  .ambitions-section-category-text {
+    padding: 2px 10px;
+  }
+  .ambition-premium-star {
+    padding: 8px 16px 8px 12px;
   }
 
   .security-section-wrapper {
