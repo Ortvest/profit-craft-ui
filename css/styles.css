@@ -1417,7 +1417,7 @@ summary::-webkit-details-marker {
   }
 
   .nav-list {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -1757,6 +1757,9 @@ summary::-webkit-details-marker {
 }
 
 @media (width<= 490px) {
+  #contact-nav-item {
+    display: none;
+  }
   .promo-banner-text {
     font-size: 12px;
   }
