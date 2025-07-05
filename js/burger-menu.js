@@ -5,8 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const toggleMenu = () => {
     navList.classList.toggle("open");
+
     const isExpanded = burger.getAttribute("aria-expanded") === "true";
     burger.setAttribute("aria-expanded", String(!isExpanded));
+
+    document.body.classList.toggle("no-scroll");
   };
 
   burger.addEventListener("click", toggleMenu);

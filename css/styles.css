@@ -1416,6 +1416,11 @@ summary::-webkit-details-marker {
     z-index: 200;
   }
 
+  body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+
   .nav-list {
     position: fixed;
     top: 0;
