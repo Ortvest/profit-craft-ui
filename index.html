@@ -17,7 +17,7 @@
         alt="Profit Craft Logo"
         aria-label="Main navigation"
       />
-      <nav class="nav">
+      <nav class="nav" id="nav">
         <ul class="nav-list" id="header-list">
           <li class="nav-list-item">
             <a href="#plans">Price Plans</a>
@@ -32,7 +32,13 @@
             <a href="#faq">FAQ</a>
           </li>
         </ul>
-        <img src="./img/burger-menu.svg" alt="burger-menu" id="burger-menu" />
+        <img
+          src="./img/burger-menu.svg"
+          alt="burger-menu"
+          id="burger-menu"
+          aria-expanded="false"
+          aria-controls="header-list"
+        />
       </nav>
     </header>
     <div class="promo-banner">
@@ -972,4 +978,5 @@
   <script src="./js/Roll_Up.js"></script>
   <script src="./js/messenger-widget.js"></script>
   <script src="./js/catagory.js"></script>
+  <script src="./js/burger-menu.js"></script>
 </html>
