@@ -30,7 +30,7 @@
         width="145"
         height="48"
       />
-      <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="Main navigation">
         <ul class="nav-list" id="header-list">
           <li class="nav-list-item">
             <a href="#plans">Price Plans</a>
@@ -45,29 +45,34 @@
             <a href="#faq">FAQ</a>
           </li>
         </ul>
-        <img
-          src="./img/burger-menu.svg"
-          alt="burger-menu"
+        <button
           id="burger-menu"
           aria-expanded="false"
           aria-controls="header-list"
-          width="32"
-          height="32"
-        />
+          aria-label="Open menu"
+        >
+          <img src="./img/burger-menu.svg" alt="" width="32" height="32" />
+        </button>
       </nav>
     </header>
-    <div class="promo-banner">
+    <aside
+      class="promo-banner"
+      aria-label="Promotional Offer"
+      itemscope
+      itemtype="https://schema.org/Offer"
+    >
       <p class="promo-banner-text">
         Get your credit score daily when you sign up for
         <span class="promo-banner-text-free">FREE</span>
       </p>
       <img
         src="./img/arrow-right-green.svg"
-        alt="right arrow"
         width="24"
         height="24"
+        aria-hidden="true"
+        role="presentation"
       />
-    </div>
+    </aside>
 
     <main>
       <section class="main-section-wrapper">
@@ -85,12 +90,16 @@
               </p>
             </div>
             <div class="main-buttons">
-              <button class="button-expertise">
+              <button
+                class="button-expertise"
+                aria-label="Get free credit expertise"
+              >
                 <span>Get FREE Expertise</span>
                 <img
                   class="button-expertise-arrow"
                   src="./img/arrow-right.svg"
-                  alt=""
+                  aria-hidden="true"
+                  role="presentation"
                   width="22"
                   height="22"
                 />
@@ -100,7 +109,8 @@
                 <img
                   class="button-expertise-arrow"
                   src="./img/arrow-right.svg"
-                  alt=""
+                  aria-hidden="true"
+                  role="presentation"
                   width="22"
                   height="22"
                 />
@@ -110,7 +120,7 @@
           <img
             class="main-section-img"
             src="./img/banks/main-section-img.webp"
-            alt="main-photo"
+            alt="Happy people representing successful credit history"
             width="646"
             height="411"
             fetchpriority="high"
@@ -133,7 +143,10 @@
             <li class="main-achievements-item">
               <div class="achievements-item-raiting">
                 <span class="achievements-item-first-word">4,8 </span>
-                <img src="./img/mans/raiting.svg" alt="rating stars" />
+                <img
+                  src="./img/mans/raiting.svg"
+                  alt="4.8 out of 5 star rating"
+                />
               </div>
               average user rating
             </li>
@@ -141,7 +154,10 @@
         </div>
       </section>
 
-      <section class="companies-logo-wrapper" aria-label="companies logo">
+      <section
+        class="companies-logo-wrapper"
+        aria-label="Trusted by major US banks and institutions"
+      >
         <div class="marquee">
           <ul class="companies-logo-list">
             <li>
@@ -154,7 +170,7 @@
             <li>
               <img
                 src="./img/companies/bank-of-america.svg"
-                alt="bank-of-america logo"
+                alt="Bank of America logo"
               />
             </li>
             <li>
@@ -213,28 +229,49 @@
         </div>
       </section>
       <div class="messenger-widget">
-        <button class="messenger-toggle" aria-label="open chat">
-          <img src="./img/message-circle.svg" alt="message" />
+        <button class="messenger-toggle" aria-label="Open messaging options">
+          <img src="./img/message-circle.svg" alt="" aria-hidden="true" />
         </button>
-        <div class="messenger-menu">
-          <a href="https://m.me/Messenger" target="_blank">
-            <img
-              src="./img/more-img/Facebook_Messenger.svg"
-              alt="Facebook Messenger"
-            />
-            Messenger
-          </a>
-          <a href="https://wa.me/WhatsApp" target="_blank">
-            <img src="./img/more-img/WhatsApp.svg" alt="WhatsApp" />
-            WhatsApp</a
-          >
-          <a href="https://t.me/telegram" target="_blank">
-            <img src="./img/more-img/Telegram.svg" alt="Telegram" />
-            Telegram</a
-          >
-        </div>
+        <ul class="messenger-menu">
+          <li>
+            <a
+              href="https://m.me/Messenger"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./img/more-img/Facebook_Messenger.svg"
+                alt="Facebook Messenger"
+              />
+              Messenger
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://wa.me/WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./img/more-img/WhatsApp.svg" alt="WhatsApp" />
+              WhatsApp</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://t.me/telegram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./img/more-img/Telegram.svg" alt="Telegram" />
+              Telegram</a
+            >
+          </li>
+        </ul>
       </div>
-      <section class="goals-section-wrapper">
+      <section
+        class="goals-section-wrapper"
+        aria-label="Financial goal options"
+      >
         <h2 class="goals-section-title">
           One Place for
           <span class="goals-new-line">
@@ -243,7 +280,7 @@
         </h2>
         <ul class="goals-list">
           <li class="goals-item">
-            <img src="./img/image-pc/cards-pc.svg" alt="" aria-hidden="true" />
+            <img src="./img/image-pc/cards-pc.svg" alt="Credit cards icon" />
             <p class="goals-item-names">Credit Cards</p>
           </li>
           <li class="goals-item">
@@ -289,7 +326,9 @@
             <div
               class="profit-text-item active divider1"
               data-img="./img/profit/analyze_your_credit.webp"
-              loading="lazy"
+              role="button"
+              tabindex="0"
+              aria-label="Step 1: Analyze your credit history"
             >
               <h3 class="profit-item-title">Analyze your credit history</h3>
               <p class="profit-item-description">
@@ -301,7 +340,9 @@
             <div
               class="profit-text-item divider2"
               data-img="./img/profit/FixWeaknesses.webp"
-              loading="lazy"
+              role="button"
+              tabindex="0"
+              aria-label="Step 2: Fix weaknesses"
             >
               <h3 class="profit-item-title">Fix weaknesses</h3>
               <p class="profit-item-description">
@@ -313,7 +354,9 @@
             <div
               class="profit-text-item divider3"
               data-img="./img/profit/PumpUp.webp"
-              loading="lazy"
+              role="button"
+              tabindex="0"
+              aria-label="Step 3: Pump up your credit rating"
             >
               <h3 class="profit-item-title">Pump up your credit rating</h3>
               <p class="profit-item-description">
@@ -324,7 +367,7 @@
           <img
             id="analyze_your_credit"
             src="./img/profit/analyze_your_credit.svg"
-            alt="analyze"
+            alt="Analyzing your credit history illustration"
           />
         </div>
 
@@ -350,7 +393,7 @@
           <div class="profit-craft-mobile-item">
             <img src="./img/profit/step3.svg" alt="Pump" />
             <div class="profit-craft-mobile-text">
-              <p class="profit-mobile-title">Pump upyour credit rating</p>
+              <p class="profit-mobile-title">Pump up your credit rating</p>
               <p class="profit-mobile-description">
                 Increase limits, open new cards and build the perfect profile
               </p>
@@ -364,9 +407,9 @@
           <span class="comments-section-title-youwrite">you write</span> Profit
           Craft's history
         </h2>
-        <div class="comments-section-list">
+        <div class="comments-section-list" role="list">
           <div class="comments-track">
-            <div class="comments-item">
+            <article class="comments-item">
               <div class="comments-item-description">
                 <p class="comments-title">Easy</p>
                 <p class="comments-description">
@@ -376,14 +419,14 @@
                 </p>
               </div>
               <div class="comments-author-mark">
-                <img src="./img/mans/man.svg" alt="man" />
+                <img src="./img/mans/man.svg" alt="Photo of Roberto C."" />
                 <div class="comments-name-raiting">
                   <p class="comments-name">Roberto C.</p>
                   <img src="./img/mans/raiting-full.svg" alt="raiting" />
                 </div>
               </div>
-            </div>
-            <div class="comments-item">
+            </article>
+            <article class="comments-item">
               <div class="comments-item-description">
                 <p class="comments-title">Very Fast</p>
                 <p class="comments-description">
@@ -393,14 +436,14 @@
                 </p>
               </div>
               <div class="comments-author-mark">
-                <img src="./img/mans/womans.svg" alt="womans" />
+                <img src="./img/mans/womans.svg" alt="Photo of Anna S." />
                 <div class="comments-name-raiting">
                   <p class="comments-name">Anna S.</p>
                   <img src="./img/mans/raiting-full.svg" alt="raiting" />
                 </div>
               </div>
-            </div>
-            <div class="comments-item">
+            </article>
+            <article class="comments-item">
               <div class="comments-item-description">
                 <p class="comments-title">Easy</p>
                 <p class="comments-description">
@@ -410,14 +453,14 @@
                 </p>
               </div>
               <div class="comments-author-mark">
-                <img src="./img/mans/man.svg" alt="man" />
+                <img src="./img/mans/man.svg" alt="Photo of Roberto C." />
                 <div class="comments-name-raiting">
                   <p class="comments-name">Roberto C.</p>
                   <img src="./img/mans/raiting-full.svg" alt="raiting" />
                 </div>
               </div>
-            </div>
-            <div class="comments-item">
+            </article>
+            <article class="comments-item">
               <div class="comments-item-description">
                 <p class="comments-title">Very Fast</p>
                 <p class="comments-description">
@@ -427,17 +470,17 @@
                 </p>
               </div>
               <div class="comments-author-mark">
-                <img src="./img/mans/womans.svg" alt="womans" />
+                <img src="./img/mans/womans.svg" alt="Photo of Anna S." />
                 <div class="comments-name-raiting">
                   <p class="comments-name">Anna S.</p>
                   <img src="./img/mans/raiting-full.svg" alt="raiting" />
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="comments-item">
+            <article class="comments-item">
               <div class="comments-item-description">
-                <p class="comments-title">Easy</p>
+                <h4 class="comments-title">Easy</h4>
                 <p class="comments-description">
                   I got a mortgage 9 months after starting with CreditCraft. I
                   was turned down at first, but now my score is 740 and the bank
@@ -445,16 +488,16 @@
                 </p>
               </div>
               <div class="comments-author-mark">
-                <img src="./img/mans/man.svg" alt="man" />
+                <img src="./img/mans/man.svg" alt="Photo of Roberto C." />
                 <div class="comments-name-raiting">
                   <p class="comments-name">Roberto C.</p>
                   <img src="./img/mans/raiting-full.svg" alt="raiting" />
                 </div>
               </div>
-            </div>
-            <div class="comments-item">
+            </article>
+            <article class="comments-item">
               <div class="comments-item-description">
-                <p class="comments-title">Very Fast</p>
+                <h4 class="comments-title">Very Fast</h4>
                 <p class="comments-description">
                   When I came to the US, I had no credit history. CreditCraft
                   connected me to an account with a 15-year credit score, and
@@ -462,17 +505,17 @@
                 </p>
               </div>
               <div class="comments-author-mark">
-                <img src="./img/mans/womans.svg" alt="womans" />
+                <img src="./img/mans/womans.svg" alt="Photo of Anna S." />
                 <div class="comments-name-raiting">
                   <p class="comments-name">Anna S.</p>
                   <img src="./img/mans/raiting-full.svg" alt="raiting" />
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="comments-item">
+            <article class="comments-item">
               <div class="comments-item-description">
-                <p class="comments-title">Easy</p>
+                <h4 class="comments-title">Easy</h4>
                 <p class="comments-description">
                   I got a mortgage 9 months after starting with CreditCraft. I
                   was turned down at first, but now my score is 740 and the bank
@@ -480,14 +523,14 @@
                 </p>
               </div>
               <div class="comments-author-mark">
-                <img src="./img/mans/man.svg" alt="man" />
+                <img src="./img/mans/man.svg" alt="Photo of Roberto C." />
                 <div class="comments-name-raiting">
                   <p class="comments-name">Roberto C.</p>
                   <img src="./img/mans/raiting-full.svg" alt="raiting" />
                 </div>
               </div>
-            </div>
-            <div class="comments-item">
+            </article>
+            <article class="comments-item">
               <div class="comments-item-description">
                 <p class="comments-title">Very Fast</p>
                 <p class="comments-description">
@@ -497,17 +540,25 @@
                 </p>
               </div>
               <div class="comments-author-mark">
-                <img src="./img/mans/womans.svg" alt="womans" />
+                <img src="./img/mans/womans.svg" alt="Photo of Anna S." />
                 <div class="comments-name-raiting">
                   <p class="comments-name">Anna S.</p>
-                  <img src="./img/mans/raiting-full.svg" alt="raiting" />
+                  <img
+                    src="./img/mans/raiting-full.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
-      <section id="plans" class="ambitions-section-wrapper">
+      <section
+        id="plans"
+        class="ambitions-section-wrapper"
+        aria-labelledby="plans-title"
+      >
         <div class="ambitions-section-columns">
           <h2 class="ambitions-section-title">
             Pick a plan for your
@@ -537,8 +588,8 @@
           </div>
           <div class="ambitions-plan-help">
             <div class="ambitions-plan-list">
-              <div class="ambitions-plan-item" id="plan-basic">
-                <p class="ambitions-plan-name">Basic</p>
+              <article class="ambitions-plan-item" id="plan-basic">
+                <h4 class="ambitions-plan-name">Basic</h4>
                 <div class="ambition-price-time-description">
                   <div class="ambition-price-time">
                     <p class="ambitions-plan-price">$1 500</p>
@@ -571,8 +622,8 @@
                   </li>
                   <li class="ambitions-details-item">Personal Manager</li>
                 </ul>
-              </div>
-              <div class="ambitions-plan-item" id="plan-advanced">
+              </article>
+              <article class="ambitions-plan-item" id="plan-advanced">
                 <div class="ambitions-plan-name-rating">
                   <p class="ambitions-plan-name">Advanced</p>
                   <div class="ambitions-plan-rating">
@@ -603,8 +654,8 @@
                   </li>
                   <li class="ambitions-details-item">Personal Manager</li>
                 </ul>
-              </div>
-              <div class="ambitions-plan-item" id="plan-premium">
+              </article>
+              <article class="ambitions-plan-item" id="plan-premium">
                 <div class="ambitions-plan-name-rating">
                   <p class="ambitions-plan-name">Premium</p>
                   <div class="ambitions-plan-rating">
@@ -636,7 +687,7 @@
                   </li>
                   <li class="ambitions-details-item">Personal Manager</li>
                 </ul>
-              </div>
+              </article>
             </div>
             <div class="ambitions-help">
               <div class="ambitions-help-ico-text">
@@ -650,7 +701,7 @@
               <button class="ambitions-help-button">Contact&nbsp;Us</button>
             </div>
           </div>
-          <div id="services" class="ambitions-services">
+          <article id="services" class="ambitions-services">
             <h3 class="ambitions-services-title">
               Additional customized services
             </h3>
@@ -726,7 +777,7 @@
                 </button>
               </div>
             </div>
-          </div>
+          </article>
           <div class="ambitions-payments-methods">
             <img src="./img/pay/apple-pay.svg" alt="apple-pay" />
             <img src="./img/pay/google-pay.svg" alt="google-pay" />
@@ -746,14 +797,17 @@
         aria-labelledby="security-title"
       >
         <div class="security-title-list">
-          <h2 class="security-title">Security you can trust</h2>
+          <h2 id="security-title" class="security-title">
+            Security you can trust
+          </h2>
           <div class="security-list">
             <div class="security-item">
               <div class="security-item-icon-group">
                 <img
                   class="security-item-icon"
                   src="./img/security-image/treat.svg"
-                  alt="treat"
+                  alt="Icon representing data treatment"
+                  loading="lazy"
                 />
               </div>
               <p class="security-item-text">
@@ -765,7 +819,8 @@
                 <img
                   class="security-item-icon"
                   src="./img/security-image/protect.svg"
-                  alt="protect"
+                  alt="Icon representing 256-bit encryption"
+                  loading="lazy"
                 />
               </div>
               <p class="security-item-text">
@@ -777,7 +832,8 @@
                 <img
                   class="security-item-icon"
                   src="./img/security-image/not-sell.svg"
-                  alt="not-sell"
+                  alt="Icon representing privacy and no selling of data"
+                  loading="lazy"
                 />
               </div>
               <p class="security-item-text">
@@ -872,14 +928,31 @@
           </div>
         </div>
 
-        <form class="consultation-form" method="post" action="/submit-form">
+        <form
+          aria-labelledby="form-title"
+          class="consultation-form"
+          method="post"
+          action="/submit-form"
+        >
           <h2 class="form-title">Get a Free Consultation</h2>
 
           <div class="consultation-form-field">
-            <input type="text" placeholder="Full Name" class="form-input" />
+            <input
+              id="full-name"
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              class="form-input"
+            />
           </div>
           <div class="consultation-form-field">
-            <input type="email" placeholder="Email" class="form-input" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Email"
+              class="form-input"
+            />
           </div>
           <div class="form-phone">
             <div class="consultation-form-field">
@@ -925,9 +998,13 @@
             </label>
           </div>
 
-          <button type="submit" class="form-submit">
+          <button
+            type="submit"
+            class="form-submit"
+            aria-label="Send consultation form"
+          >
             Send
-            <img src="./img/arrow-right-wight.svg" alt="arrow-right-wight" />
+            <img src="./img/arrow-right-wight.svg" alt="" aria-hidden="true" />
           </button>
         </form>
       </section>
@@ -937,7 +1014,7 @@
         <div class="faq-list">
           <details open class="faq-item">
             <summary class="faq-item-title-img">
-              <span class="faq-item-title">How to use credit?</span>
+              <p class="faq-item-title">How to use credit?</p>
               <img src="./img/faq/minus.svg" alt="minus" />
             </summary>
             <p class="faq-item-description">
@@ -950,7 +1027,7 @@
 
           <details class="faq-item">
             <summary class="faq-item-title-img">
-              <span class="faq-item-title">What is a credit score?</span>
+              <p class="faq-item-title">What is a credit score?</p>
               <img src="./img/faq/plus.svg" alt="plus" />
             </summary>
             <p class="faq-item-description">
@@ -963,7 +1040,7 @@
 
           <details class="faq-item">
             <summary class="faq-item-title-img">
-              <span class="faq-item-title">Pump up your credit rating?</span>
+              <p class="faq-item-title">Pump up your credit rating?</p>
               <img src="./img/faq/plus.svg" alt="plus" />
             </summary>
             <p class="faq-item-description">
@@ -976,7 +1053,7 @@
 
           <details class="faq-item">
             <summary class="faq-item-title-img">
-              <span class="faq-item-title">How to establish credit?</span>
+              <p class="faq-item-title">How to establish credit?</p>
               <img src="./img/faq/plus.svg" alt="plus" />
             </summary>
             <p class="faq-item-description">
@@ -990,23 +1067,19 @@
       </section>
 
       <footer class="footer-wrapper">
-        <img
-          src="./img/logotype.svg"
-          alt="Profit Craft Logo"
-          aria-label="Main navigation"
-        />
-        <nav class="nav">
-          <ul class="nav-list" id="footer-list">
-            <li class="nav-list-item">
+        <img src="./img/logotype.svg" alt="Profit Craft Logo" />
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul class="footer-nav-list" id="footer-list">
+            <li class="footer-nav-list-item">
               <a href="#services">Services</a>
             </li>
-            <li class="nav-list-item">
+            <li class="footer-nav-list-item">
               <a href="#plans">Price</a>
             </li>
-            <li class="nav-list-item">
+            <li class="footer-nav-list-item">
               <a href="#faq">FAQ</a>
             </li>
-            <li class="nav-list-item">
+            <li class="footer-nav-list-item" id="footer-contact-us">
               <a href="#contact">Contact Us</a>
             </li>
           </ul>
@@ -1014,8 +1087,8 @@
       </footer>
     </main>
   </body>
-  <script src="./js/profit-craft.js"></script>
-  <script src="./js/Roll_Up.js"></script>
+  <script src="./js/profit.js"></script>
+  <script src="./js/roll.js"></script>
   <script src="./js/messenger.js"></script>
   <script src="./js/catagory.js"></script>
   <script src="./js/burger.js"></script>

@@ -63,6 +63,21 @@ button {
   font-weight: 500;
 }
 
+.footer-nav {
+  display: flex;
+  align-items: center;
+}
+.footer-nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  letter-spacing: -0.01em;
+  font-size: 18px;
+  line-height: 120%;
+  align-items: center;
+  font-weight: 500;
+}
+
 #burger-menu {
   display: none;
 }
@@ -1753,7 +1768,8 @@ summary::-webkit-details-marker {
     width: 109px;
     height: 36px;
   }
-  .nav-list {
+  .nav-list,
+  .footer-nav-list {
     flex-direction: column;
   }
 
@@ -1763,7 +1779,8 @@ summary::-webkit-details-marker {
 }
 
 @media (width<= 490px) {
-  #contact-nav-item {
+  #contact-nav-item,
+  #footer-contact-us {
     display: none;
   }
   .promo-banner-text {
@@ -1779,7 +1796,7 @@ summary::-webkit-details-marker {
 
   h1 {
     font-size: 48px;
-	font-weight: 600;
+    font-weight: 600;
   }
 
   .main-title {
