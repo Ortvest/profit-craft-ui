@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link
+      rel="stylesheet"
+      href="./css/styles.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="./css/styles.css" /></noscript>
     <title>Profit Craft</title>
   </head>
   <body>
@@ -85,8 +102,11 @@
           </div>
           <img
             class="main-section-img"
-            src="./img/banks/main-section-img.svg"
+            src="./img/banks/main-section-img.webp"
             alt="main-photo"
+            width="646"
+            height="411"
+            fetchpriority="high"
           />
         </div>
         <div class="main-section-achievements">
@@ -186,8 +206,8 @@
         </div>
       </section>
       <div class="messenger-widget">
-        <button class="messenger-toggle">
-          <img src="./img/message-circle.svg" />
+        <button class="messenger-toggle" aria-label="open chat">
+          <img src="./img/message-circle.svg" alt="message" />
         </button>
         <div class="messenger-menu">
           <a href="https://m.me/Messenger" target="_blank">
@@ -216,17 +236,18 @@
         </h2>
         <ul class="goals-list">
           <li class="goals-item">
-            <img src="./img/image-pc/cards-pc.svg" alt="Credit Cards" />
+            <img src="./img/image-pc/cards-pc.svg" alt="" aria-hidden="true" />
             <p class="goals-item-names">Credit Cards</p>
           </li>
           <li class="goals-item">
-            <img src="./img/image-pc/auto-pc.svg" alt="Auto Loans" />
+            <img src="./img/image-pc/auto-pc.svg" alt="" aria-hidden="true" />
             <p class="goals-item-names">Auto Loans</p>
           </li>
           <li class="goals-item">
             <img
               src="./img/image-pc/ic_creditcragt-pc.svg"
-              alt="Credit Craft"
+              alt=""
+              aria-hidden="true"
             />
             <p class="goals-item-names">Credit Craft</p>
           </li>
@@ -291,7 +312,7 @@
 
         <div class="profit-craft-mobile">
           <div class="profit-craft-mobile-item">
-            <img src="./img/profit/step1.svg" />
+            <img src="./img/profit/step1.svg" alt="Study" />
             <div class="profit-craft-mobile-text">
               <p class="profit-mobile-title">Study your start</p>
               <p class="profit-mobile-description">
@@ -300,7 +321,7 @@
             </div>
           </div>
           <div class="profit-craft-mobile-item">
-            <img src="./img/profit/step2.svg" />
+            <img src="./img/profit/step2.svg" alt="Fix" />
             <div class="profit-craft-mobile-text">
               <p class="profit-mobile-title">Fix weaknesses</p>
               <p class="profit-mobile-description">
@@ -309,7 +330,7 @@
             </div>
           </div>
           <div class="profit-craft-mobile-item">
-            <img src="./img/profit/step3.svg" />
+            <img src="./img/profit/step3.svg" alt="Pump" />
             <div class="profit-craft-mobile-text">
               <p class="profit-mobile-title">Pump upyour credit rating</p>
               <p class="profit-mobile-description">
@@ -492,7 +513,7 @@
               class="ambition-premium-star"
               data-target="plan-premium"
             >
-              <img src="./img/star.svg" />
+              <img src="./img/star.svg" alt="star ico" />
               <p class="ambition-premium-text">Premium</p>
             </a>
           </div>
@@ -698,7 +719,7 @@
         </div>
         <div class="ambitions-roll-up">
           <p class="ambitions-roll-up-text">Roll up Services</p>
-          <img src="./img/chevron-up.svg" />
+          <img src="./img/chevron-up.svg" alt="arrow up" />
         </div>
       </section>
 
