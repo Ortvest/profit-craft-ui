@@ -1,1088 +1,1365 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Build your credit history in the US with ProfitCraft. Get approved for loans and mortgages faster with expert guidance and simple tools. Start today."
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Profit Craft</title>
-  </head>
-  <body>
-    <header class="header-wrapper">
-      <img
-        src="./img/logotype.svg"
-        alt="Profit Craft Logo"
-        aria-label="Main navigation"
-        width="145"
-        height="48"
-      />
-      <nav class="nav" id="nav" aria-label="Main navigation">
-        <ul class="nav-list" id="header-list">
-          <li class="nav-list-item">
-            <a href="#plans">Price Plans</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="#services">Services</a>
-          </li>
-          <li class="nav-list-item" id="contact-nav-item">
-            <a href="#contact">Contact Us</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="#faq">FAQ</a>
-          </li>
-        </ul>
-        <button
-          id="burger-menu"
-          aria-expanded="false"
-          aria-controls="header-list"
-          aria-label="Open menu"
-        >
-          <img src="./img/burger-menu.svg" alt="" width="32" height="32" />
-        </button>
-      </nav>
-    </header>
-    <aside
-      class="promo-banner"
-      aria-label="Promotional Offer"
-      itemscope
-      itemtype="https://schema.org/Offer"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+          name="description"
+          content="Build your credit history in the US with ProfitCraft. Get approved for loans and mortgages faster with expert guidance and simple tools. Start today."
+  />
+  <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Profit Craft</title>
+</head>
+<body>
+<header class="header-wrapper">
+  <img
+          src="./img/logotype.svg"
+          alt="Profit Craft Logo"
+          aria-label="Main navigation"
+          width="145"
+          height="48"
+  />
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <ul class="nav-list" id="header-list">
+      <li class="nav-list-item">
+        <a href="#plans">Price Plans</a>
+      </li>
+      <li class="nav-list-item">
+        <a href="#services">Services</a>
+      </li>
+      <li class="nav-list-item" id="contact-nav-item">
+        <a href="#contact">Contact Us</a>
+      </li>
+      <li class="nav-list-item">
+        <a href="#faq">FAQ</a>
+      </li>
+    </ul>
+    <button
+            id="burger-menu"
+            aria-expanded="false"
+            aria-controls="header-list"
+            aria-label="Open menu"
     >
-      <p class="promo-banner-text">
-        Get your credit score daily when you sign up for
-        <span class="promo-banner-text-free">FREE</span>
-      </p>
-      <img
-        src="./img/arrow-right-green.svg"
-        width="24"
-        height="24"
-        aria-hidden="true"
-        role="presentation"
-      />
-    </aside>
+      <img src="./img/burger-menu.svg" alt="" width="32" height="32" />
+    </button>
+  </nav>
+</header>
+<aside
+        class="promo-banner"
+        aria-label="Promotional Offer"
+        itemscope
+        itemtype="https://schema.org/Offer"
+>
+  <p class="promo-banner-text">
+    Get your credit score daily when you sign up for
+    <span class="promo-banner-text-free">FREE</span>
+  </p>
+  <img
+          src="./img/arrow-right-green.svg"
+          width="24"
+          height="24"
+          aria-hidden="true"
+          role="presentation"
+  />
+</aside>
 
-    <main>
-      <section class="main-section-wrapper">
-        <div class="main-section-title-img">
-          <div class="main-text-container">
-            <div class="main-title-description">
-              <h1 class="main-title">
-                Build your American Dream with a
-                <span class="main-title-strong">Strong</span> credit history
-              </h1>
-              <p class="main-text-description">
-                We help newcomers to the US build a strong credit profile so you
-                can borrow, buy autos, homes, and build businesses without
-                limits. Now is the time to craft your financial future!
-              </p>
-            </div>
-            <div class="main-buttons">
-              <button
-                class="button-expertise"
-                aria-label="Get free credit expertise"
-              >
-                <span>Get FREE Expertise</span>
-                <img
-                  class="button-expertise-arrow"
-                  src="./img/arrow-right.svg"
-                  aria-hidden="true"
-                  role="presentation"
-                  width="22"
-                  height="22"
-                />
-              </button>
-              <button class="button-started">
-                <span>Get Started</span>
-                <img
-                  class="button-expertise-arrow"
-                  src="./img/arrow-right.svg"
-                  aria-hidden="true"
-                  role="presentation"
-                  width="22"
-                  height="22"
-                />
-              </button>
-            </div>
-          </div>
-          <img
-            class="main-section-img"
-            src="./img/banks/main-section-img.webp"
-            alt="Happy people representing successful credit history"
-            width="646"
-            height="411"
-            fetchpriority="high"
-          />
+<main>
+  <section class="main-section-wrapper">
+    <div class="main-section-title-img">
+      <div class="main-text-container">
+        <div class="main-title-description">
+          <h1 class="main-title">
+            Build your American Dream with a
+            <span class="main-title-strong">Strong</span> credit history
+          </h1>
+          <p class="main-text-description">
+            We help you build a strong credit profile so you can borrow,
+            buy autos, homes, and build businesses without limits.
+            Now is the time to craft your financial future!
+          </p>
         </div>
-        <div class="main-section-achievements">
-          <ul class="main-achievements-list">
-            <li class="main-achievements-item">
-              <span class="achievements-item-first-word">9 years </span>helping
-              our clients
-            </li>
-            <li class="main-achievements-item">
-              <span class="achievements-item-first-word">240K+</span> open
-              credit cards
-            </li>
-            <li class="main-achievements-item">
-              <span class="achievements-item-first-word">18.7 mln</span> the
-              amount our clients received
-            </li>
-            <li class="main-achievements-item">
-              <div class="achievements-item-raiting">
-                <span class="achievements-item-first-word">4,8 </span>
-                <img
-                  src="./img/mans/raiting.svg"
-                  alt="4.8 out of 5 star rating"
-                />
-              </div>
-              average user rating
-            </li>
-          </ul>
+        <div class="main-buttons">
+          <button
+                  class="button-expertise"
+                  aria-label="Get free credit expertise"
+          >
+            <span>Get FREE Expertise</span>
+            <img
+                    class="button-expertise-arrow"
+                    src="./img/arrow-right.svg"
+                    aria-hidden="true"
+                    role="presentation"
+                    width="22"
+                    height="22"
+            />
+          </button>
+          <button class="button-started">
+            <span>Get Started</span>
+            <img
+                    class="button-expertise-arrow"
+                    src="./img/arrow-right.svg"
+                    aria-hidden="true"
+                    role="presentation"
+                    width="22"
+                    height="22"
+            />
+          </button>
         </div>
-      </section>
-
-      <section
-        class="companies-logo-wrapper"
-        aria-label="Trusted by major US banks and institutions"
-      >
-        <div class="marquee">
-          <ul class="companies-logo-list">
-            <li>
-              <img
-                src="./img/companies/JPMorganChase.svg"
-                alt="JPMorganChase logo"
-              />
-            </li>
-            <li><img src="./img/companies/Citi.svg" alt="Citi logo" /></li>
-            <li>
-              <img
-                src="./img/companies/bank-of-america.svg"
-                alt="Bank of America logo"
-              />
-            </li>
-            <li>
-              <img
-                src="./img/companies/wells-fargo.svg"
-                alt="wells-fargo logo"
-              />
-            </li>
-            <li>
-              <img
-                src="./img/companies/U.S._Bancorp.svg"
-                alt="U.S._Bancorp logo"
-              />
-            </li>
-            <li>
-              <img
-                src="./img/companies/goldman-sachs.svg"
-                alt="goldman-sachs logo"
-              />
-            </li>
-            <li><img src="./img/companies/truist.svg" alt="truist logo" /></li>
-
-            <li>
-              <img
-                src="./img/companies/JPMorganChase.svg"
-                alt="JPMorganChase logo"
-              />
-            </li>
-            <li><img src="./img/companies/Citi.svg" alt="Citi logo" /></li>
-            <li>
-              <img
-                src="./img/companies/bank-of-america.svg"
-                alt="bank-of-america logo"
-              />
-            </li>
-            <li>
-              <img
-                src="./img/companies/wells-fargo.svg"
-                alt="wells-fargo logo"
-              />
-            </li>
-            <li>
-              <img
-                src="./img/companies/U.S._Bancorp.svg"
-                alt="U.S._Bancorp logo"
-              />
-            </li>
-            <li>
-              <img
-                src="./img/companies/goldman-sachs.svg"
-                alt="goldman-sachs logo"
-              />
-            </li>
-            <li><img src="./img/companies/truist.svg" alt="truist logo" /></li>
-          </ul>
-        </div>
-      </section>
-      <div class="messenger-widget">
-        <button class="messenger-toggle" aria-label="Open messaging options">
-          <img src="./img/message-circle.svg" alt="" aria-hidden="true" />
-        </button>
-        <ul class="messenger-menu">
-          <li>
-            <a
-              href="https://m.me/Messenger"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="./img/more-img/Facebook_Messenger.svg"
-                alt="Facebook Messenger"
-              />
-              Messenger
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://wa.me/WhatsApp"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./img/more-img/WhatsApp.svg" alt="WhatsApp" />
-              WhatsApp</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://t.me/telegram"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./img/more-img/Telegram.svg" alt="Telegram" />
-              Telegram</a
-            >
-          </li>
-        </ul>
       </div>
-      <section
-        class="goals-section-wrapper"
-        aria-label="Financial goal options"
-      >
-        <h2 class="goals-section-title">
-          One Place for
-          <span class="goals-new-line">
+      <img
+              class="main-section-img"
+              src="./img/banks/main-section-img.webp"
+              alt="Happy people representing successful credit history"
+              width="646"
+              height="411"
+              fetchpriority="high"
+      />
+    </div>
+    <div class="main-section-achievements">
+      <ul class="main-achievements-list">
+        <li class="main-achievements-item">
+          <span class="achievements-item-first-word">9 years </span>helping
+          our clients
+        </li>
+        <li class="main-achievements-item">
+          <span class="achievements-item-first-word">240K+</span> approved credit cards
+        </li>
+        <li class="main-achievements-item">
+          <span class="achievements-item-first-word">$18.7M</span> in loans & credit obtained
+        </li>
+        <li class="main-achievements-item">
+          <div class="achievements-item-raiting">
+            <span class="achievements-item-first-word">4,8 </span>
+            <img
+                    src="./img/mans/raiting.svg"
+                    alt="4.8 out of 5 star rating"
+            />
+          </div>
+          average user rating
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section
+          class="companies-logo-wrapper"
+          aria-label="Trusted by major US banks and institutions"
+  >
+    <div class="marquee">
+      <ul class="companies-logo-list">
+        <li>
+          <img
+                  src="./img/companies/JPMorganChase.svg"
+                  alt="JPMorganChase logo"
+          />
+        </li>
+        <li><img src="./img/companies/Citi.svg" alt="Citi logo" /></li>
+        <li>
+          <img
+                  src="./img/companies/bank-of-america.svg"
+                  alt="Bank of America logo"
+          />
+        </li>
+        <li>
+          <img
+                  src="./img/companies/wells-fargo.svg"
+                  alt="wells-fargo logo"
+          />
+        </li>
+        <li>
+          <img
+                  src="./img/companies/U.S._Bancorp.svg"
+                  alt="U.S._Bancorp logo"
+          />
+        </li>
+        <li>
+          <img
+                  src="./img/companies/goldman-sachs.svg"
+                  alt="goldman-sachs logo"
+          />
+        </li>
+        <li><img src="./img/companies/truist.svg" alt="truist logo" /></li>
+
+        <li>
+          <img
+                  src="./img/companies/JPMorganChase.svg"
+                  alt="JPMorganChase logo"
+          />
+        </li>
+        <li><img src="./img/companies/Citi.svg" alt="Citi logo" /></li>
+        <li>
+          <img
+                  src="./img/companies/bank-of-america.svg"
+                  alt="bank-of-america logo"
+          />
+        </li>
+        <li>
+          <img
+                  src="./img/companies/wells-fargo.svg"
+                  alt="wells-fargo logo"
+          />
+        </li>
+        <li>
+          <img
+                  src="./img/companies/U.S._Bancorp.svg"
+                  alt="U.S._Bancorp logo"
+          />
+        </li>
+        <li>
+          <img
+                  src="./img/companies/goldman-sachs.svg"
+                  alt="goldman-sachs logo"
+          />
+        </li>
+        <li><img src="./img/companies/truist.svg" alt="truist logo" /></li>
+      </ul>
+    </div>
+  </section>
+  <div class="messenger-widget">
+    <button class="messenger-toggle" aria-label="Open messaging options">
+      <img src="./img/message-circle.svg" alt="" aria-hidden="true" />
+    </button>
+    <ul class="messenger-menu">
+      <li>
+        <a
+                href="https://m.me/Messenger"
+                target="_blank"
+                rel="noopener noreferrer"
+        >
+          <img
+                  src="./img/more-img/Facebook_Messenger.svg"
+                  alt="Facebook Messenger"
+          />
+          Messenger
+        </a>
+      </li>
+      <li>
+        <a
+                href="https://wa.me/WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+        >
+          <img src="./img/more-img/WhatsApp.svg" alt="WhatsApp" />
+          WhatsApp</a
+        >
+      </li>
+      <li>
+        <a
+                href="https://t.me/telegram"
+                target="_blank"
+                rel="noopener noreferrer"
+        >
+          <img src="./img/more-img/Telegram.svg" alt="Telegram" />
+          Telegram</a
+        >
+      </li>
+    </ul>
+  </div>
+  <section
+          class="goals-section-wrapper"
+          aria-label="Financial goal options"
+  >
+    <h2 class="goals-section-title">
+      One Place for
+      <span class="goals-new-line">
             All Your <span class="goals-title-Goals">Goals</span>
           </span>
-        </h2>
-        <ul class="goals-list">
-          <li class="goals-item">
-            <img src="./img/image-pc/cards-pc.svg" alt="Credit cards icon" />
-            <p class="goals-item-names">Credit Cards</p>
-          </li>
-          <li class="goals-item">
-            <img src="./img/image-pc/auto-pc.svg" alt="" aria-hidden="true" />
-            <p class="goals-item-names">Auto Loans</p>
-          </li>
-          <li class="goals-item">
-            <img
-              src="./img/image-pc/ic_creditcragt-pc.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <p class="goals-item-names">Credit Craft</p>
-          </li>
-          <li class="goals-item">
-            <img src="./img/image-pc/help-pc.svg" alt="" aria-hidden="true" />
-            <p class="goals-item-names">Credit Help</p>
-          </li>
-          <li class="goals-item">
-            <img
-              src="./img/image-pc/accountant-pc.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <p class="goals-item-names">Accountant</p>
-          </li>
-          <li class="goals-item">
-            <img
-              src="./img/image-pc/pc_getstarted.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <p class="goals-item-names">Get Started</p>
-          </li>
-        </ul>
-      </section>
-      <section class="profit-craft-section-wrapper">
-        <h2 class="profit-craft-title">
-          How <span class="profit-craft-Profit-Craft">Profit Craft </span>Works
-        </h2>
-        <div class="profit-text-img">
-          <div class="profit-text-list">
-            <div
-              class="profit-text-item active divider1"
-              data-img="./img/profit/analyze_your_credit.webp"
-              role="button"
-              tabindex="0"
-              aria-label="Step 1: Analyze your credit history"
-            >
-              <h3 class="profit-item-title">Analyze your credit history</h3>
-              <p class="profit-item-description">
-                Check your Current Situation and Develop a Strategy for your
-                Goals
+    </h2>
+    <ul class="goals-list">
+      <li class="goals-item">
+        <img src="./img/image-pc/cards-pc.svg" alt="Credit cards icon" />
+        <p class="goals-item-names">Credit Cards</p>
+      </li>
+      <li class="goals-item">
+        <img src="./img/image-pc/auto-pc.svg" alt="" aria-hidden="true" />
+        <p class="goals-item-names">Auto Loans</p>
+      </li>
+      <li class="goals-item">
+        <img
+                src="./img/image-pc/ic_creditcragt-pc.svg"
+                alt=""
+                aria-hidden="true"
+        />
+        <p class="goals-item-names">Credit Craft</p>
+      </li>
+      <li class="goals-item">
+        <img src="./img/image-pc/help-pc.svg" alt="" aria-hidden="true" />
+        <p class="goals-item-names">Credit Help</p>
+      </li>
+      <li class="goals-item">
+        <img
+                src="./img/image-pc/accountant-pc.svg"
+                alt=""
+                aria-hidden="true"
+        />
+        <p class="goals-item-names">Accountant</p>
+      </li>
+      <li class="goals-item">
+        <img
+                src="./img/image-pc/pc_getstarted.svg"
+                alt=""
+                aria-hidden="true"
+        />
+        <p class="goals-item-names">Get Started</p>
+      </li>
+    </ul>
+  </section>
+  <section class="profit-craft-section-wrapper">
+    <h2 class="profit-craft-title">
+      How <span class="profit-craft-Profit-Craft">Profit Craft </span>Works
+    </h2>
+    <div class="profit-text-img">
+      <div class="profit-text-list">
+        <div
+                class="profit-text-item active divider1"
+                data-img="./img/profit/analyze_your_credit.webp"
+                role="button"
+                tabindex="0"
+                aria-label="Step 1: Analyze your credit history"
+        >
+          <h3 class="profit-item-title">Analyze your credit history</h3>
+          <p class="profit-item-description">
+            Check your Current Situation and Develop a Strategy for your
+            Goals
+          </p>
+        </div>
+
+        <div
+                class="profit-text-item divider2"
+                data-img="./img/profit/FixWeaknesses.webp"
+                role="button"
+                tabindex="0"
+                aria-label="Step 2: Fix weaknesses"
+        >
+          <h3 class="profit-item-title">Fix weaknesses</h3>
+          <p class="profit-item-description">
+            Fixing Errors and Connecting to Accounts with Good Credit
+            History
+          </p>
+        </div>
+
+        <div
+                class="profit-text-item divider3"
+                data-img="./img/profit/PumpUp.webp"
+                role="button"
+                tabindex="0"
+                aria-label="Step 3: Pump up your credit rating"
+        >
+          <h3 class="profit-item-title">Pump up your credit rating</h3>
+          <p class="profit-item-description">
+            Increase limits, open new cards and create a perfect profile
+          </p>
+        </div>
+      </div>
+      <div class="profit-card-widget">
+
+        <!-- Іконки для картки 1 -->
+        <!-- Картка 1 -->
+        <div class="profit-card-icon profit-card-icon-1--tl">
+          <i class="bi bi-graph-up"></i>
+        </div>
+
+        <div class="profit-card-icon profit-card-icon-1--bl">
+          <i class="bi bi-bar-chart"></i>
+        </div>
+
+        <div class="profit-card-icon profit-card-icon-1--br">
+          <i class="bi bi-pie-chart"></i>
+        </div>
+
+        <!-- Картка 2 -->
+        <div class="profit-card-icon profit-card-icon-2--tr" style="display:none;">
+          <i class="bi bi-pencil-square"></i>
+        </div>
+
+        <div class="profit-card-icon profit-card-icon-2--bl" style="display:none;">
+          <i class="bi bi-credit-card-2-front"></i>
+        </div>
+
+        <!-- Картка 3 -->
+        <div class="profit-card-icon profit-card-icon-3--tl profit-card-icon-3--upload" aria-hidden="true" style="display:none;">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L18 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <path d="M10 13L18 5L26 13" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 30H27" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <!-- Картка 1: Analyze -->
+        <div class="profit-card-inner" id="profit-card-1">
+          <div class="profit-card-score-ring">
+            <svg class="profit-ring-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+              <circle class="profit-ring-bg" cx="80" cy="80" r="66" />
+              <circle class="profit-ring-fill" cx="80" cy="80" r="66" stroke="rgba(83, 231, 122, 1)" />
+            </svg>
+            <div class="profit-card-score-text">
+              <span class="profit-score-number">812</span>
+              <span class="profit-score-label">GOOD<br>POTENTIAL</span>
+            </div>
+          </div>
+          <button class="profit-card-cta">
+            Get FREE Expertise
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <p class="profit-card-desc">Many factors go into analyzing your current position in the banking system, we work on each one.</p>
+        </div>
+
+        <!-- Картка 2: Fix Weaknesses -->
+        <div class="profit-card-inner profit-card-fix" id="profit-card-2" style="display:none;">
+          <p class="profit-fix-title">Correcting<br>Weaknesses...</p>
+          <ul class="profit-fix-list">
+            <li class="profit-fix-item">
+              <span class="profit-fix-label">Incorrect Information</span>
+              <span class="profit-fix-badge corrected">Corrected</span>
+            </li>
+            <li class="profit-fix-item">
+              <span class="profit-fix-label">Incorrect Information</span>
+              <span class="profit-fix-badge corrected">Corrected</span>
+            </li>
+            <li class="profit-fix-item">
+              <span class="profit-fix-label">Outdated Data</span>
+              <span class="profit-fix-badge corrected">Corrected</span>
+            </li>
+            <li class="profit-fix-item">
+              <span class="profit-fix-label">Fraud or Other</span>
+              <span class="profit-fix-badge loading">
+          <svg class="fix-spinner" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="8" stroke="#22674b" stroke-width="2" stroke-dasharray="28 16" stroke-linecap="round"/>
+          </svg>
+        </span>
+            </li>
+            <li class="profit-fix-item">
+              <span class="profit-fix-label">Account Connection</span>
+              <span class="profit-fix-badge icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect x="2" y="5" width="20" height="14" rx="3" stroke="#888" stroke-width="1.5"/>
+            <path d="M2 10h20" stroke="#888" stroke-width="1.5"/>
+            <rect x="5" y="14" width="4" height="2" rx="1" fill="#888"/>
+          </svg>
+        </span>
+            </li>
+          </ul>
+          <button class="profit-card-cta">
+            Get Expertise
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Картка 3: Pump Up -->
+        <div class="profit-card-inner profit-card-pump" id="profit-card-3" style="display:none;">
+
+          <!-- Верхня картка Alex B. з ефектом нахилу -->
+          <div class="pump-card-main">
+            <div class="pump-card-main-top">
+              <div class="pump-user-avatar">
+                <img src="./img/avatar1.png" alt="Alex B." />
+              </div>
+              <div class="pump-user-info">
+                <p class="pump-user-name">Alex B.</p>
+                <p class="pump-user-sub">Credit Score:</p>
+              </div>
+              <div class="pump-score-badge">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L7 3L11 11" stroke="#22674b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                912
+              </div>
+            </div>
+            <div class="pump-card-main-details">
+              <div class="pump-detail-row">
+                <span class="pump-detail-label">Credit Limit:</span>
+                <span class="pump-detail-value green">$45 000.00</span>
+              </div>
+              <div class="pump-detail-row">
+                <span class="pump-detail-label">Auto Loans:</span>
+                <span class="pump-detail-value green">Approved</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Список користувачів -->
+          <ul class="pump-users-list">
+            <li class="pump-user-row">
+              <img class="pump-user-ava" src="./img/avatar2.png" alt="Hannah W." />
+              <div class="pump-user-row-info">
+                <p class="pump-user-row-name">Hannah w.</p>
+                <p class="pump-user-row-sub">Credit Score:</p>
+              </div>
+              <div class="pump-score-badge small">
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 11L7 3L11 11" stroke="#22674b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                815
+              </div>
+            </li>
+            <li class="pump-user-row">
+              <img class="pump-user-ava" src="./img/avatar3.png" alt="Grigory F." />
+              <div class="pump-user-row-info">
+                <p class="pump-user-row-name">Grigory F.</p>
+                <p class="pump-user-row-sub">Credit Score:</p>
+              </div>
+              <div class="pump-score-badge small">
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 11L7 3L11 11" stroke="#22674b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                698
+              </div>
+            </li>
+            <li class="pump-user-row">
+              <img class="pump-user-ava" src="./img/avatar4.png" alt="Denis C." />
+              <div class="pump-user-row-info">
+                <p class="pump-user-row-name">Denis C.</p>
+                <p class="pump-user-row-sub">Credit Score:</p>
+              </div>
+              <div class="pump-score-badge small">
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 11L7 3L11 11" stroke="#22674b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                642
+              </div>
+            </li>
+          </ul>
+
+          <button class="profit-card-cta">
+            Create a Perfect Profile
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="profit-craft-mobile">
+      <div class="profit-craft-mobile-item">
+        <img src="./img/profit/step1.svg" alt="Study" />
+        <div class="profit-craft-mobile-text">
+          <p class="profit-mobile-title">Study your start</p>
+          <p class="profit-mobile-description">
+            Analyze the situation and develop a strategy
+          </p>
+        </div>
+      </div>
+      <div class="profit-craft-mobile-item">
+        <img src="./img/profit/step2.svg" alt="Fix" />
+        <div class="profit-craft-mobile-text">
+          <p class="profit-mobile-title">Fix weaknesses</p>
+          <p class="profit-mobile-description">
+            Remove errors and connect to accounts with history
+          </p>
+        </div>
+      </div>
+      <div class="profit-craft-mobile-item">
+        <img src="./img/profit/step3.svg" alt="Pump" />
+        <div class="profit-craft-mobile-text">
+          <p class="profit-mobile-title">Pump up your credit rating</p>
+          <p class="profit-mobile-description">
+            Increase limits, open new cards and build the perfect profile
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="comments-section-wrapper">
+    <h2 class="comments-section-title">
+      We write your credit history and
+      <span class="comments-section-title-youwrite">you write</span> Profit
+      Craft's history
+    </h2>
+    <div class="comments-section-list">
+      <div class="comments-track">
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Life Changing</p>
+            <p class="comments-description">
+              I got a mortgage 9 months after starting with ProfitCraft. I was turned down at first, but now my score is 740 and the bank gave me a low interest loan! 🎉
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/man.svg" alt="Photo of Dmytro K." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Dmytro K.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Very Fast</p>
+            <p class="comments-description">
+              I had no credit history at all. ProfitCraft connected me to an account with a 15-year credit score, and within 6 months I had a $25K limit rewards card! 🚀
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/womans.svg" alt="Photo of Olena M." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Olena M.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Highly Recommend</p>
+            <p class="comments-description">
+              Started from zero and in 8 months my score jumped to 720. Got approved for an auto loan with a great rate. ProfitCraft really knows what they're doing! 💪
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/man.svg" alt="Photo of Andriy P." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Andriy P.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Professional Team</p>
+            <p class="comments-description">
+              My personal manager explained every step clearly. Within 5 months my score went from 580 to 690 and I finally got my first credit card with a real limit. ⭐
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/womans.svg" alt="Photo of Natalia R." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Natalia R.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Worth Every Penny</p>
+            <p class="comments-description">
+              Errors on my credit report were holding me back for years. ProfitCraft removed them in weeks and my score jumped 80 points. Now I'm working toward a mortgage! 🏠
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/man.svg" alt="Photo of Marcus T." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Marcus T.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Amazing Results</p>
+            <p class="comments-description">
+              In 7 months my score reached 750 and I opened a business card with a $30K limit. I didn't think it was possible so fast. Thank you ProfitCraft! 🙌
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/womans.svg" alt="Photo of Iryna V." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Iryna V.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Great Support</p>
+            <p class="comments-description">
+              The team was always available to answer my questions. My credit score improved by 120 points in just 6 months. Best investment I've made! 🌟
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/man.svg" alt="Photo of Serhiy B." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Serhiy B.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Exceeded Expectations</p>
+            <p class="comments-description">
+              I thought my credit past would never let me qualify. But after 10 months my score hit 760 and my mortgage was approved. ProfitCraft made it happen! 🎯
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/man.svg" alt="Photo of Vasyl H." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Vasyl H.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="comments-track">
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Life Changing</p>
+            <p class="comments-description">
+              I got a mortgage 9 months after starting with ProfitCraft. I was turned down at first, but now my score is 740 and the bank gave me a low interest loan! 🎉
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/man.svg" alt="Photo of Dmytro K." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Dmytro K.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Very Fast</p>
+            <p class="comments-description">
+              I had no credit history at all. ProfitCraft connected me to an account with a 15-year credit score, and within 6 months I had a $25K limit rewards card! 🚀
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/womans.svg" alt="Photo of Olena M." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Olena M.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Highly Recommend</p>
+            <p class="comments-description">
+              Started from zero and in 8 months my score jumped to 720. Got approved for an auto loan with a great rate. ProfitCraft really knows what they're doing! 💪
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/man.svg" alt="Photo of Andriy P." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Andriy P.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Professional Team</p>
+            <p class="comments-description">
+              My personal manager explained every step clearly. Within 5 months my score went from 580 to 690 and I finally got my first credit card with a real limit. ⭐
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/womans.svg" alt="Photo of Natalia R." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Natalia R.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Worth Every Penny</p>
+            <p class="comments-description">
+              Errors on my credit report were holding me back for years. ProfitCraft removed them in weeks and my score jumped 80 points. Now I'm working toward a mortgage! 🏠
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/man.svg" alt="Photo of Marcus T." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Marcus T.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Amazing Results</p>
+            <p class="comments-description">
+              In 7 months my score reached 750 and I opened a business card with a $30K limit. I didn't think it was possible so fast. Thank you ProfitCraft! 🙌
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/womans.svg" alt="Photo of Iryna V." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Iryna V.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Great Support</p>
+            <p class="comments-description">
+              The team was always available to answer my questions. My credit score improved by 120 points in just 6 months. Best investment I've made! 🌟
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/man.svg" alt="Photo of Serhiy B." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Serhiy B.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+
+        <article class="comments-item">
+          <div class="comments-item-description">
+            <p class="comments-title">Exceeded Expectations</p>
+            <p class="comments-description">
+              I thought my credit past would never let me qualify. But after 10 months my score hit 760 and my mortgage was approved. ProfitCraft made it happen! 🎯
+            </p>
+          </div>
+          <div class="comments-author-mark">
+            <img src="./img/mans/man.svg" alt="Photo of Vasyl H." />
+            <div class="comments-name-raiting">
+              <p class="comments-name">Vasyl H.</p>
+              <img src="./img/mans/raiting-full.svg" alt="5 star rating" />
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section
+          id="plans"
+          class="ambitions-section-wrapper"
+          aria-labelledby="plans-title"
+  >
+    <div class="ambitions-section-columns">
+      <h2 class="ambitions-section-title">
+        Pick a plan for your
+        <span class="ambitions-section-title-ambitions">ambitions</span>
+      </h2>
+      <div class="ambition-section-category">
+        <a
+                href="#plan-basic"
+                class="ambitions-section-category-text"
+                data-target="plan-basic"
+        >Basic</a
+        >
+        <a
+                href="#plan-advanced"
+                class="ambitions-section-category-text"
+                data-target="plan-advanced"
+        >Advanced</a
+        >
+        <a
+                href="#plan-premium"
+                class="ambition-premium-star"
+                data-target="plan-premium"
+        >
+          <img src="./img/star.svg" alt="star ico" />
+          <p class="ambition-premium-text">Premium</p>
+        </a>
+      </div>
+      <div class="ambitions-plan-help">
+        <div class="ambitions-plan-list">
+          <article class="ambitions-plan-item" id="plan-basic">
+            <p class="ambitions-plan-name">Basic</p>
+            <div class="ambition-price-time-description">
+              <div class="ambition-price-time">
+                <p class="ambitions-plan-price">$2 900</p>
+                <p class="ambitions-plan-time">/ 4-6 months</p>
+              </div>
+              <p class="ambitions-plan-description">
+                Suitable for those who are starting to create their dreams
               </p>
             </div>
 
-            <div
-              class="profit-text-item divider2"
-              data-img="./img/profit/FixWeaknesses.webp"
-              role="button"
-              tabindex="0"
-              aria-label="Step 2: Fix weaknesses"
+            <button
+                    class="ambitions-plan-select"
+                    aria-label="Select Basic plan"
             >
-              <h3 class="profit-item-title">Fix weaknesses</h3>
-              <p class="profit-item-description">
-                Fixing Errors and Connecting to Accounts with Good Credit
-                History
+              Select plan
+            </button>
+            <p class="ambitions-plan-details-title">All from Basic</p>
+            <ul class="ambitions-details-list">
+              <li class="ambitions-details-item">
+                Create an individualized plan
+              </li>
+              <li class="ambitions-details-item">
+                Delete all inquiries (inquiries)
+              </li>
+              <li class="ambitions-details-item">
+                Correct data in credit bureaus
+              </li>
+              <li class="ambitions-details-item">Personal Manager</li>
+            </ul>
+          </article>
+          <article class="ambitions-plan-item" id="plan-advanced">
+            <div class="ambitions-plan-name-rating">
+              <p class="ambitions-plan-name">Advanced</p>
+              <div class="ambitions-plan-rating">
+                <p class="plan-rating-text">Popular</p>
+              </div>
+            </div>
+            <div class="ambition-price-time-description">
+              <div class="ambition-price-time">
+                <p class="ambitions-plan-price">$5 900</p>
+                <p class="ambitions-plan-time">/ 7-8 months</p>
+              </div>
+              <p class="ambitions-plan-description">
+                Ideal for expanding capabilities and financial futures
               </p>
             </div>
 
-            <div
-              class="profit-text-item divider3"
-              data-img="./img/profit/PumpUp.webp"
-              role="button"
-              tabindex="0"
-              aria-label="Step 3: Pump up your credit rating"
-            >
-              <h3 class="profit-item-title">Pump up your credit rating</h3>
-              <p class="profit-item-description">
-                Increase limits, open new cards and create a perfect profile
+            <button class="ambitions-plan-select">Select plan</button>
+            <p class="ambitions-plan-details-title">All from Basic +</p>
+            <ul class="ambitions-details-list">
+              <li class="ambitions-details-item">
+                Increase limits by 2-3 times
+              </li>
+              <li class="ambitions-details-item">
+                Connect to account with 15 years of history
+              </li>
+              <li class="ambitions-details-item">
+                Help apply for 2 credit cards from any bank
+              </li>
+              <li class="ambitions-details-item">Personal Manager</li>
+            </ul>
+          </article>
+          <article class="ambitions-plan-item" id="plan-premium">
+            <div class="ambitions-plan-name-rating">
+              <p class="ambitions-plan-name">Premium</p>
+              <div class="ambitions-plan-rating">
+                <p class="plan-rating-text">Save 35%</p>
+              </div>
+            </div>
+            <div class="ambition-price-time-description">
+              <div class="ambition-price-time">
+                <p class="ambitions-plan-price">$5 900</p>
+                <p class="ambitions-plan-time">/ 9-12 months</p>
+              </div>
+              <p class="ambitions-plan-description">
+                Perfect for leaders seeking to maximize credit potential
+              </p>
+            </div>
+
+            <button class="ambitions-plan-select">Select plan</button>
+            <p class="ambitions-plan-details-title">All from Advanced +</p>
+            <ul class="ambitions-details-list">
+              <li class="ambitions-details-item">
+                Connect to account with 20-year history
+              </li>
+              <li class="ambitions-details-item">
+                Maximize credit limits
+              </li>
+              <li class="ambitions-details-item">
+                Maximize credit limits in 10-12 months
+              </li>
+              <li class="ambitions-details-item">Open 4-5 credit cards</li>
+              <li class="ambitions-details-item">
+                Open 1-3 business credit cards
+              </li>
+              <li class="ambitions-details-item">Personal Manager</li>
+            </ul>
+            <p class="ambitions-services-discount-note">
+              Credit limits and results depend on your personal financial situation
+            </p>
+          </article>
+        </div>
+        <div class="ambitions-help">
+          <div class="ambitions-help-ico-text">
+            <img src="./img/bank-note-05.svg" alt="bank note icon" />
+            <p class="ambitions-help-text">
+              If it is difficult for you to pay the whole amount at once, we
+              can break the amount into several parts, please contact us to
+              do so.
+            </p>
+          </div>
+          <button class="ambitions-help-button">Contact&nbsp;Us</button>
+        </div>
+      </div>
+      <article id="services" class="ambitions-services">
+        <h3 class="ambitions-services-title">
+          Additional customized services
+        </h3>
+        <div class="ambitions-services-list">
+          <div class="ambitions-services-item">
+            <p class="ambitions-services-name">Inquiries</p>
+            <div class="ambitions-services-price-description">
+              <div class="ambitions-services-price-inquiries">
+                <p class="ambitions-services-price">$39</p>
+                <p class="ambitions-services-inquiries">/ 1-10 Inquiries</p>
+              </div>
+              <p class="ambitions-services-discount-note">$29 per inquiry if 10+</p>
+              <p class="ambitions-services-description">
+                The cost depends on the number of Inquiries you need
               </p>
             </div>
           </div>
-          <img
-            id="analyze_your_credit"
-            src="./img/profit/analyze_your_credit.svg"
-            alt="Analyzing your credit history illustration"
+          <div class="ambitions-services-item">
+            <p class="ambitions-services-name">Late payment</p>
+            <div class="ambitions-services-price-description">
+              <div class="ambitions-services-price-inquiries">
+                <p class="ambitions-services-price">$299-499</p>
+              </div>
+              <p class="ambitions-services-description">
+                Ideal for expanding capabilities and financial futures
+              </p>
+              <p class="ambitions-services-discount-note">Price varies based on your case</p>
+            </div>
+          </div>
+          <div class="ambitions-services-item">
+            <p class="ambitions-services-name">Charge Off</p>
+            <div class="ambitions-services-price-description">
+              <div class="ambitions-services-price-inquiries">
+                <p class="ambitions-services-price">$599</p>
+              </div>
+              <p class="ambitions-services-description">
+                Debt forgiveness after prolonged non-payment
+              </p>
+            </div>
+          </div>
+          <div class="ambitions-services-item">
+            <p class="ambitions-services-name">Collections</p>
+            <div class="ambitions-services-price-description">
+              <div class="ambitions-services-price-inquiries">
+                <p class="ambitions-services-price">$599</p>
+              </div>
+              <p class="ambitions-services-description">
+                Challenging records, restructuring or debt forgiveness
+              </p>
+            </div>
+          </div>
+          <div class="ambitions-services-item">
+            <p class="ambitions-services-name">Repossession</p>
+            <div class="ambitions-services-price-description">
+              <div class="ambitions-services-price-inquiries">
+                <p class="ambitions-services-price">$499</p>
+              </div>
+              <p class="ambitions-services-description">
+                Collateral repossession after prolonged loan non-payment.
+              </p>
+            </div>
+          </div>
+          <div class="ambitions-services-item-contact">
+            <p class="ambitions-services-name-contact">
+              Contact us to discuss a customized service plan for you
+            </p>
+            <button class="ambitions-services-contact-button">
+              <p class="ambitions-services-contact-button-text">
+                Contact&nbsp;Us
+              </p>
+              <img
+                      src="./img/arrow-right-wight.svg"
+                      alt="arrow-right-wight"
+              />
+            </button>
+          </div>
+        </div>
+      </article>
+      <div class="ambitions-payments-methods">
+        <img src="./img/pay/apple-pay.svg" alt="apple-pay" />
+        <img src="./img/pay/google-pay.svg" alt="google-pay" />
+        <img src="./img/pay/paypal.svg" alt="paypal" />
+        <img src="./img/pay/mastercard-alt.svg" alt="mastercard" />
+        <img src="./img/pay/visa.svg" alt="visa" />
+      </div>
+    </div>
+    <div class="ambitions-roll-up">
+      <p class="ambitions-roll-up-text">Roll up Services</p>
+      <img src="./img/chevron-up.svg" alt="arrow up" />
+    </div>
+  </section>
+
+  <section
+          class="security-section-wrapper"
+          aria-labelledby="security-title"
+  >
+    <div class="security-title-list">
+      <h2 id="security-title" class="security-title">
+        Security you can trust
+      </h2>
+      <div class="security-list">
+        <div class="security-item">
+          <div class="security-item-icon-group">
+            <img
+                    class="security-item-icon"
+                    src="./img/security-image/treat.svg"
+                    alt="Icon representing data treatment"
+                    loading="lazy"
+            />
+          </div>
+          <p class="security-item-text">
+            We always treat your data as if it were our own
+          </p>
+        </div>
+        <div class="security-item">
+          <div class="security-item-icon-group">
+            <img
+                    class="security-item-icon"
+                    src="./img/security-image/protect.svg"
+                    alt="Icon representing 256-bit encryption"
+                    loading="lazy"
+            />
+          </div>
+          <p class="security-item-text">
+            We protect your data with 256-bit encryption
+          </p>
+        </div>
+        <div class="security-item">
+          <div class="security-item-icon-group">
+            <img
+                    class="security-item-icon"
+                    src="./img/security-image/not-sell.svg"
+                    alt="Icon representing privacy and no selling of data"
+                    loading="lazy"
+            />
+          </div>
+          <p class="security-item-text">
+            We do not sell your personal info to third parties
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section-wrapper">
+    <div class="contact-information-block">
+      <h2 class="contact-title">Contact Us</h2>
+      <ul class="contact-features-list">
+        <li class="contact-feature-item">Fast Reaction</li>
+        <li class="contact-feature-item">We Can Keep a Secret</li>
+        <li class="contact-feature-item">Personal Manager</li>
+      </ul>
+      <div class="contact-information-list">
+        <div class="contact-information-item">
+          <p class="contact-information-item-title">Email:</p>
+          <a
+                  class="contact-information-item-text"
+                  href="mailto:hi@profitcraft.info"
+          >hi@profitcraft.info</a
+          >
+        </div>
+
+        <div class="contact-information-item">
+          <p class="contact-information-item-title">Phone Number:</p>
+          <a class="contact-information-item-text" href="tel:+19151242416"
+          >+1 915 124 24 16</a
+          >
+        </div>
+
+        <div class="contact-information-item">
+          <p class="contact-information-item-title">Messengers:</p>
+          <ul class="contact-messengers-list">
+            <li>
+              <a
+                      href="https://m.me/yourusername"
+                      target="_blank"
+                      rel="noopener noreferrer"
+              >
+                <img
+                        class="contact-messengers-icon"
+                        src="./img/more-img/Facebook_Messenger.svg"
+                        alt="Facebook Messenger"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                      href="https://wa.me/yourphonenumber"
+                      target="_blank"
+                      rel="noopener noreferrer"
+              >
+                <img
+                        class="contact-messengers-icon"
+                        src="./img/more-img/WhatsApp.svg"
+                        alt="WhatsApp"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                      href="https://t.me/yourprofile"
+                      target="_blank"
+                      rel="noopener noreferrer"
+              >
+                <img
+                        class="contact-messengers-icon"
+                        src="./img/more-img/Telegram.svg"
+                        alt="Telegram"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact-information-map">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.123456789!2d-118.3510!3d34.1021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf3b3b3b3b3b%3A0x0!2s3412+Barham+Blvd%2C+Los+Angeles%2C+CA+90068!5e0!3m2!1suk!2spl!4v1751542303022!5m2!1suk!2spl"
+                width="100%"
+                height="310"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="map Profit Craft"
+        ></iframe>
+      </div>
+    </div>
+
+    <form
+            aria-labelledby="form-title"
+            class="consultation-form"
+            method="post"
+            action="/submit-form"
+    >
+      <h2 class="form-title">Get a Free Consultation</h2>
+
+      <div class="consultation-form-field">
+        <input
+                id="full-name"
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                class="form-input"
+        />
+      </div>
+      <div class="consultation-form-field">
+        <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email"
+                class="form-input"
+        />
+      </div>
+      <div class="form-phone">
+        <div class="consultation-form-field">
+          <select class="form-phone-code">
+            <option>+1</option>
+            <option>+48</option>
+            <option>+380</option>
+          </select>
+        </div>
+        <div class="consultation-form-field">
+          <input
+                  type="tel"
+                  placeholder="(XXX) XXX XXXX"
+                  class="form-input phone-input"
           />
         </div>
-
-        <div class="profit-craft-mobile">
-          <div class="profit-craft-mobile-item">
-            <img src="./img/profit/step1.svg" alt="Study" />
-            <div class="profit-craft-mobile-text">
-              <p class="profit-mobile-title">Study your start</p>
-              <p class="profit-mobile-description">
-                Analyze the situation and develop a strategy
-              </p>
-            </div>
-          </div>
-          <div class="profit-craft-mobile-item">
-            <img src="./img/profit/step2.svg" alt="Fix" />
-            <div class="profit-craft-mobile-text">
-              <p class="profit-mobile-title">Fix weaknesses</p>
-              <p class="profit-mobile-description">
-                Remove errors and connect to accounts with history
-              </p>
-            </div>
-          </div>
-          <div class="profit-craft-mobile-item">
-            <img src="./img/profit/step3.svg" alt="Pump" />
-            <div class="profit-craft-mobile-text">
-              <p class="profit-mobile-title">Pump up your credit rating</p>
-              <p class="profit-mobile-description">
-                Increase limits, open new cards and build the perfect profile
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="comments-section-wrapper">
-        <h2 class="comments-section-title">
-          We write your credit history and
-          <span class="comments-section-title-youwrite">you write</span> Profit
-          Craft's history
-        </h2>
-        <div class="comments-section-list">
-          <div class="comments-track">
-            <article class="comments-item">
-              <div class="comments-item-description">
-                <p class="comments-title">Easy</p>
-                <p class="comments-description">
-                  I got a mortgage 9 months after starting with CreditCraft. I
-                  was turned down at first, but now my score is 740 and the bank
-                  gave me a low interest loan! 🎉
-                </p>
-              </div>
-              <div class="comments-author-mark">
-                <img src="./img/mans/man.svg" alt="Photo of Roberto C."" />
-                <div class="comments-name-raiting">
-                  <p class="comments-name">Roberto C.</p>
-                  <img src="./img/mans/raiting-full.svg" alt="raiting" />
-                </div>
-              </div>
-            </article>
-            <article class="comments-item">
-              <div class="comments-item-description">
-                <p class="comments-title">Very Fast</p>
-                <p class="comments-description">
-                  When I came to the US, I had no credit history. CreditCraft
-                  connected me to an account with a 15-year credit score, and
-                  within 6 months I had a $25K limit rewards card! 🚀⚡️
-                </p>
-              </div>
-              <div class="comments-author-mark">
-                <img src="./img/mans/womans.svg" alt="Photo of Anna S." />
-                <div class="comments-name-raiting">
-                  <p class="comments-name">Anna S.</p>
-                  <img src="./img/mans/raiting-full.svg" alt="raiting" />
-                </div>
-              </div>
-            </article>
-            <article class="comments-item">
-              <div class="comments-item-description">
-                <p class="comments-title">Easy</p>
-                <p class="comments-description">
-                  I got a mortgage 9 months after starting with CreditCraft. I
-                  was turned down at first, but now my score is 740 and the bank
-                  gave me a low interest loan! 🎉
-                </p>
-              </div>
-              <div class="comments-author-mark">
-                <img src="./img/mans/man.svg" alt="Photo of Roberto C." />
-                <div class="comments-name-raiting">
-                  <p class="comments-name">Roberto C.</p>
-                  <img src="./img/mans/raiting-full.svg" alt="raiting" />
-                </div>
-              </div>
-            </article>
-            <article class="comments-item">
-              <div class="comments-item-description">
-                <p class="comments-title">Very Fast</p>
-                <p class="comments-description">
-                  When I came to the US, I had no credit history. CreditCraft
-                  connected me to an account with a 15-year credit score, and
-                  within 6 months I had a $25K limit rewards card! 🚀⚡️
-                </p>
-              </div>
-              <div class="comments-author-mark">
-                <img src="./img/mans/womans.svg" alt="Photo of Anna S." />
-                <div class="comments-name-raiting">
-                  <p class="comments-name">Anna S.</p>
-                  <img src="./img/mans/raiting-full.svg" alt="raiting" />
-                </div>
-              </div>
-            </article>
-
-            <article class="comments-item">
-              <div class="comments-item-description">
-                <p class="comments-title">Easy</p>
-                <p class="comments-description">
-                  I got a mortgage 9 months after starting with CreditCraft. I
-                  was turned down at first, but now my score is 740 and the bank
-                  gave me a low interest loan! 🎉
-                </p>
-              </div>
-              <div class="comments-author-mark">
-                <img src="./img/mans/man.svg" alt="Photo of Roberto C." />
-                <div class="comments-name-raiting">
-                  <p class="comments-name">Roberto C.</p>
-                  <img src="./img/mans/raiting-full.svg" alt="raiting" />
-                </div>
-              </div>
-            </article>
-            <article class="comments-item">
-              <div class="comments-item-description">
-                <p class="comments-title">Very Fast</p>
-                <p class="comments-description">
-                  When I came to the US, I had no credit history. CreditCraft
-                  connected me to an account with a 15-year credit score, and
-                  within 6 months I had a $25K limit rewards card! 🚀⚡️
-                </p>
-              </div>
-              <div class="comments-author-mark">
-                <img src="./img/mans/womans.svg" alt="Photo of Anna S." />
-                <div class="comments-name-raiting">
-                  <p class="comments-name">Anna S.</p>
-                  <img src="./img/mans/raiting-full.svg" alt="raiting" />
-                </div>
-              </div>
-            </article>
-
-            <article class="comments-item">
-              <div class="comments-item-description">
-                <p class="comments-title">Easy</p>
-                <p class="comments-description">
-                  I got a mortgage 9 months after starting with CreditCraft. I
-                  was turned down at first, but now my score is 740 and the bank
-                  gave me a low interest loan! 🎉
-                </p>
-              </div>
-              <div class="comments-author-mark">
-                <img src="./img/mans/man.svg" alt="Photo of Roberto C." />
-                <div class="comments-name-raiting">
-                  <p class="comments-name">Roberto C.</p>
-                  <img src="./img/mans/raiting-full.svg" alt="raiting" />
-                </div>
-              </div>
-            </article>
-            <article class="comments-item">
-              <div class="comments-item-description">
-                <p class="comments-title">Very Fast</p>
-                <p class="comments-description">
-                  When I came to the US, I had no credit history. CreditCraft
-                  connected me to an account with a 15-year credit score, and
-                  within 6 months I had a $25K limit rewards card! 🚀⚡️
-                </p>
-              </div>
-              <div class="comments-author-mark">
-                <img src="./img/mans/womans.svg" alt="Photo of Anna S." />
-                <div class="comments-name-raiting">
-                  <p class="comments-name">Anna S.</p>
-                  <img
-                    src="./img/mans/raiting-full.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section
-        id="plans"
-        class="ambitions-section-wrapper"
-        aria-labelledby="plans-title"
-      >
-        <div class="ambitions-section-columns">
-          <h2 class="ambitions-section-title">
-            Pick a plan for your
-            <span class="ambitions-section-title-ambitions">ambitions</span>
-          </h2>
-          <div class="ambition-section-category">
-            <a
-              href="#plan-basic"
-              class="ambitions-section-category-text"
-              data-target="plan-basic"
-              >Basic</a
-            >
-            <a
-              href="#plan-advanced"
-              class="ambitions-section-category-text"
-              data-target="plan-advanced"
-              >Advanced</a
-            >
-            <a
-              href="#plan-premium"
-              class="ambition-premium-star"
-              data-target="plan-premium"
-            >
-              <img src="./img/star.svg" alt="star ico" />
-              <p class="ambition-premium-text">Premium</p>
-            </a>
-          </div>
-          <div class="ambitions-plan-help">
-            <div class="ambitions-plan-list">
-              <article class="ambitions-plan-item" id="plan-basic">
-                <p class="ambitions-plan-name">Basic</p>
-                <div class="ambition-price-time-description">
-                  <div class="ambition-price-time">
-                    <p class="ambitions-plan-price">$1 500</p>
-                    <p class="ambitions-plan-time">/ 4-6 months</p>
-                  </div>
-                  <p class="ambitions-plan-description">
-                    Suitable for those who are starting to create their dreams
-                  </p>
-                </div>
-
-                <button
-                  class="ambitions-plan-select"
-                  aria-label="Select Basic plan"
-                >
-                  Select plan
-                </button>
-                <p class="ambitions-plan-details-title">All from Basic</p>
-                <ul class="ambitions-details-list">
-                  <li class="ambitions-details-item">
-                    Create an individualized plan
-                  </li>
-                  <li class="ambitions-details-item">
-                    Delete all inquiries (inquiries)
-                  </li>
-                  <li class="ambitions-details-item">
-                    Correct data in credit bureaus
-                  </li>
-                  <li class="ambitions-details-item">
-                    Increase limits by 2-3 times
-                  </li>
-                  <li class="ambitions-details-item">Personal Manager</li>
-                </ul>
-              </article>
-              <article class="ambitions-plan-item" id="plan-advanced">
-                <div class="ambitions-plan-name-rating">
-                  <p class="ambitions-plan-name">Advanced</p>
-                  <div class="ambitions-plan-rating">
-                    <p class="plan-rating-text">Popular</p>
-                  </div>
-                </div>
-                <div class="ambition-price-time-description">
-                  <div class="ambition-price-time">
-                    <p class="ambitions-plan-price">$2 900</p>
-                    <p class="ambitions-plan-time">/ 7-8 months</p>
-                  </div>
-                  <p class="ambitions-plan-description">
-                    Ideal for expanding capabilities and financial futures
-                  </p>
-                </div>
-
-                <button class="ambitions-plan-select">Select plan</button>
-                <p class="ambitions-plan-details-title">All from Basic +</p>
-                <ul class="ambitions-details-list">
-                  <li class="ambitions-details-item">
-                    Connect to account with 15 years of history
-                  </li>
-                  <li class="ambitions-details-item">
-                    Increase limits to $20-30K
-                  </li>
-                  <li class="ambitions-details-item">
-                    Help apply for 2 credit cards from any bank
-                  </li>
-                  <li class="ambitions-details-item">Personal Manager</li>
-                </ul>
-              </article>
-              <article class="ambitions-plan-item" id="plan-premium">
-                <div class="ambitions-plan-name-rating">
-                  <p class="ambitions-plan-name">Premium</p>
-                  <div class="ambitions-plan-rating">
-                    <p class="plan-rating-text">Save 35%</p>
-                  </div>
-                </div>
-                <div class="ambition-price-time-description">
-                  <div class="ambition-price-time">
-                    <p class="ambitions-plan-price">$5 900</p>
-                    <p class="ambitions-plan-time">/ 9-12 months</p>
-                  </div>
-                  <p class="ambitions-plan-description">
-                    Perfect for leaders seeking to maximize credit potential
-                  </p>
-                </div>
-
-                <button class="ambitions-plan-select">Select plan</button>
-                <p class="ambitions-plan-details-title">All from Advanced +</p>
-                <ul class="ambitions-details-list">
-                  <li class="ambitions-details-item">
-                    Connect to account with 20-year history
-                  </li>
-                  <li class="ambitions-details-item">
-                    Maximize credit limits (up to $40-50K in 10-12 months)
-                  </li>
-                  <li class="ambitions-details-item">Open 4-5 credit cards</li>
-                  <li class="ambitions-details-item">
-                    Open 1-3 business credit cards with $30K+ limit
-                  </li>
-                  <li class="ambitions-details-item">Personal Manager</li>
-                </ul>
-              </article>
-            </div>
-            <div class="ambitions-help">
-              <div class="ambitions-help-ico-text">
-                <img src="./img/bank-note-05.svg" alt="bank note icon" />
-                <p class="ambitions-help-text">
-                  If it is difficult for you to pay the whole amount at once, we
-                  can break the amount into several parts, please contact us to
-                  do so.
-                </p>
-              </div>
-              <button class="ambitions-help-button">Contact&nbsp;Us</button>
-            </div>
-          </div>
-          <article id="services" class="ambitions-services">
-            <h3 class="ambitions-services-title">
-              Additional customized services
-            </h3>
-            <div class="ambitions-services-list">
-              <div class="ambitions-services-item">
-                <p class="ambitions-services-name">Inquiries</p>
-                <div class="ambitions-services-price-description">
-                  <div class="ambitions-services-price-inquiries">
-                    <p class="ambitions-services-price">$39</p>
-                    <p class="ambitions-services-inquiries">/ 1-10 Inquiries</p>
-                  </div>
-                  <p class="ambitions-services-description">
-                    The cost depends on the number of Inquiries you need
-                  </p>
-                </div>
-              </div>
-              <div class="ambitions-services-item">
-                <p class="ambitions-services-name">Late payment</p>
-                <div class="ambitions-services-price-description">
-                  <div class="ambitions-services-price-inquiries">
-                    <p class="ambitions-services-price">$149-299</p>
-                  </div>
-                  <p class="ambitions-services-description">
-                    Ideal for expanding capabilities and financial futures
-                  </p>
-                </div>
-              </div>
-              <div class="ambitions-services-item">
-                <p class="ambitions-services-name">Charge Off</p>
-                <div class="ambitions-services-price-description">
-                  <div class="ambitions-services-price-inquiries">
-                    <p class="ambitions-services-price">$499</p>
-                  </div>
-                  <p class="ambitions-services-description">
-                    Debt forgiveness after prolonged non-payment
-                  </p>
-                </div>
-              </div>
-              <div class="ambitions-services-item">
-                <p class="ambitions-services-name">Collections</p>
-                <div class="ambitions-services-price-description">
-                  <div class="ambitions-services-price-inquiries">
-                    <p class="ambitions-services-price">$499</p>
-                  </div>
-                  <p class="ambitions-services-description">
-                    Challenging records, restructuring or debt forgiveness
-                  </p>
-                </div>
-              </div>
-              <div class="ambitions-services-item">
-                <p class="ambitions-services-name">Repossession</p>
-                <div class="ambitions-services-price-description">
-                  <div class="ambitions-services-price-inquiries">
-                    <p class="ambitions-services-price">$499</p>
-                  </div>
-                  <p class="ambitions-services-description">
-                    Collateral repossession after prolonged loan non-payment.
-                  </p>
-                </div>
-              </div>
-              <div class="ambitions-services-item-contact">
-                <p class="ambitions-services-name-contact">
-                  Contact us to discuss a customized service plan for you
-                </p>
-                <button class="ambitions-services-contact-button">
-                  <p class="ambitions-services-contact-button-text">
-                    Contact&nbsp;Us
-                  </p>
-                  <img
-                    src="./img/arrow-right-wight.svg"
-                    alt="arrow-right-wight"
-                  />
-                </button>
-              </div>
-            </div>
-          </article>
-          <div class="ambitions-payments-methods">
-            <img src="./img/pay/apple-pay.svg" alt="apple-pay" />
-            <img src="./img/pay/google-pay.svg" alt="google-pay" />
-            <img src="./img/pay/paypal.svg" alt="paypal" />
-            <img src="./img/pay/mastercard-alt.svg" alt="mastercard" />
-            <img src="./img/pay/visa.svg" alt="visa" />
-          </div>
-        </div>
-        <div class="ambitions-roll-up">
-          <p class="ambitions-roll-up-text">Roll up Services</p>
-          <img src="./img/chevron-up.svg" alt="arrow up" />
-        </div>
-      </section>
-
-      <section
-        class="security-section-wrapper"
-        aria-labelledby="security-title"
-      >
-        <div class="security-title-list">
-          <h2 id="security-title" class="security-title">
-            Security you can trust
-          </h2>
-          <div class="security-list">
-            <div class="security-item">
-              <div class="security-item-icon-group">
-                <img
-                  class="security-item-icon"
-                  src="./img/security-image/treat.svg"
-                  alt="Icon representing data treatment"
-                  loading="lazy"
-                />
-              </div>
-              <p class="security-item-text">
-                We always treat your data as if it were our own
-              </p>
-            </div>
-            <div class="security-item">
-              <div class="security-item-icon-group">
-                <img
-                  class="security-item-icon"
-                  src="./img/security-image/protect.svg"
-                  alt="Icon representing 256-bit encryption"
-                  loading="lazy"
-                />
-              </div>
-              <p class="security-item-text">
-                We protect your data with 256-bit encryption
-              </p>
-            </div>
-            <div class="security-item">
-              <div class="security-item-icon-group">
-                <img
-                  class="security-item-icon"
-                  src="./img/security-image/not-sell.svg"
-                  alt="Icon representing privacy and no selling of data"
-                  loading="lazy"
-                />
-              </div>
-              <p class="security-item-text">
-                We do not sell your personal info to third parties
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact-section-wrapper">
-        <div class="contact-information-block">
-          <h2 class="contact-title">Contact Us</h2>
-          <ul class="contact-features-list">
-            <li class="contact-feature-item">Fast Reaction</li>
-            <li class="contact-feature-item">We Can Keep a Secret</li>
-            <li class="contact-feature-item">Personal Manager</li>
-          </ul>
-          <div class="contact-information-list">
-            <div class="contact-information-item">
-              <p class="contact-information-item-title">Email:</p>
-              <a
-                class="contact-information-item-text"
-                href="mailto:hi@profitcraft.info"
-                >hi@profitcraft.info</a
-              >
-            </div>
-
-            <div class="contact-information-item">
-              <p class="contact-information-item-title">Phone Number:</p>
-              <a class="contact-information-item-text" href="tel:+19151242416"
-                >+1 915 124 24 16</a
-              >
-            </div>
-
-            <div class="contact-information-item">
-              <p class="contact-information-item-title">Messengers:</p>
-              <ul class="contact-messengers-list">
-                <li>
-                  <a
-                    href="https://m.me/yourusername"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      class="contact-messengers-icon"
-                      src="./img/more-img/Facebook_Messenger.svg"
-                      alt="Facebook Messenger"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://wa.me/yourphonenumber"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      class="contact-messengers-icon"
-                      src="./img/more-img/WhatsApp.svg"
-                      alt="WhatsApp"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://t.me/yourprofile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      class="contact-messengers-icon"
-                      src="./img/more-img/Telegram.svg"
-                      alt="Telegram"
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="contact-information-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848.3192173577074!2d-73.99908389656323!3d40.73857247744949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bd93ec0c4f%3A0x556bf88d805752ea!2zMTQ5IFcgMTR0aCBTdCwgTmV3IFlvcmssIE5ZIDEwMDExLCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2spl!4v1751542303022!5m2!1suk!2spl"
-              width="100%"
-              height="310"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="map Profit Craft"
-            ></iframe>
-          </div>
-        </div>
-
-        <form
-          aria-labelledby="form-title"
-          class="consultation-form"
-          method="post"
-          action="/submit-form"
-        >
-          <h2 class="form-title">Get a Free Consultation</h2>
-
-          <div class="consultation-form-field">
-            <input
-              id="full-name"
-              type="text"
-              name="fullName"
-              placeholder="Full Name"
-              class="form-input"
-            />
-          </div>
-          <div class="consultation-form-field">
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Email"
-              class="form-input"
-            />
-          </div>
-          <div class="form-phone">
-            <div class="consultation-form-field">
-              <select class="form-phone-code">
-                <option>+1</option>
-                <option>+48</option>
-                <option>+380</option>
-              </select>
-            </div>
-            <div class="consultation-form-field">
-              <input
-                type="tel"
-                placeholder="(XXX) XXX XXXX"
-                class="form-input phone-input"
-              />
-            </div>
-          </div>
-
-          <div class="consultation-form-field">
-            <select class="form-input-service">
-              <option value="" disabled selected hidden>
-                Choose Service (optional)
-              </option>
-              <option>Design</option>
-              <option>Development</option>
-              <option>Consultation</option>
-            </select>
-          </div>
-          <div class="consultation-form-field">
+      </div>
+      <div class="consultation-form-field">
             <textarea
-              placeholder="Write your message (optional)"
-              class="form-textarea"
+                    placeholder="Write your message (optional)"
+                    class="form-textarea"
             ></textarea>
-          </div>
-          <div class="form-checkbox-field">
-            <input type="checkbox" id="agreement" class="form-checkbox" />
-            <label class="form-checkbox-label" for="agreement">
-              By clicking “Send” you agree to the
-              <a href="#" target="_blank" class="form-checkbox-label_blank"
-                >terms and conditions</a
-              >
-              of data processing
-            </label>
-          </div>
-
-          <button
-            type="submit"
-            class="form-submit"
-            aria-label="Send consultation form"
+      </div>
+      <div class="form-checkbox-field">
+        <input type="checkbox" id="agreement" class="form-checkbox" />
+        <label class="form-checkbox-label" for="agreement">
+          By clicking "Send" you agree to the
+          <a href="#" target="_blank" class="form-checkbox-label_blank"
+          >terms and conditions</a
           >
-            Send
-            <img src="./img/arrow-right-wight.svg" alt="" aria-hidden="true" />
-          </button>
-        </form>
-      </section>
+          of data processing
+        </label>
+      </div>
 
-      <section id="faq" class="FAQ-section">
-        <h2 class="faq-title">FAQ</h2>
-        <div class="faq-list">
-          <details open class="faq-item">
-            <summary class="faq-item-title-img">
-              <p class="faq-item-title">How to use credit?</p>
-              <img src="./img/faq/minus.svg" alt="minus" />
-            </summary>
-            <p class="faq-item-description">
-              In all but eight states, insurers can consider your credit score
-              when setting insurance rates. If you have an excellent credit
-              score and haven’t burned down your house or caused any highway
-              pileups, you probably qualify for great rates.
-            </p>
-          </details>
+      <button
+              type="submit"
+              class="form-submit"
+              aria-label="Send consultation form"
+      >
+        Send
+        <img src="./img/arrow-right-wight.svg" alt="" aria-hidden="true" />
+      </button>
+    </form>
+  </section>
 
-          <details class="faq-item">
-            <summary class="faq-item-title-img">
-              <p class="faq-item-title">What is a credit score?</p>
-              <img src="./img/faq/plus.svg" alt="plus" />
-            </summary>
-            <p class="faq-item-description">
-              In all but eight states, insurers can consider your credit score
-              when setting insurance rates. If you have an excellent credit
-              score and haven’t burned down your house or caused any highway
-              pileups, you probably qualify for great rates.
-            </p>
-          </details>
+  <section id="faq" class="FAQ-section">
+    <h2 class="faq-title">FAQ</h2>
+    <div class="faq-list">
+      <details open class="faq-item">
+        <summary class="faq-item-title-img">
+          <p class="faq-item-title">How do I use credit effectively?</p>
+          <img src="./img/faq/minus.svg" alt="minus" />
+        </summary>
+        <p class="faq-item-description">
+          In most states, insurers are permitted to factor in your credit
+          history when calculating insurance premiums. Maintaining a strong
+          credit profile and a clean claims record can help you qualify for
+          the most competitive rates available.
+        </p>
+      </details>
 
-          <details class="faq-item">
-            <summary class="faq-item-title-img">
-              <p class="faq-item-title">Pump up your credit rating?</p>
-              <img src="./img/faq/plus.svg" alt="plus" />
-            </summary>
-            <p class="faq-item-description">
-              In all but eight states, insurers can consider your credit score
-              when setting insurance rates. If you have an excellent credit
-              score and haven’t burned down your house or caused any highway
-              pileups, you probably qualify for great rates.
-            </p>
-          </details>
+      <details class="faq-item">
+        <summary class="faq-item-title-img">
+          <p class="faq-item-title">What is a credit score?</p>
+          <img src="./img/faq/plus.svg" alt="plus" />
+        </summary>
+        <p class="faq-item-description">
+          A credit score is a numerical representation of your
+          creditworthiness, based on your financial history and borrowing
+          behavior. Insurers in most states may use this score as one of
+          several factors when determining your insurance premiums.
+        </p>
+      </details>
 
-          <details class="faq-item">
-            <summary class="faq-item-title-img">
-              <p class="faq-item-title">How to establish credit?</p>
-              <img src="./img/faq/plus.svg" alt="plus" />
-            </summary>
-            <p class="faq-item-description">
-              In all but eight states, insurers can consider your credit score
-              when setting insurance rates. If you have an excellent credit
-              score and haven’t burned down your house or caused any highway
-              pileups, you probably qualify for great rates.
-            </p>
-          </details>
-        </div>
-      </section>
+      <details class="faq-item">
+        <summary class="faq-item-title-img">
+          <p class="faq-item-title">How can I improve my credit rating?</p>
+          <img src="./img/faq/plus.svg" alt="plus" />
+        </summary>
+        <p class="faq-item-description">
+          Improving your credit rating involves making timely payments,
+          reducing outstanding balances, and avoiding unnecessary credit
+          inquiries. A higher credit score can positively impact your
+          insurance rates in states where credit-based pricing is permitted.
+        </p>
+      </details>
 
-      <footer class="footer-wrapper">
-        <img src="./img/logotype.svg" alt="Profit Craft Logo" />
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <ul class="footer-nav-list" id="footer-list">
-            <li class="footer-nav-list-item">
-              <a href="#services">Services</a>
-            </li>
-            <li class="footer-nav-list-item">
-              <a href="#plans">Price</a>
-            </li>
-            <li class="footer-nav-list-item">
-              <a href="#faq">FAQ</a>
-            </li>
-            <li class="footer-nav-list-item" id="footer-contact-us">
-              <a href="#contact">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
-    </main>
-  </body>
-  <script src="js/profit.js"></script>
-  <script src="js/roll.js"></script>
-  <script src="js/messenger.js"></script>
-  <script src="js/catagory.js"></script>
-  <script src="js/burger.js"></script>
+      <details class="faq-item">
+        <summary class="faq-item-title-img">
+          <p class="faq-item-title">How do I establish credit?</p>
+          <img src="./img/faq/plus.svg" alt="plus" />
+        </summary>
+        <p class="faq-item-description">
+          Building credit typically starts with opening a secured credit card
+          or becoming an authorized user on an existing account. Consistent,
+          responsible use of credit over time establishes a reliable financial
+          history, which can benefit both your borrowing opportunities and
+          insurance eligibility.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="footer-wrapper">
+    <img src="./img/logotype.svg" alt="Profit Craft Logo" />
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <ul class="footer-nav-list" id="footer-list">
+        <li class="footer-nav-list-item">
+          <a href="#services">Services</a>
+        </li>
+        <li class="footer-nav-list-item">
+          <a href="#plans">Price</a>
+        </li>
+        <li class="footer-nav-list-item">
+          <a href="#faq">FAQ</a>
+        </li>
+        <li class="footer-nav-list-item" id="footer-contact-us">
+          <a href="#contact">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</main>
+</body>
+<script src="js/profit.js"></script>
+<script src="js/roll.js"></script>
+<script src="js/messenger.js"></script>
+<script src="js/catagory.js"></script>
+<script src="js/burger.js"></script>
 </html>

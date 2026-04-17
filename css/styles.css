@@ -480,7 +480,8 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  animation: scroll-horizontal 20s linear infinite;
+  animation: scroll-horizontal 60s linear infinite;
+  flex-shrink: 0;
 }
 
 .comments-item {
@@ -511,7 +512,7 @@ button {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 .comments-title {
@@ -1351,10 +1352,10 @@ summary::-webkit-details-marker {
   border-radius: 16px;
   padding: 16px;
   box-shadow: 0px 80px 23px rgba(206, 208, 212, 0),
-    0px 51px 21px rgba(206, 208, 212, 0.04),
-    0px 29px 17px rgba(206, 208, 212, 0.13),
-    0px 13px 13px rgba(206, 208, 212, 0.22),
-    0px 3px 7px rgba(206, 208, 212, 0.26);
+  0px 51px 21px rgba(206, 208, 212, 0.04),
+  0px 29px 17px rgba(206, 208, 212, 0.13),
+  0px 13px 13px rgba(206, 208, 212, 0.22),
+  0px 3px 7px rgba(206, 208, 212, 0.26);
 }
 
 .messenger-menu a {
@@ -2040,4 +2041,438 @@ summary::-webkit-details-marker {
     font-size: 20px;
     font-weight: 600;
   }
+}
+
+/* ===========================
+   PROFIT CARD WIDGET
+   =========================== */
+
+.profit-card-widget {
+  position: relative;
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.profit-card-inner {
+  background: #f2f2f2;
+  border-radius: 28px;
+  padding: 32px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.profit-card-icon-2--tr,
+.profit-card-icon-2--bl {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+/* floating icons */
+.profit-card-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Градиент как в макете */
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+
+  /* мягкая тень */
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.25);
+
+  z-index: 2;
+}
+
+.profit-card-icon i {
+  font-size: 30px;
+  color: white;
+  opacity: 0.95;
+}
+
+
+
+/* Картка 1 іконки */
+.profit-card-icon-1--tl {
+  top: 16px;
+  right: -36px;
+  background: rgba(34, 103, 75, 1) !important;
+}
+.profit-card-icon-1--bl {
+  top: 25%;
+  left: -36px;
+}
+.profit-card-icon-1--br {
+  top: 35%;
+  right: -100px;
+}
+
+/* Картка 2 іконки */
+.profit-card-icon-2--tr {
+  top: -20px;
+  right: -40px;
+  background: rgba(184, 255, 226, 1);
+  border-radius: 16px;
+  padding: 12px;
+}
+.profit-card-icon-2--bl {
+  bottom: 80px;
+  left: -40px;
+  background-color: #53e77a;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+/* Картка 3 іконки */
+.profit-card-icon-3--tl {
+  top: 45%;
+  left: -55px;
+}
+.profit-card-icon-3--br {
+  top: 35%;
+  right: -96px;
+}
+
+/* ring */
+.profit-card-score-ring {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profit-ring-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  transform: rotate(-220deg);
+}
+
+.profit-ring-bg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 310;
+  stroke-dashoffset: 0;
+}
+
+.profit-ring-fill {
+  fill: none;
+  stroke: #22674b;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 310;
+  stroke-dashoffset: 80;
+}
+
+.profit-card-score-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.profit-score-number {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #000;
+}
+
+.profit-score-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #22674b;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* CTA button */
+.profit-card-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background-color: #f79e1b;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+/* description text */
+.profit-card-desc {
+  font-size: 13px;
+  line-height: 160%;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.48);
+  text-align: center;
+}
+
+/* ===========================
+   КАРТКА 2: Fix Weaknesses
+   =========================== */
+
+.profit-card-fix {
+  gap: 16px;
+  padding: 24px 20px 20px;
+}
+
+.profit-fix-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  color: #111;
+}
+
+.profit-fix-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.profit-fix-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.profit-fix-item:last-child {
+  border-bottom: none;
+}
+
+.profit-fix-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.profit-fix-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profit-fix-badge.corrected {
+  background-color: rgba(83, 231, 122, 0.18);
+  color: #1a8a45;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.profit-fix-badge.loading,
+.profit-fix-badge.icon {
+  width: 28px;
+  height: 28px;
+}
+
+.fix-spinner {
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===========================
+   КАРТКА 3: Pump Up — відповідає дизайну (скрін 2)
+   =========================== */
+
+.profit-card-pump {
+  background: #f2f2f2 !important;
+  border-radius: 28px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: stretch;
+  box-shadow: none;
+  position: relative;
+}
+
+/* Верхня картка Alex B. — нахилена, з тінню, ефект "стопки карток" */
+.pump-card-main {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 3;
+  transform: rotate(-2deg);
+  margin-bottom: -6px;
+}
+
+.pump-card-main-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.pump-user-avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pump-user-info {
+  flex: 1;
+}
+
+.pump-user-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+.pump-user-sub {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.48);
+  font-weight: 500;
+}
+
+.pump-score-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+.pump-score-badge.small {
+  font-size: 15px;
+}
+
+.pump-card-main-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pump-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pump-detail-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.56);
+}
+
+.pump-detail-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.pump-detail-value.green {
+  color: #22674b;
+}
+
+/* Список користувачів під верхньою карткою */
+.pump-users-list {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.pump-user-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pump-user-row:last-child {
+  border-bottom: none;
+}
+
+.pump-user-ava {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pump-user-row-info {
+  flex: 1;
+}
+
+.pump-user-row-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.pump-user-row-sub {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.48);
+  font-weight: 500;
+}
+
+/* responsive */
+@media (width <= 1024px) {
+  .profit-card-widget {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (width <= 490px) {
+  .profit-card-widget {
+    display: none;
+  }
+}
+
+.ambitions-services-discount-note {
+  display: inline-block;
+  background-color: #f0f7ff;
+  color: #22674b;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin: 4px 0 8px;
 }
