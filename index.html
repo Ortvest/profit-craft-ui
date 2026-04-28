@@ -299,7 +299,7 @@
         />
         <p class="goals-item-names">Accountant</p>
       </li>
-      <li class="goals-item">
+      <li class="goals-item goals-item-get-started scroll-to-form" role="button" tabindex="0" style="cursor:pointer;">
         <img
                 src="./img/image-pc/pc_getstarted.svg"
                 alt=""
@@ -936,7 +936,7 @@
             </div>
             <div class="ambition-price-time-description">
               <div class="ambition-price-time">
-                <p class="ambitions-plan-price">$5 900</p>
+                <p class="ambitions-plan-price">$9 900</p>
                 <p class="ambitions-plan-time">/ 9-12 months</p>
               </div>
               <p class="ambitions-plan-description">
@@ -1235,22 +1235,6 @@
                 class="form-input"
         />
       </div>
-      <div class="form-phone">
-        <div class="consultation-form-field">
-          <select class="form-phone-code">
-            <option>+1</option>
-            <option>+48</option>
-            <option>+380</option>
-          </select>
-        </div>
-        <div class="consultation-form-field">
-          <input
-                  type="tel"
-                  placeholder="(XXX) XXX XXXX"
-                  class="form-input phone-input"
-          />
-        </div>
-      </div>
       <div class="consultation-form-field">
             <textarea
                     placeholder="Write your message (optional)"
@@ -1365,7 +1349,7 @@
 <script src="js/burger.js"></script>
 <script>
   document.querySelectorAll('.scroll-to-form').forEach(function(btn) {
-    btn.addEventListener('click', function() {
+    function scrollToForm() {
       const contactSection = document.getElementById('contact');
       const form = document.getElementById('consultation-form');
 
@@ -1376,6 +1360,14 @@
       }
 
       form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    btn.addEventListener('click', scrollToForm);
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        scrollToForm();
+      }
     });
   });
 </script>

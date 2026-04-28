@@ -1782,7 +1782,7 @@ summary::-webkit-details-marker {
 @media (width<= 490px) {
   #contact-nav-item,
   #footer-contact-us {
-    display: none;
+    display: list-item;
   }
   .promo-banner-text {
     font-size: 12px;
@@ -2024,7 +2024,8 @@ summary::-webkit-details-marker {
     font-size: 40px;
   }
   .contact-section-wrapper {
-    display: none;
+    display: flex;
+    padding: 40px 16px;
   }
   .faq-title,
   .security-title {
