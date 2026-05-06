@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://profitcraft.info/en</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://profitcraft.info/en" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://profitcraft.info/ru" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://profitcraft.info/uk" />
+<lastmod>2026-05-06T19:29:53.858Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://profitcraft.info/ru</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://profitcraft.info/en" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://profitcraft.info/ru" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://profitcraft.info/uk" />
+<lastmod>2026-05-06T19:29:53.858Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://profitcraft.info/uk</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://profitcraft.info/en" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://profitcraft.info/ru" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://profitcraft.info/uk" />
+<lastmod>2026-05-06T19:29:53.858Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://profitcraft.info/en/privacy-policy</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://profitcraft.info/en/privacy-policy" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://profitcraft.info/ru/privacy-policy" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://profitcraft.info/uk/privacy-policy" />
+<lastmod>2026-05-06T19:29:53.858Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://profitcraft.info/ru/privacy-policy</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://profitcraft.info/en/privacy-policy" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://profitcraft.info/ru/privacy-policy" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://profitcraft.info/uk/privacy-policy" />
+<lastmod>2026-05-06T19:29:53.858Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://profitcraft.info/uk/privacy-policy</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://profitcraft.info/en/privacy-policy" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://profitcraft.info/ru/privacy-policy" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://profitcraft.info/uk/privacy-policy" />
+<lastmod>2026-05-06T19:29:53.858Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://profitcraft.info/en/terms-and-conditions</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://profitcraft.info/en/terms-and-conditions" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://profitcraft.info/ru/terms-and-conditions" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://profitcraft.info/uk/terms-and-conditions" />
+<lastmod>2026-05-06T19:29:53.858Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://profitcraft.info/ru/terms-and-conditions</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://profitcraft.info/en/terms-and-conditions" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://profitcraft.info/ru/terms-and-conditions" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://profitcraft.info/uk/terms-and-conditions" />
+<lastmod>2026-05-06T19:29:53.858Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://profitcraft.info/uk/terms-and-conditions</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://profitcraft.info/en/terms-and-conditions" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://profitcraft.info/ru/terms-and-conditions" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://profitcraft.info/uk/terms-and-conditions" />
+<lastmod>2026-05-06T19:29:53.858Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+</urlset>

@@ -1,0 +1,17 @@
+{
+  "node": {
+    "60b0474bf0000af0e8a3838c81939a3154e2668788": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": 18728,
+          "async": false,
+          "exportedName": "submitContact",
+          "filename": "src/app/actions/contact.ts"
+        }
+      },
+      "exportedName": "submitContact",
+      "filename": "src/app/actions/contact.ts"
+    }
+  },
+  "edge": {}
+}

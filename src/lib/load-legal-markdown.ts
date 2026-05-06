@@ -8,8 +8,10 @@ const FILE_MAP: Record<LegalDocSlug, string> = {
   'terms-and-conditions': 'terms-and-conditions.md',
 };
 
+const legalDir = path.join(process.cwd(), 'content', 'legal');
+
 export function loadLegalMarkdown(slug: LegalDocSlug): string {
   const filename = FILE_MAP[slug];
-  const fullPath = path.join(process.cwd(), filename);
+  const fullPath = path.join(legalDir, filename);
   return fs.readFileSync(fullPath, 'utf8');
 }

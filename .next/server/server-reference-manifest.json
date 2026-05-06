@@ -1,15 +1,16 @@
 {
   "node": {
-    "604be6c6c3c92ec056a2167a42b57b352f62951f0a": {
+    "60b0474bf0000af0e8a3838c81939a3154e2668788": {
       "workers": {
         "app/[locale]/page": {
-          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.3.2_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2F0xdimovski%2Fdevelopment%2Fortvest%2Fprofitcraft%2Fprofit-craft-ui-next%2Fsrc%2Fapp%2Factions%2Fcontact.ts%22%2C%5B%7B%22id%22%3A%22604be6c6c3c92ec056a2167a42b57b352f62951f0a%22%2C%22exportedName%22%3A%22submitContact%22%7D%5D%5D%5D&__client_imported__=true!",
-          "async": false
+          "moduleId": 18728,
+          "async": false,
+          "exportedName": "submitContact",
+          "filename": "src/app/actions/contact.ts"
         }
       },
-      "layer": {
-        "app/[locale]/page": "action-browser"
-      }
+      "filename": "src/app/actions/contact.ts",
+      "exportedName": "submitContact"
     }
   },
   "edge": {},
