@@ -22,7 +22,8 @@ const contactSchema = z.object({
 
 export type ContactResult = { success: true } | { success: false; error: string };
 
-const API_URL = process.env.API_URL ?? 'http://localhost:4001';
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4001';
+
 
 export async function submitContact(
   _prev: ContactResult | null,
@@ -67,12 +68,14 @@ export async function submitContact(
   if (message) body.memo = message;
 
   try {
+
     const res = await fetch(`${API_URL}/crc/clients`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
       cache: 'no-store',
     });
+
 
     if (!res.ok) {
       const text = await res.text().catch(() => '');
