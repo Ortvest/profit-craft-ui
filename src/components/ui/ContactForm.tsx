@@ -75,6 +75,7 @@ export default function ContactForm() {
   const [state, formAction, pending] = useActionState(submitContact, null);
   const [errors, setErrors] = useState<FormErrors>({});
   const [phoneMobile, setPhoneMobile] = useState('');
+  const [agreed, setAgreed] = useState(false);
 
   const clearError = (field: FormField) =>
     setErrors((prev) => ({ ...prev, [field]: undefined }));
@@ -252,6 +253,7 @@ export default function ContactForm() {
           className="form-checkbox"
           required
           disabled={pending}
+          onChange={(e) => setAgreed(e.target.checked)}
         />
         <label className="form-checkbox-label" htmlFor="agreement">
           {t('agreement')}{' '}
@@ -312,8 +314,8 @@ export default function ContactForm() {
         type="submit"
         className="form-submit"
         aria-label={t('send')}
-        disabled={pending}
-        style={{ opacity: pending ? 0.7 : 1, cursor: pending ? 'wait' : 'pointer' }}
+        disabled={pending || !agreed}
+        style={{ opacity: (pending || !agreed) ? 0.7 : 1, cursor: pending ? 'wait' : 'pointer' }}
       >
         {pending ? '...' : t('send')}
         {!pending && (
