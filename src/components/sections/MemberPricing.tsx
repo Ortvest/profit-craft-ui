@@ -82,7 +82,7 @@ export default async function MemberPricing() {
 
       <div className="ambitions-plan-help member-pricing">
         <div className="ambitions-plan-list">
-          {tiers.map((tier) => (
+          {tiers.map((tier, idx) => (
             <article key={tier.id} className="ambitions-plan-item" id={tier.id}>
               <div className="member-pricing-top">
                 <div className="ambitions-plan-name-rating">
@@ -116,7 +116,7 @@ export default async function MemberPricing() {
                   <li key={f} className="ambitions-details-item">{f}</li>
                 ))}
               </ul>
-              <p className="ambitions-services-discount-note">{t('cancelAnytime')}</p>
+              {idx === 2 && <p className="ambitions-services-discount-note">{t('cancelAnytime')}</p>}
             </article>
           ))}
         </div>
