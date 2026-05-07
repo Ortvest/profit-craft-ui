@@ -32,7 +32,6 @@ export default async function MemberPricing() {
         t('o1i6'),
         t('o1i7'),
         t('o1i8'),
-        t('o1i9'),
       ],
     },
     {
@@ -51,7 +50,6 @@ export default async function MemberPricing() {
         t('o2i6'),
         t('o2i7'),
         t('o2i8'),
-        t('o2i9'),
       ],
       badge: t('mostPopular'),
     },

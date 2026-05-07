@@ -186,7 +186,7 @@
 
     "option1Title": "Credit Foundation",
     "option1Price": "$89",
-    "option1Fee": "+$99 Initial Review and First Work Fee",
+    "option1Fee": "$99 Initial Review and First Work Fee",
     "option1BestFor": "Clients with 1–5 questionable negative accounts/items.",
     "o1i1": "Credit report review",
     "o1i2": "Client portal access",
@@ -200,7 +200,7 @@
 
     "option2Title": "Credit Restore",
     "option2Price": "$119",
-    "option2Fee": "+$129 Initial Review and First Work Fee",
+    "option2Fee": "$129 Initial Review and First Work Fee",
     "option2BestFor": "Most clients with moderate credit issues.",
     "o2i1": "All 3 bureau dispute strategy",
     "o2i2": "Creditor intervention letters",
@@ -214,7 +214,7 @@
 
     "option3Title": "Credit Premier",
     "option3Price": "$149",
-    "option3Fee": "+$199 Initial Review and First Work Fee",
+    "option3Fee": "$199 Initial Review and First Work Fee",
     "option3BestFor": "Clients with many negatives, collections, charge-offs, repos, mixed files, identity-related issues, or complex bureau inconsistencies.",
     "o3i1": "Advanced furnisher disputes",
     "o3i2": "Debt buyer / collector dispute support",
