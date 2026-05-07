@@ -26,12 +26,6 @@ export default async function Contact() {
               —
             </p>
           </div>
-          <div className="contact-information-item">
-            <p className="contact-information-item-title">{t('addressLabel')}</p>
-            <p className="contact-information-item-text">
-              {t('addressValue')}
-            </p>
-          </div>
         </div>
       </div>
 

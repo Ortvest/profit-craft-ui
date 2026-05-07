@@ -5,10 +5,13 @@ import { z } from 'zod';
 const optionalStr = (max: number) =>
   z.string().max(max).nullish().transform((v) => v ?? undefined);
 
+const requiredStr = (max: number) =>
+  z.preprocess((v) => (v ?? ''), z.string().min(1).max(max));
+
 const contactSchema = z.object({
-  firstname: z.string().min(1).max(100),
-  lastname: z.string().min(1).max(100),
-  email: z.string().email().max(254),
+  firstname: requiredStr(100),
+  lastname: requiredStr(100),
+  email: z.preprocess((v) => (v ?? ''), z.string().email().max(254)),
   phone_home: optionalStr(20),
   phone_mobile: optionalStr(20),
   street_address: optionalStr(255),
@@ -22,13 +25,14 @@ const contactSchema = z.object({
 
 export type ContactResult = { success: true } | { success: false; error: string };
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4001';
+const API_URL = process.env.API_URL ?? 'http://localhost:4001';
 
 
 export async function submitContact(
   _prev: ContactResult | null,
   formData: FormData,
 ): Promise<ContactResult> {
+  console.log('[contact] fetching', `${API_URL}/crc/clients`);
   const raw = Object.fromEntries(
     [
       'firstname', 'lastname', 'email',

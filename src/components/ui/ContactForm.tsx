@@ -8,56 +8,56 @@ import { submitContact } from '@/app/actions/contact';
 import { useRouter } from 'next/navigation';
 
 const US_STATES = [
-  { value: 'AL', label: 'Alabama' },
-  { value: 'AK', label: 'Alaska' },
-  { value: 'AZ', label: 'Arizona' },
-  { value: 'AR', label: 'Arkansas' },
-  { value: 'CA', label: 'California' },
-  { value: 'CO', label: 'Colorado' },
-  { value: 'CT', label: 'Connecticut' },
-  { value: 'DE', label: 'Delaware' },
-  { value: 'FL', label: 'Florida' },
-  { value: 'GA', label: 'Georgia' },
-  { value: 'HI', label: 'Hawaii' },
-  { value: 'ID', label: 'Idaho' },
-  { value: 'IL', label: 'Illinois' },
-  { value: 'IN', label: 'Indiana' },
-  { value: 'IA', label: 'Iowa' },
-  { value: 'KS', label: 'Kansas' },
-  { value: 'KY', label: 'Kentucky' },
-  { value: 'LA', label: 'Louisiana' },
-  { value: 'ME', label: 'Maine' },
-  { value: 'MD', label: 'Maryland' },
-  { value: 'MA', label: 'Massachusetts' },
-  { value: 'MI', label: 'Michigan' },
-  { value: 'MN', label: 'Minnesota' },
-  { value: 'MS', label: 'Mississippi' },
-  { value: 'MO', label: 'Missouri' },
-  { value: 'MT', label: 'Montana' },
-  { value: 'NE', label: 'Nebraska' },
-  { value: 'NV', label: 'Nevada' },
-  { value: 'NH', label: 'New Hampshire' },
-  { value: 'NJ', label: 'New Jersey' },
-  { value: 'NM', label: 'New Mexico' },
-  { value: 'NY', label: 'New York' },
-  { value: 'NC', label: 'North Carolina' },
-  { value: 'ND', label: 'North Dakota' },
-  { value: 'OH', label: 'Ohio' },
-  { value: 'OK', label: 'Oklahoma' },
-  { value: 'OR', label: 'Oregon' },
-  { value: 'PA', label: 'Pennsylvania' },
-  { value: 'RI', label: 'Rhode Island' },
-  { value: 'SC', label: 'South Carolina' },
-  { value: 'SD', label: 'South Dakota' },
-  { value: 'TN', label: 'Tennessee' },
-  { value: 'TX', label: 'Texas' },
-  { value: 'UT', label: 'Utah' },
-  { value: 'VT', label: 'Vermont' },
-  { value: 'VA', label: 'Virginia' },
-  { value: 'WA', label: 'Washington' },
-  { value: 'WV', label: 'West Virginia' },
-  { value: 'WI', label: 'Wisconsin' },
-  { value: 'WY', label: 'Wyoming' },
+  { value: 'AL', label: 'AL' },
+  { value: 'AK', label: 'AK' },
+  { value: 'AZ', label: 'AZ' },
+  { value: 'AR', label: 'AR' },
+  { value: 'CA', label: 'CA' },
+  { value: 'CO', label: 'CO' },
+  { value: 'CT', label: 'CT' },
+  { value: 'DE', label: 'DE' },
+  { value: 'FL', label: 'FL' },
+  { value: 'GA', label: 'GA' },
+  { value: 'HI', label: 'HI' },
+  { value: 'ID', label: 'ID' },
+  { value: 'IL', label: 'IL' },
+  { value: 'IN', label: 'IN' },
+  { value: 'IA', label: 'IA' },
+  { value: 'KS', label: 'KS' },
+  { value: 'KY', label: 'KY' },
+  { value: 'LA', label: 'LA' },
+  { value: 'ME', label: 'ME' },
+  { value: 'MD', label: 'MD' },
+  { value: 'MA', label: 'MA' },
+  { value: 'MI', label: 'MI' },
+  { value: 'MN', label: 'MN' },
+  { value: 'MS', label: 'MS' },
+  { value: 'MO', label: 'MO' },
+  { value: 'MT', label: 'MT' },
+  { value: 'NE', label: 'NE' },
+  { value: 'NV', label: 'NV' },
+  { value: 'NH', label: 'NH' },
+  { value: 'NJ', label: 'NJ' },
+  { value: 'NM', label: 'NM' },
+  { value: 'NY', label: 'NY' },
+  { value: 'NC', label: 'NC' },
+  { value: 'ND', label: 'ND' },
+  { value: 'OH', label: 'OH' },
+  { value: 'OK', label: 'OK' },
+  { value: 'OR', label: 'OR' },
+  { value: 'PA', label: 'PA' },
+  { value: 'RI', label: 'RI' },
+  { value: 'SC', label: 'SC' },
+  { value: 'SD', label: 'SD' },
+  { value: 'TN', label: 'TN' },
+  { value: 'TX', label: 'TX' },
+  { value: 'UT', label: 'UT' },
+  { value: 'VT', label: 'VT' },
+  { value: 'VA', label: 'VA' },
+  { value: 'WA', label: 'WA' },
+  { value: 'WV', label: 'WV' },
+  { value: 'WI', label: 'WI' },
+  { value: 'WY', label: 'WY' },
 ];
 
 type FormField =
@@ -82,6 +82,10 @@ export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
   const [step, setStep] = useState<StepId>(1);
   const router = useRouter();
+
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
 
   const [dob, setDob] = useState('');
   const [streetAddress, setStreetAddress] = useState('');
@@ -144,6 +148,9 @@ export default function ContactForm() {
     }
 
     setErrors({});
+    setFirstName(String(fd.get('firstname') ?? '').trim());
+    setLastName(String(fd.get('lastname') ?? '').trim());
+    setEmail(String(fd.get('email') ?? '').trim());
     setStep(2);
   };
 
@@ -223,7 +230,11 @@ export default function ContactForm() {
                 placeholder={t('firstnamePlaceholder')}
                 maxLength={100}
                 disabled={pending}
-                onChange={() => clearError('firstname')}
+                value={firstName}
+                onChange={(e) => {
+                  setFirstName(e.target.value);
+                  clearError('firstname');
+                }}
               />
               {errors.firstname && <span className="form-field-error">{errors.firstname}</span>}
             </div>
@@ -235,7 +246,11 @@ export default function ContactForm() {
                 placeholder={t('lastnamePlaceholder')}
                 maxLength={100}
                 disabled={pending}
-                onChange={() => clearError('lastname')}
+                value={lastName}
+                onChange={(e) => {
+                  setLastName(e.target.value);
+                  clearError('lastname');
+                }}
               />
               {errors.lastname && <span className="form-field-error">{errors.lastname}</span>}
             </div>
@@ -249,7 +264,11 @@ export default function ContactForm() {
               placeholder={t('emailPlaceholder')}
               maxLength={254}
               disabled={pending}
-              onChange={() => clearError('email')}
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                clearError('email');
+              }}
               onBlur={(e) => {
                 const err = validateEmail(e.target.value);
                 if (err) setErrors((p) => ({ ...p, email: err }));
@@ -283,6 +302,10 @@ export default function ContactForm() {
 
       {step === 2 && (
         <>
+          <input type="hidden" name="firstname" value={firstName} />
+          <input type="hidden" name="lastname" value={lastName} />
+          <input type="hidden" name="email" value={email} />
+
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '10px' }}>
             <button
               type="button"
@@ -430,9 +453,15 @@ export default function ContactForm() {
               href={`/${locale}/terms-and-conditions`}
               className="form-checkbox-label_blank"
             >
-              {t('agreementLink')}
+              {t('agreementTerms')}
+            </Link>{' '}
+            {t('agreementAnd')}{' '}
+            <Link
+              href={`/${locale}/privacy-policy`}
+              className="form-checkbox-label_blank"
+            >
+              {t('agreementPrivacy')}
             </Link>
-            {t('agreementEnd') ? ` ${t('agreementEnd')}` : ''}
           </label>
         </div>
       )}
