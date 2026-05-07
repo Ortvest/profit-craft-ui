@@ -36,7 +36,6 @@ export default async function HowItWorks() {
       t('card2Item2'),
       t('card2Item3'),
       t('card2Item4'),
-      t('card2Item5'),
     ],
     corrected: t('corrected'),
     card3Cta: t('card3Cta'),
