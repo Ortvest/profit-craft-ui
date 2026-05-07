@@ -545,6 +545,11 @@ button {
   flex-direction: row;
   gap: 16px;
 }
+
+.comments-avatar {
+  border-radius: 999px;
+  object-fit: cover;
+}
 .comments-name-raiting {
   display: flex;
   flex-direction: column;
@@ -600,6 +605,12 @@ button {
   background-color: #f79e1b;
 }
 
+.member-pricing-title .ambitions-section-title-ambitions::after {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
 .ambitions-plan-help {
   display: flex;
   max-width: 1080px;
@@ -644,6 +655,42 @@ button {
 .ambitions-plan-item:hover .ambitions-plan-details-title,
 .ambitions-plan-item:hover .ambitions-details-item {
   color: #ffffff;
+}
+
+.member-fee-line {
+  margin-top: -6px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.ambitions-plan-item:hover .member-fee-line {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.member-bestfor {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.62);
+}
+
+.member-bestfor-label {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.ambitions-plan-item:hover .member-bestfor,
+.ambitions-plan-item:hover .member-bestfor-label {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.member-pricing .member-pricing-top {
+  height: 260px;
+}
+
+.member-pricing .ambitions-plan-select {
+  width: 100%;
+  align-self: stretch;
+  margin-left: 0;
+  margin-right: 0;
 }
 .ambitions-plan-name-rating {
   display: flex;
@@ -2200,6 +2247,11 @@ summary::-webkit-details-marker {
   stroke-dashoffset: 80;
 }
 
+.profit-ring-fill--low {
+  stroke: #e53e3e;
+  stroke-dashoffset: 190;
+}
+
 .profit-card-score-text {
   display: flex;
   flex-direction: column;
@@ -2396,6 +2448,33 @@ summary::-webkit-details-marker {
 
 .pump-score-badge.small {
   font-size: 15px;
+}
+
+.pump-score-badge.stacked {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  line-height: 1;
+}
+
+.pump-score-main {
+  font-size: inherit;
+  font-weight: 800;
+  color: #111;
+}
+
+.pump-score-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #22674b;
+  line-height: 1.1;
+}
+
+.pump-score-badge.small .pump-score-delta {
+  font-size: 11px;
 }
 
 .pump-card-main-details {

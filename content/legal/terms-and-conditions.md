@@ -1,8 +1,8 @@
 # Terms and Conditions
 
-**Effective Date:** [DATE]
+**Effective Date:** May 7, 2026
 
-Welcome to [WEBSITE URL] (the “Website”). These Terms and Conditions (“Terms”) govern your access to and use of the Website operated by [COMPANY NAME] (“Company,” “we,” “us,” or “our”).
+Welcome to https://profitcraft.info (the “Website”). These Terms and Conditions (“Terms”) govern your access to and use of the Website operated by ProfitCraft LLC (“Company,” “we,” “us,” or “our”).
 
 By accessing the Website or submitting information through the Website form, you agree to these Terms. If you do not agree, please do not use the Website.
 
@@ -48,7 +48,7 @@ By submitting the Website form, you consent to being contacted by email regardin
 
 You may ask us to stop contacting you at any time by emailing us at:
 
-**[EMAIL ADDRESS]**
+**Profitcraftllc@gmail.com**
 
 ---
 
@@ -126,7 +126,7 @@ Please review the Privacy Policy to understand how we collect, use, share, and p
 
 Recommended link:
 
-**[PRIVACY POLICY URL]**
+**https://profitcraft.info/en/privacy-policy**
 
 ---
 
@@ -177,9 +177,9 @@ Any changes will be posted on this page with an updated effective date. Your con
 
 ## 16. Governing Law
 
-These Terms are governed by the laws of the State of [STATE], without regard to conflict of law principles.
+These Terms are governed by the laws of the State of California, without regard to conflict of law principles.
 
-Any disputes related to these Terms or the Website will be handled in the courts located in [COUNTY], [STATE], unless applicable law requires otherwise.
+Any disputes related to these Terms or the Website will be handled in the courts located in Los Angeles County, California, unless applicable law requires otherwise.
 
 ---
 
@@ -187,9 +187,9 @@ Any disputes related to these Terms or the Website will be handled in the courts
 
 If you have questions about these Terms, contact us at:
 
-**[COMPANY NAME]**  
-[MAILING ADDRESS]  
-[EMAIL ADDRESS]  
+**ProfitCraft LLC**  
+3412 Barham Blvd, Los Angeles, CA 90068  
+Profitcraftllc@gmail.com  
 [PHONE NUMBER]
 
 ---

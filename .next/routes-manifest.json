@@ -45,6 +45,14 @@
         "nxtPlocale": "nxtPlocale"
       },
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/terms\\-and\\-conditions(?:/)?$"
+    },
+    {
+      "page": "/[locale]/thank-you",
+      "regex": "^/([^/]+?)/thank\\-you(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/thank\\-you(?:/)?$"
     }
   ],
   "staticRoutes": [

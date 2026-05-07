@@ -1,8 +1,8 @@
 # Privacy Policy
 
-**Effective Date:** \[DATE]
+**Effective Date:** May 7, 2026
 
-\[COMPANY NAME] (“Company,” “we,” “us,” or “our”) respects your privacy. This Privacy Policy explains how we collect, use, and protect information submitted through our website, \[WEBSITE URL].
+ProfitCraft LLC (“Company,” “we,” “us,” or “our”) respects your privacy. This Privacy Policy explains how we collect, use, and protect information submitted through our website, https://profitcraft.info.
 
 \---
 
@@ -92,7 +92,7 @@ By submitting the form, you consent to being contacted by email regarding your r
 
 You may ask us to stop contacting you at any time by emailing us at:
 
-**\[EMAIL ADDRESS]**
+**Profitcraftllc@gmail.com**
 
 \---
 
@@ -124,7 +124,7 @@ Depending on where you live, you may have the right to request access to, correc
 
 To make a privacy request, contact us at:
 
-**\[EMAIL ADDRESS]**
+**Profitcraftllc@gmail.com**
 
 \---
 
@@ -150,10 +150,10 @@ Any changes will be posted on this page with an updated effective date.
 
 If you have questions about this Privacy Policy, contact us at:
 
-**\[COMPANY NAME]**  
-\[MAILING ADDRESS]  
-\[EMAIL ADDRESS]  
-\[PHONE NUMBER]
+**ProfitCraft LLC**  
+3412 Barham Blvd, Los Angeles, CA 90068  
+Profitcraftllc@gmail.com  
+[PHONE NUMBER]
 
 \---
 

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { submitContact } from '@/app/actions/contact';
+import { useRouter } from 'next/navigation';
 
 const US_STATES = [
   { value: 'AL', label: 'Alabama' },
@@ -61,13 +62,16 @@ const US_STATES = [
 
 type FormField =
   | 'firstname' | 'lastname' | 'email'
-  | 'phone_home' | 'phone_mobile'
+  | 'phone_mobile'
   | 'street_address' | 'city' | 'state' | 'post_code'
   | 'birth_date';
 
 type FormErrors = Partial<Record<FormField, string>>;
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const BIRTH_RE = /^\d{2}\/\d{2}\/\d{4}$/;
+
+type StepId = 1 | 2;
 
 export default function ContactForm() {
   const locale = useLocale();
@@ -76,6 +80,14 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [phoneMobile, setPhoneMobile] = useState('');
   const [agreed, setAgreed] = useState(false);
+  const [step, setStep] = useState<StepId>(1);
+  const router = useRouter();
+
+  const [dob, setDob] = useState('');
+  const [streetAddress, setStreetAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [stateVal, setStateVal] = useState('');
+  const [postCode, setPostCode] = useState('');
 
   const clearError = (field: FormField) =>
     setErrors((prev) => ({ ...prev, [field]: undefined }));
@@ -83,25 +95,74 @@ export default function ContactForm() {
   const validateEmail = (v: string) =>
     !v.trim() ? t('emailRequired') : !EMAIL_RE.test(v) ? t('emailInvalid') : '';
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    fd.set('phone_mobile', phoneMobile.replace(/-/g, ''));
-
+  const validateStep1 = (fd: FormData) => {
     const errs: FormErrors = {};
     if (!String(fd.get('firstname')).trim()) errs.firstname = t('firstnameRequired');
     if (!String(fd.get('lastname')).trim()) errs.lastname = t('lastnameRequired');
     const emailErr = validateEmail(String(fd.get('email')));
     if (emailErr) errs.email = emailErr;
     if (!phoneMobile.trim()) errs.phone_mobile = t('phoneMobileRequired');
+    return errs;
+  };
 
+  const validateStep2 = () => {
+    const errs: FormErrors = {};
+    if (!dob.trim()) errs.birth_date = t('birthDateRequired');
+    else if (!BIRTH_RE.test(dob)) errs.birth_date = t('birthDateInvalid');
+    if (!streetAddress.trim()) errs.street_address = t('streetAddressRequired');
+    if (!city.trim()) errs.city = t('cityRequired');
+    if (!stateVal) errs.state = t('stateRequired');
+    if (!postCode.trim()) errs.post_code = t('postCodeRequired');
+    return errs;
+  };
+
+  const submitStage = (fd: FormData) => {
+    fd.set('phone_mobile', phoneMobile.replace(/-/g, ''));
+    fd.set('birth_date', dob);
+    fd.set('street_address', streetAddress);
+    fd.set('city', city);
+    fd.set('state', stateVal);
+    fd.set('post_code', postCode);
+
+    startTransition(() => formAction(fd));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
+
+  const handleContinue = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget.form;
+    if (!form) return;
+    const fd = new FormData(form);
+
+    const errs = validateStep1(fd);
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
 
     setErrors({});
-    startTransition(() => formAction(fd));
+    setStep(2);
+  };
+
+  const handleCreatePortal = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget.form;
+    if (!form) return;
+
+    if (!agreed) return;
+
+    const errs = validateStep2();
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs);
+      return;
+    }
+
+    const fd = new FormData(form);
+    setErrors({});
+    submitStage(fd);
   };
 
   const errorMessageKey = state?.success === false
@@ -113,52 +174,8 @@ export default function ContactForm() {
     : null;
 
   if (state?.success) {
-    return (
-      <div
-        id="consultation-form"
-        className="consultation-form"
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '20px',
-          padding: '48px 32px',
-          textAlign: 'center',
-        }}
-      >
-        <div
-          style={{
-            width: '64px',
-            height: '64px',
-            borderRadius: '50%',
-            background: 'rgba(34,103,75,0.1)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexShrink: 0,
-          }}
-        >
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path
-              d="M7 16.5L13 22.5L25 10"
-              stroke="#22674b"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <p style={{ margin: 0, fontSize: '20px', fontWeight: 700, color: '#111' }}>
-            {t('successTitle')}
-          </p>
-          <p style={{ margin: 0, fontSize: '15px', color: 'rgba(0,0,0,0.5)', lineHeight: 1.5 }}>
-            {t('successMessage')}
-          </p>
-        </div>
-      </div>
-    );
+    router.push(`/${locale}/thank-you`);
+    return null;
   }
 
   return (
@@ -169,72 +186,223 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       noValidate
     >
-      <h2 className="form-title" id="form-title">{t('formTitle')}</h2>
-
-      <div className="form-grid-2">
-        <div className="consultation-form-field form-field-wrap">
-          <input
-            className="form-input"
-            type="text"
-            name="firstname"
-            placeholder={t('firstnamePlaceholder')}
-            maxLength={100}
-            disabled={pending}
-            onChange={() => clearError('firstname')}
-          />
-          {errors.firstname && <span className="form-field-error">{errors.firstname}</span>}
-        </div>
-        <div className="consultation-form-field form-field-wrap">
-          <input
-            className="form-input"
-            type="text"
-            name="lastname"
-            placeholder={t('lastnamePlaceholder')}
-            maxLength={100}
-            disabled={pending}
-            onChange={() => clearError('lastname')}
-          />
-          {errors.lastname && <span className="form-field-error">{errors.lastname}</span>}
-        </div>
+      <h2 className="form-title" id="form-title">
+        {step === 1 ? t('step1Title') : t('step2Title')}
+      </h2>
+      <div
+        aria-label={step === 1 ? 'Step 1 of 2' : 'Step 2 of 2'}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '10px',
+          marginTop: '-6px',
+          marginBottom: '18px',
+          color: 'rgba(0,0,0,0.45)',
+          fontSize: '12px',
+          fontWeight: 600,
+          letterSpacing: '0.02em',
+          textTransform: 'uppercase',
+        }}
+      >
+        <span>{step === 1 ? 'Step 1 of 2' : 'Step 2 of 2'}</span>
+        <span style={{ display: 'inline-flex', gap: '6px', alignItems: 'center' }} aria-hidden="true">
+          <span style={{ width: 7, height: 7, borderRadius: 999, background: step === 1 ? '#22674b' : 'rgba(0,0,0,0.18)' }} />
+          <span style={{ width: 7, height: 7, borderRadius: 999, background: step === 2 ? '#22674b' : 'rgba(0,0,0,0.18)' }} />
+        </span>
       </div>
 
-      <div className="consultation-form-field form-field-wrap">
-        <input
-          className="form-input"
-          type="email"
-          name="email"
-          placeholder={t('emailPlaceholder')}
-          maxLength={254}
-          disabled={pending}
-          onChange={() => clearError('email')}
-          onBlur={(e) => {
-            const err = validateEmail(e.target.value);
-            if (err) setErrors((p) => ({ ...p, email: err }));
-          }}
-        />
-        {errors.email && <span className="form-field-error">{errors.email}</span>}
-      </div>
+      {step === 1 && (
+        <>
+          <div className="form-grid-2">
+            <div className="consultation-form-field form-field-wrap">
+              <input
+                className="form-input"
+                type="text"
+                name="firstname"
+                placeholder={t('firstnamePlaceholder')}
+                maxLength={100}
+                disabled={pending}
+                onChange={() => clearError('firstname')}
+              />
+              {errors.firstname && <span className="form-field-error">{errors.firstname}</span>}
+            </div>
+            <div className="consultation-form-field form-field-wrap">
+              <input
+                className="form-input"
+                type="text"
+                name="lastname"
+                placeholder={t('lastnamePlaceholder')}
+                maxLength={100}
+                disabled={pending}
+                onChange={() => clearError('lastname')}
+              />
+              {errors.lastname && <span className="form-field-error">{errors.lastname}</span>}
+            </div>
+          </div>
 
-      <div className="form-grid-1">
-        <div className="consultation-form-field form-field-wrap">
-          <label className="form-field-label" htmlFor="phone_mobile">{t('phoneMobileLabel')}</label>
-          <input
-            id="phone_mobile"
-            className="form-input"
-            type="text"
-            name="phone_mobile"
-            placeholder={t('phoneMobilePlaceholder')}
-            maxLength={20}
-            disabled={pending}
-            value={phoneMobile}
-            onChange={(e) => {
-              setPhoneMobile(e.target.value.replace(/[^\d-]/g, ''));
-              clearError('phone_mobile');
-            }}
-          />
-          {errors.phone_mobile && <span className="form-field-error">{errors.phone_mobile}</span>}
-        </div>
-      </div>
+          <div className="consultation-form-field form-field-wrap">
+            <input
+              className="form-input"
+              type="email"
+              name="email"
+              placeholder={t('emailPlaceholder')}
+              maxLength={254}
+              disabled={pending}
+              onChange={() => clearError('email')}
+              onBlur={(e) => {
+                const err = validateEmail(e.target.value);
+                if (err) setErrors((p) => ({ ...p, email: err }));
+              }}
+            />
+            {errors.email && <span className="form-field-error">{errors.email}</span>}
+          </div>
+
+          <div className="form-grid-1">
+            <div className="consultation-form-field form-field-wrap">
+              <label className="form-field-label" htmlFor="phone_mobile">{t('phoneMobileLabel')}</label>
+              <input
+                id="phone_mobile"
+                className="form-input"
+                type="text"
+                name="phone_mobile"
+                placeholder={t('phoneMobilePlaceholder')}
+                maxLength={20}
+                disabled={pending}
+                value={phoneMobile}
+                onChange={(e) => {
+                  setPhoneMobile(e.target.value.replace(/[^\d-]/g, ''));
+                  clearError('phone_mobile');
+                }}
+              />
+              {errors.phone_mobile && <span className="form-field-error">{errors.phone_mobile}</span>}
+            </div>
+          </div>
+        </>
+      )}
+
+      {step === 2 && (
+        <>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '10px' }}>
+            <button
+              type="button"
+              onClick={() => setStep(1)}
+              disabled={pending}
+              style={{
+                background: 'transparent',
+                border: 'none',
+                padding: 0,
+                cursor: pending ? 'not-allowed' : 'pointer',
+                color: '#22674b',
+                fontSize: '14px',
+                fontWeight: 700,
+              }}
+            >
+              ← {t('back')}
+            </button>
+          </div>
+
+          <p style={{ margin: '0 0 16px', color: 'rgba(0,0,0,0.55)', fontSize: '14px', lineHeight: 1.5 }}>
+            {t('step2Help')}
+          </p>
+
+          <div className="consultation-form-field form-field-wrap">
+            <input
+              className="form-input"
+              type="text"
+              name="birth_date"
+              placeholder={t('birthDatePlaceholder')}
+              maxLength={10}
+              disabled={pending}
+              value={dob}
+              onChange={(e) => {
+                const digits = e.target.value.replace(/\D/g, '').slice(0, 8);
+                let v = digits.slice(0, 2);
+                if (digits.length > 2) v += '/' + digits.slice(2, 4);
+                if (digits.length > 4) v += '/' + digits.slice(4, 8);
+                setDob(v);
+                clearError('birth_date');
+              }}
+              onBlur={() => {
+                if (dob && !BIRTH_RE.test(dob)) setErrors((p) => ({ ...p, birth_date: t('birthDateInvalid') }));
+              }}
+            />
+            {errors.birth_date && <span className="form-field-error">{errors.birth_date}</span>}
+          </div>
+
+          <div className="consultation-form-field form-field-wrap">
+            <input
+              className="form-input"
+              type="text"
+              name="street_address"
+              placeholder={t('streetAddressPlaceholder')}
+              maxLength={255}
+              disabled={pending}
+              value={streetAddress}
+              onChange={(e) => {
+                setStreetAddress(e.target.value);
+                clearError('street_address');
+              }}
+            />
+            {errors.street_address && <span className="form-field-error">{errors.street_address}</span>}
+          </div>
+
+          <div className="form-grid-3">
+            <div className="consultation-form-field form-field-wrap">
+              <input
+                className="form-input"
+                type="text"
+                name="city"
+                placeholder={t('cityPlaceholder')}
+                maxLength={100}
+                disabled={pending}
+                value={city}
+                onChange={(e) => {
+                  setCity(e.target.value);
+                  clearError('city');
+                }}
+              />
+              {errors.city && <span className="form-field-error">{errors.city}</span>}
+            </div>
+
+            <div className="consultation-form-field form-field-wrap">
+              <select
+                name="state"
+                className="form-input form-select"
+                disabled={pending}
+                value={stateVal}
+                onChange={(e) => {
+                  setStateVal(e.target.value);
+                  clearError('state');
+                }}
+              >
+                <option value="">{t('statePlaceholder')}</option>
+                {US_STATES.map((s) => (
+                  <option key={s.value} value={s.value}>{s.label}</option>
+                ))}
+              </select>
+              {errors.state && <span className="form-field-error">{errors.state}</span>}
+            </div>
+
+            <div className="consultation-form-field form-field-wrap">
+              <input
+                className="form-input"
+                type="text"
+                name="post_code"
+                placeholder={t('postCodePlaceholder')}
+                maxLength={10}
+                disabled={pending}
+                value={postCode}
+                onChange={(e) => {
+                  setPostCode(e.target.value.replace(/\D/g, ''));
+                  clearError('post_code');
+                }}
+              />
+              {errors.post_code && <span className="form-field-error">{errors.post_code}</span>}
+            </div>
+          </div>
+        </>
+      )}
 
       <div className="consultation-form-field">
         <textarea
@@ -245,27 +413,29 @@ export default function ContactForm() {
         />
       </div>
 
-      <div className="form-checkbox-field">
-        <input
-          type="checkbox"
-          id="agreement"
-          name="agreement"
-          className="form-checkbox"
-          required
-          disabled={pending}
-          onChange={(e) => setAgreed(e.target.checked)}
-        />
-        <label className="form-checkbox-label" htmlFor="agreement">
-          {t('agreement')}{' '}
-          <Link
-            href={`/${locale}/terms-and-conditions`}
-            className="form-checkbox-label_blank"
-          >
-            {t('agreementLink')}
-          </Link>
-          {t('agreementEnd') ? ` ${t('agreementEnd')}` : ''}
-        </label>
-      </div>
+      {step === 2 && (
+        <div className="form-checkbox-field">
+          <input
+            type="checkbox"
+            id="agreement"
+            name="agreement"
+            className="form-checkbox"
+            required
+            disabled={pending}
+            onChange={(e) => setAgreed(e.target.checked)}
+          />
+          <label className="form-checkbox-label" htmlFor="agreement">
+            {t('agreement')}{' '}
+            <Link
+              href={`/${locale}/terms-and-conditions`}
+              className="form-checkbox-label_blank"
+            >
+              {t('agreementLink')}
+            </Link>
+            {t('agreementEnd') ? ` ${t('agreementEnd')}` : ''}
+          </label>
+        </div>
+      )}
 
       {state && !state.success && errorMessageKey && (
         <div
@@ -310,18 +480,35 @@ export default function ContactForm() {
         </div>
       )}
 
-      <button
-        type="submit"
-        className="form-submit"
-        aria-label={t('send')}
-        disabled={pending || !agreed}
-        style={{ opacity: (pending || !agreed) ? 0.7 : 1, cursor: pending ? 'wait' : 'pointer' }}
-      >
-        {pending ? '...' : t('send')}
-        {!pending && (
-          <Image src="/img/arrow-right-wight.svg" alt="" aria-hidden width={20} height={20} />
-        )}
-      </button>
+      {step === 1 ? (
+        <button
+          type="button"
+          className="form-submit"
+          aria-label={t('continue')}
+          disabled={pending}
+          onClick={handleContinue}
+          style={{ opacity: pending ? 0.7 : 1, cursor: pending ? 'wait' : 'pointer', gap: '14px' }}
+        >
+          {pending ? '...' : t('continue')}
+          {!pending && (
+            <Image src="/img/arrow-right-wight.svg" alt="" aria-hidden width={20} height={20} />
+          )}
+        </button>
+      ) : (
+        <button
+          type="button"
+          className="form-submit"
+          aria-label={t('createMyPortal')}
+          disabled={pending || !agreed}
+          onClick={handleCreatePortal}
+          style={{ opacity: (pending || !agreed) ? 0.7 : 1, cursor: pending ? 'wait' : 'pointer', gap: '14px' }}
+        >
+          {pending ? '...' : t('createMyPortal')}
+          {!pending && (
+            <Image src="/img/arrow-right-wight.svg" alt="" aria-hidden width={20} height={20} />
+          )}
+        </button>
+      )}
     </form>
   );
 }

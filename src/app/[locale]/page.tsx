@@ -5,6 +5,7 @@ import Marquee from '@/components/sections/Marquee';
 import Goals from '@/components/sections/Goals';
 import HowItWorks from '@/components/sections/HowItWorks';
 import Reviews from '@/components/sections/Reviews';
+import MemberPricing from '@/components/sections/MemberPricing';
 import Pricing from '@/components/sections/Pricing';
 import Security from '@/components/sections/Security';
 import Contact from '@/components/sections/Contact';
@@ -42,6 +43,9 @@ export default function HomePage() {
         </section>
         <section className="comments-section-wrapper">
           <Reviews />
+        </section>
+        <section id="member-pricing" className="ambitions-section-wrapper" aria-labelledby="member-pricing-title">
+          <MemberPricing />
         </section>
         <section id="plans" className="ambitions-section-wrapper" aria-labelledby="plans-title">
           <Pricing />

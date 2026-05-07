@@ -80,7 +80,7 @@ export default function HowItWorksInteractive({ steps, cardData }: Props) {
             >
               {cls.includes('graph') || cls.includes('1--tl') ? <i className="bi bi-graph-up" /> :
                cls.includes('1--bl') ? <i className="bi bi-bar-chart" /> :
-               cls.includes('1--br') ? <i className="bi bi-pie-chart" /> :
+               cls.includes('1--br') ? <i className="bi bi-graph-up-arrow" /> :
                cls.includes('2--tr') ? <i className="bi bi-pencil-square" /> :
                cls.includes('2--bl') ? <i className="bi bi-credit-card-2-front" /> :
                cls.includes('3--tl') ? (
@@ -98,10 +98,10 @@ export default function HowItWorksInteractive({ steps, cardData }: Props) {
           <div className="profit-card-score-ring">
             <svg className="profit-ring-svg" viewBox="0 0 160 160">
               <circle className="profit-ring-bg" cx="80" cy="80" r="66" />
-              <circle className="profit-ring-fill" cx="80" cy="80" r="66" stroke="rgba(83, 231, 122, 1)" />
+              <circle className="profit-ring-fill profit-ring-fill--low" cx="80" cy="80" r="66" />
             </svg>
             <div className="profit-card-score-text">
-              <span className="profit-score-number">812</span>
+              <span className="profit-score-number">560</span>
               <span className="profit-score-label">GOOD<br />POTENTIAL</span>
             </div>
           </div>
@@ -152,8 +152,11 @@ export default function HowItWorksInteractive({ steps, cardData }: Props) {
                 <p className="pump-user-name">Alex B.</p>
                 <p className="pump-user-sub">{cardData.creditScore}</p>
               </div>
-              <div className="pump-score-badge">
-                <UpArrow /> 912
+              <div className="pump-score-badge stacked">
+                  <span className="pump-score-main">812</span>
+                  <span className="pump-score-delta">
+                    <UpArrow /> +140 points
+                  </span>
               </div>
             </div>
             <div className="pump-card-main-details">
@@ -169,9 +172,9 @@ export default function HowItWorksInteractive({ steps, cardData }: Props) {
           </div>
           <ul className="pump-users-list">
             {[
-              { src: '/img/avatar2.png', name: 'Hannah W.', score: 815 },
-              { src: '/img/avatar3.png', name: 'Grigory F.', score: 698 },
-              { src: '/img/avatar4.png', name: 'Denis C.', score: 642 },
+              { src: '/img/avatar2.png', name: 'Hannah W.', score: 780, points: 60 },
+              { src: '/img/avatar3.png', name: 'Grigory F.', score: 750, points: 110 },
+              { src: '/img/avatar4.png', name: 'Denis C.', score: 730, points: 130 },
             ].map((user) => (
               <li key={user.name} className="pump-user-row">
                 <Image className="pump-user-ava" src={user.src} alt={user.name} width={32} height={32} />
@@ -179,8 +182,11 @@ export default function HowItWorksInteractive({ steps, cardData }: Props) {
                   <p className="pump-user-row-name">{user.name}</p>
                   <p className="pump-user-row-sub">{cardData.creditScore}</p>
                 </div>
-                <div className="pump-score-badge small">
-                  <UpArrow /> {user.score}
+                <div className="pump-score-badge small stacked">
+                    <span className="pump-score-main">{user.score}</span>
+                    <span className="pump-score-delta">
+                      <UpArrow /> +{user.points} points
+                    </span>
                 </div>
               </li>
             ))}

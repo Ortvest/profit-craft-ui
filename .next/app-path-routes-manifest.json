@@ -2,6 +2,7 @@
   "/[locale]/page": "/[locale]",
   "/[locale]/privacy-policy/page": "/[locale]/privacy-policy",
   "/[locale]/terms-and-conditions/page": "/[locale]/terms-and-conditions",
+  "/[locale]/thank-you/page": "/[locale]/thank-you",
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/page": "/",

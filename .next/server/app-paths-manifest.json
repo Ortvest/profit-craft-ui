@@ -2,6 +2,7 @@
   "/[locale]/page": "app/[locale]/page.js",
   "/[locale]/privacy-policy/page": "app/[locale]/privacy-policy/page.js",
   "/[locale]/terms-and-conditions/page": "app/[locale]/terms-and-conditions/page.js",
+  "/[locale]/thank-you/page": "app/[locale]/thank-you/page.js",
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",

@@ -4,12 +4,12 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
 
-const locales = ['en', 'ru', 'uk'] as const;
+const locales = ['en'] as const;
 
 const localeShort: Record<string, string> = {
   en: 'EN',
-  ru: 'RU',
-  uk: 'UK',
+  // ru: 'RU',
+  // uk: 'UK',
 };
 
 export default function LocaleSwitcher() {
