@@ -47,7 +47,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     logo: `${siteUrl}/img/logotype.svg`,
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-915-124-24-16',
+      telephone: '+1-973-370-6666',
       contactType: 'customer service',
       email: 'hi@profitcraft.info',
     },
@@ -65,7 +65,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     '@type': 'LocalBusiness',
     name: 'ProfitCraft',
     url: siteUrl,
-    telephone: '+1-915-124-24-16',
+    telephone: '+1-973-370-6666',
     email: 'hi@profitcraft.info',
     address: {
       '@type': 'PostalAddress',

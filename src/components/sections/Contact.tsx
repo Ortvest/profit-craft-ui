@@ -22,9 +22,9 @@ export default async function Contact() {
           </div>
           <div className="contact-information-item">
             <p className="contact-information-item-title">{t('phoneLabel')}</p>
-            <p className="contact-information-item-text" suppressHydrationWarning>
-              —
-            </p>
+            <a className="contact-information-item-text" href="tel:+19733706666">
+              (973) 370-6666
+            </a>
           </div>
         </div>
       </div>
