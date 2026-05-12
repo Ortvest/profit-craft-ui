@@ -55,7 +55,41 @@ button {
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 16px 32px;
+}
+
+.header-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-product-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #22674b;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.header-product-link:hover {
+  background-color: #164e37;
+  color: #fff;
+}
+
+.header-product-link:focus-visible {
+  outline: 2px solid #f79e1b;
+  outline-offset: 2px;
+  color: #fff;
 }
 
 .nav {
@@ -2303,7 +2337,7 @@ summary::-webkit-details-marker {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-align: center;
-  color: #22674b;
+  color: #e53e3e;
   text-transform: uppercase;
   line-height: 1.3;
 }

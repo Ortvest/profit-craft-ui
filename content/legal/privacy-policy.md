@@ -152,8 +152,7 @@ If you have questions about this Privacy Policy, contact us at:
 
 **ProfitCraft LLC**  
 3412 Barham Blvd, Los Angeles, CA 90068  
-Profitcraftllc@gmail.com  
-(973) 370-6666
+Profitcraftllc@gmail.com
 
 \---
 

@@ -102,7 +102,7 @@ export default function HowItWorksInteractive({ steps, cardData }: Props) {
             </svg>
             <div className="profit-card-score-text">
               <span className="profit-score-number">560</span>
-              <span className="profit-score-label">GOOD<br />POTENTIAL</span>
+              <span className="profit-score-label">BAD<br />POTENTIAL</span>
             </div>
           </div>
           <ScrollToFormButton className="profit-card-cta scroll-to-form">

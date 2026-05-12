@@ -4,19 +4,30 @@ import Link from 'next/link';
 import LocaleSwitcher from '@/components/ui/LocaleSwitcher';
 import BurgerMenu from '@/components/ui/BurgerMenu';
 
+const AUTO_BROKERAGE_URL = 'https://profitcraft-auto-ui.vercel.app/';
+
 export default async function Header() {
   const t = await getTranslations('nav');
 
   return (
     <>
-      <Image
-        src="/img/logotype.svg"
-        alt="Profit Craft Logo"
-        aria-label="Main navigation"
-        width={145}
-        height={48}
-        priority
-      />
+      <div className="header-brand-group">
+        <Link href="/" aria-label="Profit Craft home">
+          <Image
+            src="/img/logotype.svg"
+            alt="Profit Craft Logo"
+            width={145}
+            height={48}
+            priority
+          />
+        </Link>
+        <a
+          className="header-product-link"
+          href={AUTO_BROKERAGE_URL}
+        >
+          {t('autoBrokerage')}
+        </a>
+      </div>
       <nav className="nav" id="nav" aria-label="Main navigation">
         <ul className="nav-list" id="header-list">
           <li className="nav-list-item">
