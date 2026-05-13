@@ -10,7 +10,7 @@ export default async function Goals() {
       <h2 className="goals-section-title">
         {t('title')}{' '}
         <span className="goals-new-line">
-          All Your <span className="goals-title-Goals">{t('titleGoals')}</span>
+          <span className="goals-title-Goals">{t('titleGoals')}</span>
         </span>
       </h2>
       <ul className="goals-list">

@@ -92,6 +92,32 @@ button {
   color: #fff;
 }
 
+.nav-list-item--cross-site {
+  display: none;
+}
+
+.header-auto-brokerage-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background-color: #22674b;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.header-auto-brokerage-icon:hover {
+  background-color: #164e37;
+}
+
+.header-auto-brokerage-icon:focus-visible {
+  outline: 2px solid #f79e1b;
+  outline-offset: 2px;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -1556,6 +1582,18 @@ summary::-webkit-details-marker {
 }
 
 @media (width<= 1024px) {
+  .header-brand-group {
+    gap: 16px;
+  }
+
+  .header-brand-group .header-product-link--brand {
+    display: none;
+  }
+
+  .header-auto-brokerage-icon {
+    display: inline-flex;
+  }
+
   #burger-menu {
     display: block;
     cursor: pointer;
@@ -1609,6 +1647,33 @@ summary::-webkit-details-marker {
     text-decoration: none;
     color: black;
   }
+
+  .nav-list-item--cross-site {
+    display: list-item;
+    border-bottom: none;
+    padding-bottom: 8px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .nav-list-item--cross-site a.header-product-link--menu {
+    display: inline-flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #22674b;
+    border-radius: 9999px;
+  }
+
+  .nav-list-item--cross-site a.header-product-link--menu:hover {
+    background-color: #164e37;
+    color: #fff;
+  }
+
   .main-section-title-img {
     flex-direction: column;
   }

@@ -22,10 +22,22 @@ export default async function Header() {
           />
         </Link>
         <a
-          className="header-product-link"
+          className="header-product-link header-product-link--brand"
           href={AUTO_BROKERAGE_URL}
         >
           {t('autoBrokerage')}
+        </a>
+        <a
+          className="header-auto-brokerage-icon"
+          href={AUTO_BROKERAGE_URL}
+          aria-label={t('autoBrokerage')}
+        >
+          <Image
+            src="/img/icons/auto-brokerage-header.svg"
+            alt=""
+            width={22}
+            height={22}
+          />
         </a>
       </div>
       <nav className="nav" id="nav" aria-label="Main navigation">
@@ -41,6 +53,14 @@ export default async function Header() {
           </li>
           <li className="nav-list-item">
             <Link href="#faq">{t('faq')}</Link>
+          </li>
+          <li className="nav-list-item nav-list-item--cross-site">
+            <a
+              className="header-product-link header-product-link--menu"
+              href={AUTO_BROKERAGE_URL}
+            >
+              {t('autoBrokerage')}
+            </a>
           </li>
           <li className="nav-list-item">
             <LocaleSwitcher />
