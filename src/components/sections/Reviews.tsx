@@ -1,5 +1,7 @@
 import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
+import ReviewsMarquee, {
+  type ReviewMarqueeItem,
+} from '@/components/ui/ReviewsMarquee';
 
 export default async function Reviews() {
   const t = await getTranslations('reviews');
@@ -15,7 +17,7 @@ export default async function Reviews() {
     r8Title: 'https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=96&h=96&q=80',
   } as const;
 
-  const reviews = [
+  const reviewKeys = [
     { titleKey: 'r1Title', textKey: 'r1Text', authorKey: 'r1Author', img: avatarByReview.r1Title },
     { titleKey: 'r2Title', textKey: 'r2Text', authorKey: 'r2Author', img: avatarByReview.r2Title },
     { titleKey: 'r3Title', textKey: 'r3Text', authorKey: 'r3Author', img: avatarByReview.r3Title },
@@ -26,21 +28,13 @@ export default async function Reviews() {
     { titleKey: 'r8Title', textKey: 'r8Text', authorKey: 'r8Author', img: avatarByReview.r8Title },
   ] as const;
 
-  const ReviewCard = ({ item }: { item: typeof reviews[number] }) => (
-    <article className="comments-item">
-      <div className="comments-item-description">
-        <p className="comments-title">{t(item.titleKey)}</p>
-        <p className="comments-description">{t(item.textKey)}</p>
-      </div>
-      <div className="comments-author-mark">
-        <Image className="comments-avatar" src={item.img} alt={`Photo of ${t(item.authorKey)}`} width={48} height={48} />
-        <div className="comments-name-raiting">
-          <p className="comments-name">{t(item.authorKey)}</p>
-          <Image src="/img/mans/raiting-full.svg" alt="5 star rating" width={80} height={16} />
-        </div>
-      </div>
-    </article>
-  );
+  const items: ReviewMarqueeItem[] = reviewKeys.map((r) => ({
+    id: r.titleKey,
+    title: t(r.titleKey),
+    text: t(r.textKey),
+    author: t(r.authorKey),
+    img: r.img,
+  }));
 
   return (
     <>
@@ -50,12 +44,7 @@ export default async function Reviews() {
         {t('titleEnd')}
       </h2>
       <div className="comments-section-list">
-        <div className="comments-track">
-          {reviews.map((r) => <ReviewCard key={r.titleKey} item={r} />)}
-        </div>
-        <div className="comments-track">
-          {reviews.map((r) => <ReviewCard key={`dup-${r.titleKey}`} item={r} />)}
-        </div>
+        <ReviewsMarquee items={items} ariaLabel={t('carouselAria')} />
       </div>
     </>
   );

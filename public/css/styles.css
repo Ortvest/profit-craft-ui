@@ -538,20 +538,45 @@ button {
 }
 
 .comments-section-list {
-  display: flex;
-  overflow: hidden;
   width: 100%;
-  align-items: flex-start;
-  flex-direction: row;
-  gap: 24px;
 }
 
-.comments-track {
+.comments-marquee-fade {
+  width: 100%;
+}
+
+.comments-marquee-viewport {
+  overflow-x: auto;
+  width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: auto;
+  cursor: grab;
+  overscroll-behavior-x: contain;
+}
+
+.comments-marquee-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.comments-marquee-viewport:active {
+  cursor: grabbing;
+}
+
+.comments-marquee-track {
   display: flex;
-  align-items: flex-start;
+  width: max-content;
+  align-items: stretch;
   gap: 24px;
-  animation: scroll-horizontal 60s linear infinite;
+  margin: 0;
+  padding: 0 24px;
+  list-style: none;
+}
+
+.comments-marquee-slide {
   flex-shrink: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .comments-item {
@@ -577,14 +602,6 @@ button {
   width: 100%;
 }
 
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 .comments-title {
   font-size: 24px;
   letter-spacing: -0.01em;

@@ -83,8 +83,11 @@ export default function HowItWorksInteractive({ steps, cardData }: Props) {
                cls.includes('1--br') ? <i className="bi bi-graph-up-arrow" /> :
                cls.includes('2--tr') ? <i className="bi bi-pencil-square" /> :
                cls.includes('2--bl') ? <i className="bi bi-credit-card-2-front" /> :
+               cls.includes('3--br') ? (
+                 <i className="bi bi-lightning-charge-fill" aria-hidden="true" />
+               ) :
                cls.includes('3--tl') ? (
-                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
                    <path d="M18 6L18 24" stroke="white" strokeWidth="3" strokeLinecap="round" />
                    <path d="M10 13L18 5L26 13" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                    <path d="M9 30H27" stroke="white" strokeWidth="3" strokeLinecap="round" />
