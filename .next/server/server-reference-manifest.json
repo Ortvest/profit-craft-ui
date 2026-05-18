@@ -1,6 +1,18 @@
 {
   "node": {
-    "60b0474bf0000af0e8a3838c81939a3154e2668788": {
+    "401658b1fcdaffb7e77b4d94f616f999c5ef64ce6f": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": 18728,
+          "async": false,
+          "exportedName": "saveContactLead",
+          "filename": "src/app/actions/contact.ts"
+        }
+      },
+      "filename": "src/app/actions/contact.ts",
+      "exportedName": "saveContactLead"
+    },
+    "60775e55e04786b5c0d781c2cc7441266dcd0370a4": {
       "workers": {
         "app/[locale]/page": {
           "moduleId": 18728,
@@ -14,5 +26,5 @@
     }
   },
   "edge": {},
-  "encryptionKey": "R2ngDs4ss4Zc+gVqfVaYzFToiWEcwOuuWr9Mgya7e4M="
+  "encryptionKey": "GGoDdTPw6vQjFIayMupUeaXHdogwIu2AHJIoQVbg1fI="
 }

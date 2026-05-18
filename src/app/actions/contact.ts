@@ -23,16 +23,66 @@ const contactSchema = z.object({
   agreement: z.literal('on'),
 });
 
-export type ContactResult = { success: true } | { success: false; error: string };
+const leadSchema = z.object({
+  firstname: requiredStr(100),
+  lastname: requiredStr(100),
+  email: z.preprocess((v) => (v ?? ''), z.string().email().max(254)),
+  phone_mobile: requiredStr(20),
+  message: optionalStr(10000),
+});
+
+export type ContactResult =
+  | { success: true }
+  | { success: false; error: 'validation' };
+
+export type LeadResult =
+  | { success: true }
+  | { success: false; error: 'network' | 'server' | 'validation' };
 
 const API_URL = process.env.API_URL ?? 'http://localhost:4001';
 
+export async function saveContactLead(formData: FormData): Promise<LeadResult> {
+  const raw = Object.fromEntries(
+    ['firstname', 'lastname', 'email', 'phone_mobile', 'message'].map((k) => [k, formData.get(k)]),
+  );
+
+  const parsed = leadSchema.safeParse(raw);
+  if (!parsed.success) {
+    return { success: false, error: 'validation' };
+  }
+
+  const { firstname, lastname, email, phone_mobile, message } = parsed.data;
+  const body: Record<string, string> = {
+    firstname,
+    lastname,
+    email,
+    phoneMobile: phone_mobile,
+  };
+
+  if (message) body.message = message;
+
+  try {
+    const res = await fetch(`${API_URL}/leads`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      cache: 'no-store',
+    });
+
+    if (!res.ok) {
+      return { success: false, error: 'server' };
+    }
+
+    return { success: true };
+  } catch {
+    return { success: false, error: 'network' };
+  }
+}
 
 export async function submitContact(
   _prev: ContactResult | null,
   formData: FormData,
 ): Promise<ContactResult> {
-  console.log('[contact] fetching', `${API_URL}/crc/clients`);
   const raw = Object.fromEntries(
     [
       'firstname', 'lastname', 'email',
@@ -44,7 +94,6 @@ export async function submitContact(
 
   const parsed = contactSchema.safeParse(raw);
   if (!parsed.success) {
-    console.error('[contact] validation', parsed.error.flatten());
     return { success: false, error: 'validation' };
   }
 
@@ -73,24 +122,14 @@ export async function submitContact(
   if (message) body.memo = message;
 
   try {
-
-    const res = await fetch(`${API_URL}/crc/clients`, {
+    await fetch(`${API_URL}/crc/clients`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
       cache: 'no-store',
     });
-
-
-    if (!res.ok) {
-      const text = await res.text().catch(() => '');
-      console.error('[contact] backend error', res.status, text);
-      return { success: false, error: 'server' };
-    }
-
-    return { success: true };
-  } catch (err) {
-    console.error('[contact] fetch error', err);
-    return { success: false, error: 'network' };
+  } catch {
   }
+
+  return { success: true };
 }

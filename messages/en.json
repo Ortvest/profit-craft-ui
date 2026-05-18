@@ -275,6 +275,7 @@
     "errorServer": "The server returned an error. Please try again in a few minutes.",
     "errorValidation": "Some fields contain invalid data. Please review your entries and try again.",
     "errorRetry": "Try again",
+    "errorEmailDuplicate": "This email address is already registered in our system. Please use a different email or contact support.",
     "firstnameRequired": "First name is required",
     "lastnameRequired": "Last name is required",
     "emailRequired": "Email is required",

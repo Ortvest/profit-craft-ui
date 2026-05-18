@@ -4,7 +4,7 @@ import { useActionState, startTransition, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
-import { submitContact } from '@/app/actions/contact';
+import { saveContactLead, submitContact } from '@/app/actions/contact';
 import { useRouter } from 'next/navigation';
 
 const US_STATES = [
@@ -81,6 +81,8 @@ export default function ContactForm() {
   const [phoneMobile, setPhoneMobile] = useState('');
   const [agreed, setAgreed] = useState(false);
   const [step, setStep] = useState<StepId>(1);
+  const [savingLead, setSavingLead] = useState(false);
+  const [leadError, setLeadError] = useState<'network' | 'server' | 'validation' | null>(null);
   const router = useRouter();
 
   const [firstName, setFirstName] = useState('');
@@ -135,11 +137,12 @@ export default function ContactForm() {
     e.preventDefault();
   };
 
-  const handleContinue = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleContinue = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const form = e.currentTarget.form;
     if (!form) return;
     const fd = new FormData(form);
+    fd.set('phone_mobile', phoneMobile.replace(/-/g, ''));
 
     const errs = validateStep1(fd);
     if (Object.keys(errs).length > 0) {
@@ -147,7 +150,16 @@ export default function ContactForm() {
       return;
     }
 
+    setSavingLead(true);
+    const result = await saveContactLead(fd).finally(() => setSavingLead(false));
+
+    if (!result.success) {
+      setLeadError(result.error);
+      return;
+    }
+
     setErrors({});
+    setLeadError(null);
     setFirstName(String(fd.get('firstname') ?? '').trim());
     setLastName(String(fd.get('lastname') ?? '').trim());
     setEmail(String(fd.get('email') ?? '').trim());
@@ -172,13 +184,16 @@ export default function ContactForm() {
     submitStage(fd);
   };
 
-  const errorMessageKey = state?.success === false
-    ? state.error === 'network'
+  const formError = leadError ?? (state?.success === false ? state.error : null);
+  const errorMessageKey = formError
+    ? formError === 'network'
       ? 'errorNetwork'
-      : state.error === 'server'
+      : formError === 'server'
         ? 'errorServer'
         : 'errorValidation'
     : null;
+
+  const busy = pending || savingLead;
 
   if (state?.success) {
     router.push(`/${locale}/thank-you`);
@@ -229,7 +244,7 @@ export default function ContactForm() {
                 name="firstname"
                 placeholder={t('firstnamePlaceholder')}
                 maxLength={100}
-                disabled={pending}
+                disabled={busy}
                 value={firstName}
                 onChange={(e) => {
                   setFirstName(e.target.value);
@@ -245,7 +260,7 @@ export default function ContactForm() {
                 name="lastname"
                 placeholder={t('lastnamePlaceholder')}
                 maxLength={100}
-                disabled={pending}
+                disabled={busy}
                 value={lastName}
                 onChange={(e) => {
                   setLastName(e.target.value);
@@ -263,7 +278,7 @@ export default function ContactForm() {
               name="email"
               placeholder={t('emailPlaceholder')}
               maxLength={254}
-              disabled={pending}
+              disabled={busy}
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -287,7 +302,7 @@ export default function ContactForm() {
                 name="phone_mobile"
                 placeholder={t('phoneMobilePlaceholder')}
                 maxLength={20}
-                disabled={pending}
+                disabled={busy}
                 value={phoneMobile}
                 onChange={(e) => {
                   setPhoneMobile(e.target.value.replace(/[^\d-]/g, ''));
@@ -310,12 +325,12 @@ export default function ContactForm() {
             <button
               type="button"
               onClick={() => setStep(1)}
-              disabled={pending}
+              disabled={busy}
               style={{
                 background: 'transparent',
                 border: 'none',
                 padding: 0,
-                cursor: pending ? 'not-allowed' : 'pointer',
+                cursor: busy ? 'not-allowed' : 'pointer',
                 color: '#22674b',
                 fontSize: '14px',
                 fontWeight: 700,
@@ -336,7 +351,7 @@ export default function ContactForm() {
               name="birth_date"
               placeholder={t('birthDatePlaceholder')}
               maxLength={10}
-              disabled={pending}
+              disabled={busy}
               value={dob}
               onChange={(e) => {
                 const digits = e.target.value.replace(/\D/g, '').slice(0, 8);
@@ -360,7 +375,7 @@ export default function ContactForm() {
               name="street_address"
               placeholder={t('streetAddressPlaceholder')}
               maxLength={255}
-              disabled={pending}
+              disabled={busy}
               value={streetAddress}
               onChange={(e) => {
                 setStreetAddress(e.target.value);
@@ -378,7 +393,7 @@ export default function ContactForm() {
                 name="city"
                 placeholder={t('cityPlaceholder')}
                 maxLength={100}
-                disabled={pending}
+                disabled={busy}
                 value={city}
                 onChange={(e) => {
                   setCity(e.target.value);
@@ -392,7 +407,7 @@ export default function ContactForm() {
               <select
                 name="state"
                 className="form-input form-select"
-                disabled={pending}
+                disabled={busy}
                 value={stateVal}
                 onChange={(e) => {
                   setStateVal(e.target.value);
@@ -414,7 +429,7 @@ export default function ContactForm() {
                 name="post_code"
                 placeholder={t('postCodePlaceholder')}
                 maxLength={10}
-                disabled={pending}
+                disabled={busy}
                 value={postCode}
                 onChange={(e) => {
                   setPostCode(e.target.value.replace(/\D/g, ''));
@@ -432,7 +447,7 @@ export default function ContactForm() {
           name="message"
           placeholder={t('messagePlaceholder')}
           className="form-textarea"
-          disabled={pending}
+          disabled={busy}
         />
       </div>
 
@@ -444,7 +459,7 @@ export default function ContactForm() {
             name="agreement"
             className="form-checkbox"
             required
-            disabled={pending}
+            disabled={busy}
             onChange={(e) => setAgreed(e.target.checked)}
           />
           <label className="form-checkbox-label" htmlFor="agreement">
@@ -466,7 +481,7 @@ export default function ContactForm() {
         </div>
       )}
 
-      {state && !state.success && errorMessageKey && (
+      {errorMessageKey && (
         <div
           style={{
             display: 'flex',
@@ -514,12 +529,12 @@ export default function ContactForm() {
           type="button"
           className="form-submit"
           aria-label={t('continue')}
-          disabled={pending}
+          disabled={busy}
           onClick={handleContinue}
-          style={{ opacity: pending ? 0.7 : 1, cursor: pending ? 'wait' : 'pointer', gap: '14px' }}
+          style={{ opacity: busy ? 0.7 : 1, cursor: busy ? 'wait' : 'pointer', gap: '14px' }}
         >
-          {pending ? '...' : t('continue')}
-          {!pending && (
+          {busy ? '...' : t('continue')}
+          {!busy && (
             <Image src="/img/arrow-right-wight.svg" alt="" aria-hidden width={20} height={20} />
           )}
         </button>
@@ -528,12 +543,12 @@ export default function ContactForm() {
           type="button"
           className="form-submit"
           aria-label={t('createMyPortal')}
-          disabled={pending || !agreed}
+          disabled={busy || !agreed}
           onClick={handleCreatePortal}
-          style={{ opacity: (pending || !agreed) ? 0.7 : 1, cursor: pending ? 'wait' : 'pointer', gap: '14px' }}
+          style={{ opacity: (busy || !agreed) ? 0.7 : 1, cursor: busy ? 'wait' : 'pointer', gap: '14px' }}
         >
-          {pending ? '...' : t('createMyPortal')}
-          {!pending && (
+          {busy ? '...' : t('createMyPortal')}
+          {!busy && (
             <Image src="/img/arrow-right-wight.svg" alt="" aria-hidden width={20} height={20} />
           )}
         </button>
