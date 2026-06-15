@@ -4,7 +4,7 @@ import Link from 'next/link';
 import LocaleSwitcher from '@/components/ui/LocaleSwitcher';
 import BurgerMenu from '@/components/ui/BurgerMenu';
 
-const AUTO_BROKERAGE_URL = 'https://profitcraft-auto-ui.vercel.app/';
+const AUTO_BROKERAGE_URL = 'https://profitcraft-auto.info/';
 
 export default async function Header() {
   const t = await getTranslations('nav');
